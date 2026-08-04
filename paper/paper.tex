@@ -1,0 +1,487 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{pgf-pie}
+\usepackage{float}
+\usepackage{setspace}
+\usetikzlibrary{shapes.geometric, arrows, positioning, fit, backgrounds}
+
+
+\title{Data-Driven UI/UX Modernization: Mining Human-Centric Look and Feel Evolution in Open-Source Software}
+\author{Eliz Payaslı, Jacob Krüger, Alexander Nolte}
+\date{July 2026}
+
+\begin{document}
+
+%% ---- Custom Title Page ----
+\begin{titlepage}
+    \centering
+    \vspace*{1.5cm}
+
+    {\Large \textbf{Eindhoven University of Technology}\\[0.3em]
+    Software Engineering \& Technology (SET) Group}
+
+    \vspace{2cm}
+
+    {\LARGE \textbf{Data-Driven UI/UX Modernization:\\[0.4em]
+    Mining Human-Centric UI/UX Evolution\\[0.4em]
+    in Open-Source Software}}
+
+    \vspace{2cm}
+
+    {\large \textit{Research Paper}}
+
+    \vspace{1.5cm}
+
+    {\large
+    \textbf{Author:} Eliz Payaslı \\[0.5em]
+    \textbf{Supervisors:} Jacob Krüger, Alexander Nolte  \\[0.5em]
+    \textbf{Date:} July 2026
+    }
+
+    \vspace{2.5cm}
+
+    \begin{minipage}{0.85\textwidth}
+    \begin{abstract}
+    \noindent
+    While empirical software engineering (SE) literature extensively
+    addresses backend architectural evolution, the systematic analysis of
+    user interface (UI) and user experience (UX) transformation remains
+    heavily understudied. This research bridges this gap by focusing on
+    the modernization of design and usability of open-source software
+    (OSS) applications from a human-computer interaction (HCI)
+    perspective. Utilizing Mining Software Repositories (MSR)
+    methodologies, we investigate the causes that trigger
+    modernization and concrete indicators of visual modernization in the
+    UI. Rather than assessing code-centric constraints, we analyze
+    modernization in UI-design and usability, and identify the
+    underlying reasons associated with each modernization type such as
+    accessibility barriers and usability frictions. By
+    examining commit logs across 346 actively maintained
+    JavaScript/TypeScript OSS repositories, we categorize the resulting
+    changes along three modernization aspects, component behavior
+    and interaction, visual and responsive design, and framework or
+    design-system migration, and across three structural levels,
+    namely behavior of the UI, visual and structural layout, and code
+    architecture changes. A four-condition mining pipeline combining
+    keyword matching, file-type detection, a date boundary, and
+    commit-level prefix exclusion achieves a filter precision of
+    $\approx$96\% on a manually validated random sample of 200 commits.
+    Our quantitative analysis provides information on how open-source
+    communities perceive and implement UI-design modernization under
+    various causes.
+    \end{abstract}
+    \end{minipage}
+
+    \vfill
+
+    {\small \textbf{Keywords:} mining software repositories; UI/UX modernization;
+    open-source software; human-centric issues; accessibility; design systems;
+    empirical software engineering.}
+
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+%% ================================================================
+\section{Introduction}
+%% ================================================================
+
+Open-source software (OSS) applications are no longer used only by technically
+proficient contributors; a growing share of their user base consists of
+non-technical end-users who interact with these applications primarily
+through their interface \cite{wang2022how}. As a result, the visual design
+and usability of an application has become as important to OSS adoption as
+its underlying functionality. We use the term \emph{UI-design or usability
+modernization} to refer to a deliberate change to the visual presentation
+(e.g., layout, color, typography) and interactive behavior (e.g., how
+components respond to user input) of an application's interface, following
+the usage of related terms in prior empirical software engineering (SE)
+work \cite{wang2022how, lamine2022understanding}.
+
+Prior SE research shows that OSS contributors do not always prioritize this
+aspect of their projects to the same extent as end-users do. Survey-based
+studies report that OSS contributors often emphasize technical concerns,
+such as algorithmic efficiency, backend stability, and feature completeness, over usability, a tendency that has been described as a
+\emph{system-centric} view of development, in contrast to a
+\emph{user-centric} view that treats the end-user's experience as a primary
+design concern \cite{wang2022how, andreasen2006usability}. At the same time,
+other empirical studies show that when OSS communities do address interface
+issues, these discussions are shaped by the personal experience of
+individual contributors rather than by a systematic design process
+\cite{cheng2018how}, and that the types of human-centric issues raised in
+GitHub repositories (e.g., accessibility, layout preferences, satisfaction
+with the interface) can be reliably identified and categorized from
+repository commits \cite{khalajzadeh2022how}.
+Separately, work on design systems shows that when OSS communities maintain
+shared UI component libraries, their repository discussions concentrate on
+the \emph{behavior} of interface components roughly four times as often as
+on their pure \emph{visual design}, with structural framework or
+design-system migration forming a third, distinct concern
+\cite{lamine2022understanding}.
+
+However, these prior studies either examine usability and UX issues in OSS
+broadly, without focusing specifically on UI-design or usability
+modernization, or they study modernization-adjacent practices, such as
+design system maintenance, without connecting them to the specific
+human-centric issues that motivated the change in the first place. As a
+result, it remains unclear (i) what proportion of overall commit activity
+corresponds to UI modernization, (ii) what categories of human-centric
+issues actually lead OSS contributors to modernize an interface, and
+(iii) how the resulting changes can be systematically identified and
+measured from the software repository artifacts (e.g., commit logs) that
+document them. Closing this gap matters because modernization efforts
+consume considerable contributor time and are usually undertaken without a
+shared vocabulary or framework for what is being changed and why; a
+structured, data-driven account of these patterns can give OSS maintainers
+and researchers a clearer picture of how and why interfaces evolve.
+
+This study addresses this gap by mining commit-level repository artifacts
+from OSS projects to systematically trace UI-design or usability
+modernization. We pose three research questions, addressed in order of
+priority:
+
+\begin{itemize}
+    \item \textbf{RQ0:} What proportion of overall commit activity in
+    actively maintained OSS repositories corresponds to UI-design or
+    usability modernization? We ask this question first because, before
+    categorizing the \emph{kind} of UI change or its trigger, it is
+    necessary to establish the raw scale of UI-related work relative to
+    all other development activity. This grounds the rest of our analysis
+    in a concrete sense of how much front-end evolution actually occurs in
+    modern OSS development.
+    \item \textbf{RQ1:} How can the visual and interaction changes in the
+    UI design be categorized and measured from repository artifacts (e.g.,
+    commit logs)? We ask this question because, while prior work shows
+    that design system communities discuss component behavior, visual
+    design, and framework migration as three distinct concerns
+    \cite{lamine2022understanding}, there is no established way to measure
+    the \emph{depth} of a given UI change (e.g., whether it is a
+    surface-level style tweak or a deeper change to component behavior or
+    architecture). Answering RQ1 gives us a way to quantify modernization
+    rather than only describe it qualitatively.
+    \item \textbf{RQ2:} What categories of human-centric issues are
+    discussed by OSS contributors as triggers for modernization of the UI
+    design? We ask this question because existing human-centric issue
+    taxonomies \cite{khalajzadeh2022how} were developed from general
+    end-user discussions rather than from discussions that specifically
+    led to a UI change being implemented; it is unclear whether the same
+    categories, or only a subset of them, apply when the discussion
+    results in an actual modernization effort.
+\end{itemize}
+
+To answer these questions, we apply MSR methods to a curated sample of
+346 actively maintained, JavaScript/TypeScript-based OSS repositories.
+We mine UI-related commit logs and classify the resulting human-centric
+triggers and UI changes using the classification scheme presented in
+Section~\ref{sec:background} and the method described in
+Section~\ref{sec:method}. Unlike studies that rely on unstructured
+end-user reviews (e.g., from app stores), our data consists of
+developer-to-developer communication within the repository itself
+\cite{lamine2022understanding, cheng2018how}, which lets us connect a
+specific commit to the concrete code change it produced.
+
+\newpage
+%% ================================================================
+\section{Background}
+\label{sec:background}
+%% ================================================================
+
+This section summarizes what is already known about usability and UI-design
+practices in OSS, and explains which parts of this prior work we build on
+in our own classification scheme (Section~\ref{sec:method}).
+
+\subsection{Usability Perception and Practice in OSS}
+Several studies have examined how OSS contributors perceive and handle
+usability. Wang et al.\ surveyed 84 OSS contributors and found that, while
+most recognized the importance of usability, the majority still held a
+system-centric rather than user-centric view of their projects
+\cite{wang2022how}. This finding echoes earlier work by Andreasen et al.,
+who surveyed and interviewed OSS developers and found that usability was
+generally seen as important in principle but rarely treated as a top
+development priority in practice, with most usability-related effort based
+on informal common sense rather than systematic evaluation
+\cite{andreasen2006usability}. Cheng and Guo's qualitative analysis of
+issue threads in three OSS projects similarly found that usability and UX
+discussions were largely shaped by the personal opinions and experiences of
+individual contributors, rather than by a structured design process
+\cite{cheng2018how}.
+
+\subsection{Human-Centric Issues in GitHub Discussions}
+Closer to our focus on the specific issues that lead to interface changes,
+Khalajzadeh et al.\ manually analyzed 1,691 issue comments from 12 diverse
+GitHub repositories and identified eight categories of human-centric
+issues discussed by developers: inclusiveness, privacy and security,
+compatibility, location and language, preference, satisfaction, emotional
+aspects, and accessibility \cite{khalajzadeh2022how}. This taxonomy was
+developed from general issue discussions, not specifically from discussions
+that led to a UI-design or usability modernization effort. Among these
+eight categories, three relate most directly to changes in an interface's
+visual presentation and interactive behavior: \emph{accessibility},
+\emph{preference} (including requests to change the position or
+configuration of existing interface elements), and \emph{satisfaction}
+(including complaints about visual clutter or interface friction). We
+build our own classification of modernization causes
+(Section~\ref{sec:method}) on these three categories, since they are the
+ones most plausibly connected to a concrete interface change, while
+excluding categories such as inclusiveness or location and language that
+are less directly tied to visual or interaction design.
+
+\subsection{Design Systems and UI Component Evolution}
+On the side of what concrete UI changes look like in repository data,
+Lamine and Cheng analyzed 4,714 issues from 41 open-source design system
+projects and found that open-source communities around design systems
+distribute their discussions across three structurally distinct concerns:
+(i) the \emph{behavior} of user interface components (e.g., state changes,
+accessibility, responsiveness), which accounted for the largest share of
+issues; (ii) the pure \emph{visual design} of components (e.g., color
+scheme, spacing, typography); and (iii) requests for an entirely new
+\emph{framework or design-system migration} \cite{lamine2022understanding}.
+Their interviews with design system project leaders further showed that
+practitioners explicitly distinguish behavior-level component work from
+framework-level adoption decisions, and that this distinction is one of
+the central tensions design system maintainers manage. We adopt this
+three-way distinction in our own classification of modernization aspects,
+since it gives us a way to separate large, structural UI changes from
+component-level and purely visual ones, using vocabulary that is already
+grounded in how OSS communities themselves describe these changes.
+
+\subsection{Commit Classification and Noise in MSR}
+A persistent challenge in MSR studies is that commit history contains
+substantial noise: not all commits touching a given file type correspond
+to a meaningful change in the domain under study. Herzig et al.\
+demonstrated that misclassification of commits (e.g., mislabeling a
+refactoring commit as a bug fix) can substantially inflate or deflate
+the apparent rate of a phenomenon \cite{herzig2013}. Similarly, Levin
+and Yehudai showed that commit messages contain systematic structural
+signals (such as conventional prefixes) that can be exploited to
+classify commits into maintenance activity types with high accuracy
+\cite{levin2017}. We build on this insight by using commit message
+prefix exclusion as a pre-filter step in our pipeline
+(Section~\ref{sec:commit-mining}).
+
+\subsection{Summary}
+Taken together, this prior work establishes (i) that OSS communities do
+discuss human-centric issues in their repositories, and that these
+discussions can be reliably categorized \cite{khalajzadeh2022how}; (ii)
+that when OSS communities work on shared UI components, their repository
+discussions can be classified into behavior, visual-design, and
+framework-migration concerns \cite{lamine2022understanding}; and (iii)
+that commit-level prefix signals provide reliable indicators of activity
+type, enabling noise reduction in MSR pipelines \cite{levin2017,
+herzig2013}. However, none of this prior work connects a specific
+human-centric trigger to the specific UI change it produced within a
+single study. Our classification scheme (Section~\ref{sec:method})
+combines elements of these prior taxonomies for this purpose: we use a
+subset of Khalajzadeh et al.'s human-centric categories to classify
+\emph{why} a modernization effort was started, and the three-way
+distinction from Lamine and Cheng to classify \emph{what} changed in the
+UI as a result.
+
+\newpage
+%% ================================================================
+\section{Methodology}
+\label{sec:method}
+%% ================================================================
+
+To answer RQ0, RQ1, and RQ2, we need a way to quantify the scale of UI
+modernization activity and to consistently categorize both the triggers
+behind UI-design or usability modernization and the concrete changes that
+result from it. We therefore establish a structured classification
+framework, adapted from the prior work discussed in
+Section~\ref{sec:background}, divided into two primary dimensions:
+Modernization Catalysts (Causes), which we use to answer RQ2, and
+Modernization Dimensions (Aspects), which we use to answer RQ1. RQ0 is
+addressed directly by computing the ratio of UI-related commits to total
+commits in the same two-year window (Section~\ref{sec:results}). We adopt
+this two-dimensional structure because it allows us to separate the
+\emph{reason} a modernization effort was initiated from the \emph{concrete
+change} it produced in the repository, and to later examine how the two
+relate to each other.
+
+\subsection{Modernization Catalysts (Causes)}
+The look and feel triggers we use are mapped to specific developer-facing
+dimensions identified in prior human-centric issue taxonomies
+\cite{khalajzadeh2022how}. We rely on this categorization because it was
+derived specifically from developer-to-developer discussion on GitHub,
+which matches our own data source. Crucially, rather than drawing from
+unstructured end-user reviews typically found in app stores, our data
+targets explicit developer-to-developer commentary and peer-review text
+within code platforms \cite{lamine2022understanding, cheng2018how}. We
+group these catalysts into three categories based on their functional
+origin:
+\begin{itemize}
+    \item \textbf{Accessibility Compliance Overhauls (A11y):} Resolving
+    high-priority accessibility defects, such as critical color contrast
+    flaws in localized themes, screen-reader blockages, or touch-target
+    violations \cite{khalajzadeh2022how, llerena2019adapting}.
+    \item \textbf{Architectural Layout Drift and Preferences:} Mitigating
+    styling discrepancies where decentralized or nested UI nodes
+    accidentally mismatch design guidelines, altering the position or
+    configuration of UI elements \cite{khalajzadeh2022how}.
+    \item \textbf{Usability Friction and Component Degradation:}
+    Eliminating operational visual clutter, flickering bugs, rendering
+    bottlenecks, or broken micro-interactions (e.g., locked loaders) that
+    induce user anxiety and structural dissatisfaction
+    \cite{khalajzadeh2022how, hellman2022characterizing}.
+\end{itemize}
+
+\subsection{Modernization Dimensions (Aspects)}
+\label{sec:aspects}
+When open-source communities act on these triggers, the changes manifest in
+the repository through distinct UI modifications. While our Causes taxonomy
+is adapted from a general human-centric issue taxonomy
+\cite{khalajzadeh2022how}, our Aspects taxonomy is adapted directly from an
+empirical study of UI component discussions in 41 open-source design
+system repositories \cite{lamine2022understanding}. We rely on this source
+because, unlike general human-centric taxonomies, it was derived
+specifically from analyzing \emph{what kind of UI change} a discussion
+resulted in, which is the question RQ1 asks. In that study, issues about
+the \emph{behavior} of UI components (e.g., state changes, animations,
+accessibility, navigation, input handling) outnumbered issues about pure
+\emph{visual design} (e.g., color, spacing, typography) by roughly four to
+one, and issues requesting an entirely new framework or design-system
+migration formed a third, structurally distinct category
+\cite{lamine2022understanding}. We adopt these three empirically grounded
+categories as our Aspects taxonomy:
+\begin{itemize}
+    \item \textbf{Component Behavior and Interaction Refactoring:} Changes
+    to how a UI component reacts to user input and state, including state
+    change feedback (e.g., hover, focus, disabled states), UI animation
+    behavior, navigational behavior (e.g., pagination, scrolling), and
+    input verification logic \cite{lamine2022understanding}.
+    \item \textbf{Visual and Responsive Design Adjustment:} Changes to the
+    visual presentation of existing components without altering their
+    underlying behavior, including color scheme, spacing, typography, and
+    responsive adaptation of layout to different screen sizes
+    \cite{lamine2022understanding, wang2022how}.
+    \item \textbf{Framework and Design System Migration:} Structural
+    changes that replace scattered, legacy CSS codebases with a
+    centralized UI library or design system (e.g., Ant Design, Material
+    UI) to ensure visual coherence and interface predictability across the
+    application \cite{wang2022how, lamine2022understanding}.
+\end{itemize}
+
+We consider this taxonomy more directly relevant to our mining pipeline
+than a generic behavior-versus-style split, since each category corresponds
+to a different tier of our modernization spectrum
+(Section~\ref{sec:spectrum}): Component Behavior and Interaction
+Refactoring maps to the Up-Level tier, Visual and Responsive Design
+Adjustment maps to the Intermediate-Level tier, and Framework and Design
+System Migration maps to the Down-Level tier. This direct correspondence
+lets us operationalize RQ1 as a classification task.
+
+Table~\ref{tab:taxonomy} summarizes these three Cause categories and three
+Aspect categories as a standalone conceptual classification scheme,
+independent of how they are measured in repository data.
+
+\begin{table}[htbp]
+\centering
+\caption{Conceptual Taxonomy of UI/UX Modernization Causes and Aspects}
+\label{tab:taxonomy}
+\begin{tabularx}{\textwidth}{l X}
+\toprule
+\textbf{Dimension} & \textbf{Category} \\
+\midrule
+\textbf{Causes} & Accessibility Compliance Overhauls (A11y) \\
+& Architectural Layout Drift and Preferences \\
+& Usability Friction and Component Degradation \\
+\midrule
+\textbf{Aspects} & Component Behavior and Interaction Refactoring \\
+& Visual and Responsive Design Adjustment \\
+& Framework and Design System Migration \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Operationalization}
+\label{sec:operationalization}
+
+While Table~\ref{tab:taxonomy} defines \emph{what} each category means
+conceptually, it does not yet specify \emph{how} we detect it in
+repository data. We therefore separately operationalize each category as a
+concrete, searchable signal in commit logs.
+Table~\ref{tab:operationalization} summarizes this mapping.
+
+\begin{table}[htbp]
+\centering
+\caption{Operationalization of the UI/UX Modernization Taxonomy}
+\label{tab:operationalization}
+\begin{tabularx}{\textwidth}{l l X}
+\toprule
+\textbf{Dimension} & \textbf{Category} & \textbf{Target Repository Artifact / Signal} \\
+\midrule
+\textbf{Causes} & Accessibility (A11y) & Commits mentioning \texttt{accessibility}, \texttt{a11y}, contrast, ARIA, or screen-reader \cite{khalajzadeh2022how} \\
+& Layout Preference & Commits targeting element placement, spacing tokens, or theme configuration \cite{khalajzadeh2022how} \\
+& Component Degradation & Commits addressing visual clutter, broken interactions, or rendering bottlenecks \cite{khalajzadeh2022how} \\
+\midrule
+\textbf{Aspects} & Component Behavior \& Interaction & Commits touching component state logic, animation, navigation, or input handling \cite{lamine2022understanding} \\
+& Visual \& Responsive Design & Commits touching CSS variables, color tokens, typography, or responsive breakpoints \cite{lamine2022understanding, wang2022how} \\
+& Framework/Design System Migration & Changes to \texttt{package.json} dependencies introducing or replacing a UI library \cite{wang2022how, lamine2022understanding} \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\newpage
+\subsection{The Spectrum of UI Modernization}
+\label{sec:spectrum}
+
+To track the depth of a UI change once it has been classified by cause and
+aspect, we model modernization indicators along a multi-tiered structural
+spectrum. This spectrum maps directly to the core engineering building
+blocks of web interfaces (HTML, CSS, and JavaScript/TypeScript),
+classifying repository modifications from low-level infrastructure to
+dynamic runtime manifestations, and directly answers part of RQ1 by giving
+us a way to measure how deep a given modernization effort goes. Each tier
+corresponds one-to-one with an Aspect category from Table~\ref{tab:taxonomy}:
+
+\begin{itemize}
+    \item \textbf{Up-Level (Behavior of the UI --- Governed by
+    JavaScript/TypeScript):} Corresponds to Component Behavior and
+    Interaction Refactoring. The highest tier of the spectrum, mapping
+    functional changes in internal runtime behavior, conditional loading
+    interaction loops, and state-transition handling mechanisms. In
+    modern web engineering, JavaScript and TypeScript govern how
+    components react to user inputs. Modernization at this level
+    addresses critical operational glitches (e.g., UI freezes or broken
+    loaders) that induce user anxiety and structural dissatisfaction
+    \cite{lamine2022understanding, khalajzadeh2022how}.
+    \item \textbf{Intermediate-Level (Visual and Structural Layout ---
+    Governed by CSS):} Corresponds to Visual and Responsive Design
+    Adjustment. This layer captures visual modifications, including
+    structural theme alterations, mode toggles (e.g., light to dark
+    mode), button design variations, and explicit layout re-arrangements
+    to mitigate visual clutter. While HTML defines the mere existence of
+    elements, CSS dictates their look and feel, visual consistency, and
+    compliance with accessibility (A11y) color-contrast standards
+    \cite{lamine2022understanding, llerena2019adapting}.
+    \item \textbf{Down-Level (Code Architecture Changes in the UI ---
+    Governed by HTML/Infrastructure):} Corresponds to Framework and
+    Design System Migration. The underlying engineering foundation,
+    capturing repository fluctuations in structural skeletons (HTML
+    structures), \texttt{package.json} library dependencies, global
+    styling configuration setups, and code churn within structural
+    stylesheets. This layer tracks the baseline architectural shift,
+    such as moving from scattered legacy styles to centralized,
+    predictable design systems \cite{lamine2022understanding}.
+\end{itemize}
+
+This tiered abstraction justifies our methodological scope of filtering
+public repositories by JavaScript or TypeScript as their primary
+technology stack. Repositories classified purely as HTML or CSS often
+represent static layouts that lack the behavioral tracking (Up-Level) and
+dynamic state management data required to mine comprehensive UI-design
+evolution.
+
+\end{document}

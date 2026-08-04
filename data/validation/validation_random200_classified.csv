@@ -1,0 +1,673 @@
+repo,sha,message,ui_label,aspect,cause,reason
+outline/outline,7b71aa53d2850a2e62b80f26facfdba667dccac7,"fix: Suggestion menus are now correctly announced to screenreaders (#12750)
+
+* fix: Suggestion menus are not correctly announced to screenreaders
+
+* PR feedback, pass disabled as ARIA prop",Yes,B,A,Screen reader announcement for suggestion menus
+angular/angular,7d92cc8b461a835b4290d962c68a9d3e39f1850e,"fix(docs-infra): improve version picker dropdown positioning
+
+Drops `position: absolute` from the version picker `<ul>` and tightens `max-height` to `70dvh` so the cdk-overlay-pane fits the viewport a",Yes,V,U,Fix dropdown overflow and mobile viewport fit
+lobehub/lobehub,99e42327966ef2f5260bcc40f9cc534d40eb51ae,✨ feat(chat-input): adopt sectioned editor menus (#16471),Yes,B,L,Restructured editor menus into sections
+clash-verge-rev/clash-verge-rev,22c516f550cad760a9132599b3d7127a78734d02,"feat(sysinfo): return structured system info (#7122)
+
+* feat(sysinfo): return structured system info
+
+* refactor: simplify SystemInfo conversion and enhance Platform struct
+
+---------
+
+Co-authored-by:",No,-,-,Backend system info structure refactoring
+OpenCut-app/OpenCut,3e75852ffee06ec75006c787389870107395bd2d,chore: remove dead songs tab,No,-,-,"Removing unused code, no UI changes"
+lyswhut/lx-music-desktop,b028fb955f4f56c0d0181c5bb241a0de9780057d,Optimize options with too long descriptions in settings (#2172),Yes,V,L,Truncate long text in settings UI
+apache/superset,a8045d7f65d86031b2647877fb2d382a5169fc93,"chore(deps-dev): bump @swc/plugin-emotion from 14.13.0 to 14.14.0 in /superset-frontend (#41515)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependab",No,-,-,Dependency bump unrelated to UI changes
+chakra-ui/chakra-ui,1ef580069c1a6c0cc3dd03f6edab52d98dac14b2,"feat: float panel component (#10752)
+
+* feat: implementation for float panel component with storybook
+
+* feat: doc floating panel
+
+* fix: minor changes on the ui
+
+* chore: add changeset
+
+* refactor: c",Yes,B,L,New float panel component interaction patterns
+lyswhut/lx-music-desktop,c42b2fb34c017444e4fd1fa4b58f1d1ffea37623,"Fix edit theme dialog layout (#2188)
+
+Co-authored-by: lyswhut <lyswhut@qq.com>",Yes,V,L,Fix theme dialog layout alignment
+mattermost/mattermost,7b10409141c9f5963a7aad272e641591e8001cd5,"[MM-69229] Remove CloudAnnualRenewals feature flag and dead code (#37151)
+
+* [MM-69229] Remove CloudAnnualRenewals feature flag and dead code
+
+The CloudAnnualRenewals flag (default false, shipped v9.4",No,-,-,"Feature flag removal, no UI changes"
+clash-verge-rev/clash-verge-rev,fd8c852698211c313d6e9a0c0127c09c2e16229e,fix: update mihomo plugin log handling,No,-,-,Backend plugin logging logic change
+clash-verge-rev/clash-verge-rev,15de400f2f94ef5e28f7333b13d37c074c1eaa66,fix: align backup dialogs with in-app modal behavior,Yes,V,L,Align backup dialogs with modal styling
+OpenCut-app/OpenCut,eb28942dab4b2efe73c6be10ad1defa520f7790a,fix: audio waveform height in timeline,Yes,V,U,Fix waveform rendering overflow issue
+lobehub/lobehub,dee95f541985e4e86605dd1c4dd76b02372f8ffe,"💄 style(tool): compact single-row Linear list render (#16359)
+
+Render Linear list_* entities as one tight row each: title on the left,
+relative ""updated"" time on the right. Drop the chunky per-field g",Yes,V,L,Compact Linear list layout styling redesign
+portainer/portainer,e2d7491bc9ee561f97758a81132c6f8a3c30891f,fix(edge-stacks): fix webhook ID creation in the frontend BE-12983 (#2682),No,-,-,Backend webhook ID logic fix
+chakra-ui/chakra-ui,b42c9a2dca85181e1f6f092c82d20a57eb27171b,"fix(deps): update eslint (#10810)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",No,-,-,Dependency bump unrelated to UI library
+grafana/grafana,84d68591d9b49649f7ffd5833ae4c0a327d82929,"Deps: Unpin production dependencies in `@grafana/ui` (#127348)
+
+* Unpin `@codemirror/*`
+
+* Unpin `@emotion/*`
+
+* Unpin `@floating-ui/react`
+
+* Unpin `@hello-pangea/dnd`
+
+* Unpin `@monaco-editor/react`",No,-,-,Dependency version constraint updates only
+apache/superset,4519a5c52d8f4e1545723f10e7e1962c0b9b2ea6,"fix(safe-markdown): do not mutate the shared sanitization schema (#41298)
+
+Co-authored-by: Amin Ghadersohi <amin.ghadersohi@gmail.com>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",No,-,-,"Backend sanitization logic fix, no UI changes"
+mattermost/mattermost,127552ce84201f4e442f8b41aebf2e8d93c7910b,"Add user setting to disable auto-follow on channel-wide mentions (#36068)
+
+* Add server config to disable auto-follow on channel-wide mentions
+
+Adds `ServiceSettings.ChannelMentionAutoFollowThreads` (",Yes,B,U,Prevent unwanted auto-follow behavior on mentions
+lfnovo/open-notebook,76e408f81e86e0dc4c9ae44b1f33976658ebb926,"feat: add Catalan translation to the UI (#674)
+
+* Add Catalan translation
+
+* Add Catalan to the UI
+
+* Typo
+
+* Make Catalan language dynamic
+
+* Fix LanguageToogle
+
+* fix(i18n): restore locale parity af",No,-,-,"Translation addition, no UI/UX changes"
+chakra-ui/chakra-ui,3b788a57ee84ccf6392e0c7c7c81ec6fe3dfed10,chore: update pnpm,No,-,-,Dependency management update only
+remix-run/react-router,22480fb238772024f201b8a1e517c6f9fe63ede2,Version 8.0.0-pre.0,No,-,-,"Version release, no UI changes"
+blakeblackshear/frigate,47a06c8b309b50d3f10f030d45b55990b9f22d1e,"Tweaks (#23367)
+
+* add ptz presets and default role widgets
+
+* language tweaks
+
+* fix width in triggers view
+
+* tweak iOS PWA message in notifications settings
+
+* deprecate ui.date_style and ui.time_s",Yes,V,L,Fix width and adjust iOS PWA message styling
+mattermost/mattermost,d90ea343bcc2f33129c16cb6577ceb511b59cfcf,"MM-69003 Update ESLint and related dependencies (#37039)
+
+* Remove everything
+
+* Re-add most ESLint plugins and run --fix
+
+* Additional fixes
+
+* Fix or disable linter warnings caused by require import",No,-,-,ESLint dependency bump and linting fixes
+grafana/grafana,d7b62bea589ed8277f82f98a856461609efa6b53,"Chore: Use Stack component from @grafana/ui package (#127277)
+
+Use Stack component from @grafana/ui package",No,-,-,Refactor to use existing UI library component
+ItzCrazyKns/Vane,9b2c229e9c631cf2d28ce88bb064587e156f92c1,feat(message-input): remove copilot toggle,No,-,-,"Backend feature removal, no UI changes"
+ItzCrazyKns/Vane,bb7b7170cad22adda0277cde09c3de9ae8417d9f,"feat(media, suggestions): handle chat history correctly",No,-,-,Backend logic for chat history handling
+mattermost/mattermost,94e2efbd995c599f11362ec6a5260252b6433df1,"MM-51016 Re-implement layout logic for Markdown lists (#36678)
+
+* Revert mattermost/mattermost-webapp#4981
+
+This directly fixes the MM-51016, but it causes MM-22969 to regress on Firefox.
+
+* Revert ma",Yes,V,U,Fix markdown list rendering layout issues
+lobehub/lobehub,872604cc6a0fc8c7b733e61dc861594c4abe1fb2,"🐛 fix(auth-spa): clean stale SPA assets before auth build (#16310)
+
+* 🐛 fix(auth-spa): clean stale SPA assets before auth build
+
+* 🐛 fix(auth-spa): copy favicon assets",No,-,-,Build/tooling fix for auth SPA assets
+siyuan-note/siyuan,665f2ee9b8778f53b1a7eade910edb6ca254fe22,":construction_worker: Improve cd
+
+Signed-off-by: Daniel <845765@qq.com>",No,-,-,CI/build workflow improvement only
+lfnovo/open-notebook,209b48cc104fdf56819206f428d9e801572cb992,"feat(notebooks): add list view toggle to notebooks page (#925)
+
+Add a tile/list view toggle to the Notebooks page header. Tile view
+(the card grid) remains the default; list view renders compact rows
+",Yes,B,L,"Toggle view preference, layout reconfiguration"
+mattermost/mattermost,a84032f40a6ab1dadc344914a1ab92a2fb934577,"MM-69053 Log server message when a user has concurrent React enabled (#36837)
+
+* MM-69053 Log server message when a user has concurrent React enabled
+
+* Add session_id and user_id to server-logged mes",No,-,-,Backend logging and session tracking
+chakra-ui/chakra-ui,1ab16bd0d07af93562442634363e73e2826df9a6,"fix(deps): update dependency globals to v17 (#10708)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",No,-,-,Dependency bump unrelated to UI library
+OpenCut-app/OpenCut,23187b0b6a9f179bdb68578fc4bdaa8414b8316d,"refactor: remove dead tangent handle variant
+
+The { kind: ""tangent"" } MaskHandleId variant was never constructed — neither
+getFreeformDisplayHandles nor any other code ever produced a tangent handle
+o",No,-,-,"Dead code removal, no UI changes"
+grafana/grafana,4ec46f7c6df5e9b0e0b0b9a5fcc6e72b260d9c5e,"Deps: Unpin production dependencies in `@grafana/e2e-selectors` (#127498)
+
+Unpin `typescript`",No,-,-,"Dependency management, not UI changes"
+lobehub/lobehub,e0cf68b6c63562608f59e935a7155dd319eda0e4,🐛 fix(chat): fold completed agent turn process (#16431),No,-,-,Backend logic fix for agent turn processing
+chakra-ui/chakra-ui,c7e3a59b0e33924f1987afc9aa87a88835b98e58,"fix(deps): update panda to v1.9.0 (#10540)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",No,-,-,Dependency bump unrelated to UI changes
+lobehub/lobehub,0c615cd9f5dbe410809838a04aacc38488bd0d0f," 💄 style(token): chat input context token details refresh (#15978)
+
+* ✨ feat(controls): add sidebar styling for form layout
+
+* ✨ feat(chat): implement context window message handling with history coun",Yes,V,L,Refresh chat input token display styling
+clash-verge-rev/clash-verge-rev,e11b74206d0eb9b9e47a3dc39dc3939ab4c6b473,feat: add warning tooltip for proxy chain,Yes,B,U,Warn users of proxy chain issues
+clash-verge-rev/clash-verge-rev,7e233efd10a4bedc3c9d9dd7a38be3012f2c8149,feat: add reset button to Global script,No,-,-,"Backend script feature, no UI changes"
+siyuan-note/siyuan,cde3598dc10a39da0977459c12f2f12779b0d70a,":sparkles: AI Agent https://github.com/siyuan-note/siyuan/issues/17797
+
+Signed-off-by: Daniel <845765@qq.com>",No,-,-,Backend AI agent feature implementation
+remix-run/react-router,42e70db52eef3015dd60f5a274c461d94291805e,Handle remaining v8 todo's (#15074),No,-,-,Backend logic and version migration tasks
+ItzCrazyKns/Vane,64683e3dec1ed5c6e46de4c09f5d07c2f21c707f,feat(assistant-steps): improve style,Yes,V,L,Styling improvements to assistant steps component
+apache/superset,0370ac8607bfd474aad73e4f6ffdf11a41f420c9,"chore(deps-dev): bump unzipper from 0.12.3 to 0.12.5 in /superset-frontend (#41523)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users",No,-,-,Dependency bump unrelated to UI library
+apache/superset,0c12114ea9277e2a3ba787acdea38ca79baae1d9,"fix(explore): stop metric edits from bleeding across metrics with duplicate optionNames (#41208)
+
+Co-authored-by: Evan Rusackas <evan@rusackas.com>
+Co-authored-by: Claude Opus 4.8 <noreply@anthropic.c",Yes,B,U,Metric edit state isolation fix
+appsmithorg/appsmith,6d3c382db51e634d111e77727834f293d749ce54,"chore: updated docs url for Redeploy App (#41481)
+
+## Description
+Updated appsmith docs to explain about Redeploy button, and updated the
+docs url for Learn more in the callout.
+
+Fixes [41482 ](https:",No,-,-,Documentation URL update only
+blakeblackshear/frigate,88f944fe81c2ff382e7bc25ab1b099ce4812359c,"feat: add Traditional Chinese (zh-Hant) language option (#23322)
+
+The zh-Hant translations are synced from Weblate (98% complete) but the
+locale was never registered in the language selector, so users",No,-,-,i18n translation registration only
+OpenCut-app/OpenCut,220ec757d42b54f498d031436e5b4b03931b165c,refactor: move packages sub-folders into web app,No,-,-,"Backend restructuring, no UI changes"
+apache/superset,068a709c1407d0434d1f42164ead42b94bb96336,"fix(config): expose build details (git SHA/build number) to admins only (#41301)
+
+Co-authored-by: Amin Ghadersohi <amin.ghadersohi@gmail.com>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",No,-,-,"Backend config exposure, no UI changes"
+chakra-ui/chakra-ui,2a59400c2e56ad81cd80973656c37a94e417d9bd,chore: update marquee,No,-,-,"Dependency update, no UI changes"
+lyswhut/lx-music-desktop,0f27e3ea42647077781d96311f2e9eafeab87da5,Fix duplicate songs dialog layout (#2203),Yes,V,L,Dialog layout alignment and spacing fix
+blakeblackshear/frigate,d9c1ea908d59187d5f3a2f7225984c7c119f4ded,"Chat improvements (#23195)
+
+* Support token streaming stats
+
+* Propogate streaming token stats to chat calls
+
+* Show token stats for each image
+
+* Add settings to handle token stats and other options
+",Yes,V,L,Mobile layout spacing improvements for chat UI
+outline/outline,b3d456373072b8548796d9275153d72088f39c71,"perf: Improve performance of in-page search (#12649)
+
+* Fix editor find freezing on long documents
+
+In-document search (Ctrl+F) blocked the UI for several seconds while
+typing in long documents. Two c",No,-,-,"Backend performance optimization, no UI changes"
+portainer/portainer,0da57f8747104626e9ef3f32e54ae98fc82c064b,fix(environment-groups): restore dark mode badge colors and fix empty list regression [C9S-231] (#2811),Yes,V,U,Dark mode badge colors and empty list rendering
+clash-verge-rev/clash-verge-rev,e71e701fd051e10b4bf4f9fc6df8ee77babbc51e,refactor: migrate query cache to swr,No,-,-,"Backend logic refactor, no UI changes"
+outline/outline,a95505c6a73d7805240c93a7ce2406a0a5c3a8bf,"chore(deps-dev): bump babel-plugin-styled-components from 2.1.4 to 2.3.0 (#12785)
+
+Bumps [babel-plugin-styled-components](https://github.com/styled-components/babel-plugin-styled-components) from 2.1.",No,-,-,Dependency bump unrelated to UI changes
+chakra-ui/chakra-ui,093509b43d349bd6eb8f6ca3f167c8aaf72695a2,"fix(listbox): prevent crash when filter empties collection in explorer demo (#10870)
+
+When typing in the Listbox Input to filter items, if no items match the
+query, collection.items becomes empty. Acc",Yes,B,U,Prevent crash on empty filtered listbox collection
+lfnovo/open-notebook,f04d2695951074db413db2c2a8d89c2c8ed1313d,"fix(search): page-level scroll for results + configurable API timeout (#905)
+
+* fix(search): page-level scroll for results + configurable API timeout
+
+#882: Search/Ask results were trapped in a height",Yes,B,U,Fix search results scroll interaction trapped
+chakra-ui/chakra-ui,a48df18f09f64bf922f78a8d20ce1eb08845f23f,"fix(deps): update dependency @clack/prompts to v1 (#10644)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",No,-,-,Dependency bump unrelated to UI library
+OpenCut-app/OpenCut,8161de00e684db1f78fa56f88ba3612b54af9b68,chore: formatting,No,-,-,"Code formatting only, no UI changes"
+umami-software/umami,ce3d928f7757427a4b072f4cb596c529e3fab0a2,Keep heatmap depth labels readable while scaling overlay,Yes,V,U,Heatmap labels remain visible during scaling
+lobehub/lobehub,5bb04374ebb768c0e54c6c0b253033ce94b8559a,"✨ feat(conversation): global human-approval notification island (#16390)
+
+* ✨ feat(conversation): global human-approval notification island
+
+Surface pending human-approval requests from non-active loc",Yes,B,U,Notification island improves approval workflow usability
+portainer/portainer,8cdc2f49d89897ececa248ddb0b1942d5d9347b1,"feat(kube): backend handlers for pod delete, pod restart, and capabil… (#2491)
+
+Co-authored-by: Nicholas Loomans <nicholas.loomans@portainer.io>",No,-,-,Backend handlers for Kubernetes pod operations
+portainer/portainer,cfcd8493ac525fd7e38292b060c9397126ee68d7,fix(gitops): prevent non-admin users from editing source access control BE-13151 (#3030),No,-,-,"Backend permission logic, no UI changes"
+grafana/grafana,9480d8bbda6aa058e99c9797e689eeda763a9424,"Parca: Remove from core plugins (#127322)
+
+* remvoe parca frontend
+
+* remove parca backend
+
+* remove parca from schemas
+
+* remove from various places
+
+* update
+
+* decrease the number",No,-,-,"Removing plugin code, not UI changes"
+umami-software/umami,c7515ff230e9fb74cca7f9757ff180a2cf038046,fix: merge DataGrid layout + add min width to sessions location column,Yes,V,L,DataGrid layout alignment and column width adjustment
+umami-software/umami,9fafd0cfd4eabb998f34db237113e29d0749ea04,"Apply suggestion from @greptile-apps[bot]
+
+Co-authored-by: greptile-apps[bot] <165735046+greptile-apps[bot]@users.noreply.github.com>",No,-,-,"Bot suggestion, likely refactor or dependency update"
+chakra-ui/chakra-ui,f32a160162ba9523f93080587df086a99ca5bfdc,"feat(overlay): add has() method to createOverlay return (#10868)
+
+* feat(overlay): add has() method to createOverlay return
+
+* docs: changeset
+
+---------
+
+Co-authored-by: Segun Adebayo <joseshegs@gmai",No,-,-,API enhancement for overlay management utility
+siyuan-note/siyuan,0f4e400811feeb3e6e3677575a14ff143d6becac,":bookmark: Release v3.7.0-beta.4
+
+Signed-off-by: Daniel <845765@qq.com>",No,-,-,Version release tag only
+apache/superset,e807e66a3e9498866e6550af6e896c76a3ce1b03,"chore(deps-dev): bump timezone-mock from 1.4.2 to 1.4.3 in /superset-frontend (#41521)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@us",No,-,-,Dependency bump unrelated to UI library
+outline/outline,cd4b324f5abcf3ca9f8a4c1ff230e8e8916922fd,"chore: Upgrade dd-trace and Sentry (node/react) to v10 (#12759)
+
+Bumps dd-trace to ^5.109.0 and @sentry/node + @sentry/react to ^10.58.0,
+migrating off APIs removed in the Sentry v8 major: BrowserTrac",No,-,-,Dependency upgrade for monitoring/tracing libraries
+lobehub/lobehub,216d50ba24600f60568fe1d5d66bf5f427afadfc,"🔨 chore(agent-testing): auto-allocate non-conflicting dev ports + local chat-security bypass (#16287)
+
+* 🔨 chore(agent-testing): auto-allocate non-conflicting dev ports + local chat-security bypass
+
+T",No,-,-,CI/build tooling and testing infrastructure
+ItzCrazyKns/Vane,3b8d8be6761949cf9034d6b3d9ec82a78115cb81,feat(package): bump version,No,-,-,"Version bump only, no UI changes"
+remix-run/react-router,c1ecb28f96d16f384d2dda92778c6beae7345822,Drop react-router-dom re-export package (#15076),No,-,-,"Removing package re-export, not UI change"
+outline/outline,0d50f0d60ac14b73c0a6e6e059fc7f4dd255534e,fix: Do not close icon picker on choice (#12573),Yes,B,U,Icon picker closing prematurely on selection
+OpenCut-app/OpenCut,2ee0a44735d2b930348e9774909638b2c1909738,refactor: unify element params,No,-,-,"Backend refactoring, no UI changes"
+OpenCut-app/OpenCut,22725f71faae51e84e02dfd240fc30e10f180238,chore: update opencut-wasm to 0.1.3,No,-,-,Dependency bump unrelated to UI
+blakeblackshear/frigate,5ef8b9b92466a0ad3107b2da14e481618a5dd194,"Debug replay fixes (#23270)
+
+* ensure motion masks from source camera are copied to replay
+
+* stop polling debug_replay/status after live_ready
+
+* use vod for constructing replay clips",No,-,-,Backend logic and debug replay polling changes
+appsmithorg/appsmith,23a344cf4ab26b24fcb2d5a2a3b08a7e4a42ad1a,"fix: Corrected message for REDEPLOY_APP_WARNING. Also not showing Redeploy when Pull button is shown in GIT Modal. (#41474)
+
+## Description
+Corrected message for REDEPLOY_APP_WARNING. Also not showing",No,-,-,Backend logic and git modal state handling
+portainer/portainer,6cb6f2e9b454abfffed753674ec4429929bb82ed,fix(change-confirmation): add git dry run and docker resize to the excluded urls [c9s-159] (#2562),No,-,-,Backend logic exclusion list update
+clash-verge-rev/clash-verge-rev,512efe7d411bcf2ad274417125d3c42a284b96a7,"fix: node selection for remembered profiles during switch (#6865)
+
+* fix: node selection for remembered profiles during switch
+
+* remove redundant comments",Yes,B,U,Fix node selection state during profile switch
+OpenCut-app/OpenCut,1fa5442f211fb06548bc51ea3192b5e0b4ffe614,chore: remove debugging throughout codebase,No,-,-,"Debugging removal, no UI changes"
+angular/angular,e77a8a0c7a89cc383496c39463abe157f2d86626,"fix(docs-infra): align the page title with its edit action
+
+The page title row (`.docs-page-title`) relied on the default flex
+alignment, so the edit icon next to the title did not line up with the
+ti",Yes,V,L,Align edit icon with page title baseline
+apache/superset,c87fdfc18fc9905f86d2be01bea421ee42107ab2,"fix(i18n): defer plugin init and menu render until language pack is ready (#40729)
+
+Co-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",No,-,-,"i18n translation loading, no UI changes"
+outline/outline,d7ebae60d1c19caa23a07a2e1c82905ad20e7240,"feat: Allow Passkey logins on desktop (#12749)
+
+* feat: Allow Passkey logins on desktop
+
+* Refactor, address PR feedback",No,-,-,"Backend authentication feature, no UI changes"
+lyswhut/lx-music-desktop,05e8442ff1aefe348dc6b234f66d873db18a2710,"Fix change music source dialog layout (#2204)
+
+* Fix change music source dialog layout
+
+* Apply suggestions from lyswhut
+
+Co-authored-by: lyswhut <lyswhut@qq.com>
+
+---------
+
+Co-authored-by: lyswhut <",Yes,V,L,Dialog layout alignment and spacing fix
+OpenCut-app/OpenCut,dc5956900e104326cef17f8111017eadb3eac2fd,fix: eliminate first-paint flicker in landing handlebars,Yes,B,U,Eliminate visual flicker on initial render
+clash-verge-rev/clash-verge-rev,66d104593bdc3066dbb4a9b90dea6efebf1d7a49,"fix(logs): avoid forced scroll-to-bottom on refresh
+
+Closes #7188",Yes,B,U,Prevent unwanted scroll behavior on refresh
+blakeblackshear/frigate,4b6fa49449b59d4a0ea0e848b94c6339843f33d0,"Miscellaneous fixes (#23335)
+
+* stabilize chart options to stop ApexCharts updateOptions running on every stats tick
+
+* constrain height of export dialog
+
+* stop audio maintainer when deleting a camer",Yes,B,U,Stabilize chart options prevent excessive redraws
+portainer/portainer,a5cacd712dc9949149d93d3305ce4c8ce64d495e,"refactor(gitops): remove manual credential entry from git form [BE-13047] (#2951)
+
+Co-authored-by: Claude <noreply@anthropic.com>",No,-,-,"Backend form logic refactor, no UI changes"
+lobehub/lobehub,26db93ff9871c11371e4ce813e7dab5f07fb9048,"🐛 fix(group): stop first-message flicker on new-topic creation (#16259)
+
+* 🐛 fix(group): stop first-message flicker on new-topic creation
+
+Sending the first message in a group chat made the just-sent ",Yes,B,U,Eliminate message flicker on group chat send
+firecrawl/firecrawl,e29d28418506f89a46f6a0f5974f404c5b663267,fix(security): pin @opentelemetry/core >=2.8.0 in test-suite (GHSA-8988-4f7v-96qf) (#3791),No,-,-,Security patch for dependency vulnerability
+clash-verge-rev/clash-verge-rev,b9da0875cd6391c4ff064d07659c8a390efaf783,refactor: optimize swr data refresh paths,No,-,-,Backend data fetching optimization only
+lobehub/lobehub,8a86c34300783c5c54fd253b6e3665e8c12d0c04,"⏪️ revert: improve device connection management (#16191) (#16268)
+
+Revert ""✨ feat(device): improve device connection management (#16191)""
+
+This reverts commit 9d6bf3f8fad0bfe3775ae8385659b876d4bbb8dc.",No,-,-,"Revert commit, no UI changes"
+chakra-ui/chakra-ui,88e5f9fbf2e002154efcf81373878f7dd1e426d1,"Version Packages (#10641)
+
+ci(changesets): version packages
+
+Co-authored-by: Segun Adebayo <joseshegs@gmail.com>",No,-,-,"Version release, no UI changes"
+apache/superset,7e17c70cba265080f4d2f86e334064ee773e449c,"fix: Filter null child names in treeBuilder utility (#31477)
+
+Co-authored-by: Evan Rusackas <evan@preset.io>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",No,-,-,Backend utility fix for data processing
+lfnovo/open-notebook,8a5bf2d98aef25a67c468d7e62a82a724e30852c,"feat: sort sources by all table columns (#930)
+
+Expand /api/sources sorting to type, title, created, updated, insights_count, and embedded (whitelisted, with a computed type alias so SurrealDB can ord",Yes,B,U,Enable sorting interaction across all table columns
+lfnovo/open-notebook,42437abf1059cb7766e4ffebabc2a79832c2fd77,"fix: narrow note context mode type (#929)
+
+Adds NoteContextMode = Exclude<ContextMode, 'insights'> and threads it through the note selection utilities and NotesColumn callbacks, so notes only accept o",No,-,-,"Type safety refactor, no UI changes"
+outline/outline,3e5d21fa1189de864796c664a3e678d366525f7d,fix: `revisions.list` response too large (#12822),No,-,-,"Backend API response optimization, no UI changes"
+portainer/portainer,b18b4418c83aa366e89611c79293a6c943b276a3,fix(kube/app): get stack only for managed stacks [BE-12927] (#2516),No,-,-,Backend logic for stack filtering
+siyuan-note/siyuan,56ab4026abb4ee973ca27a14610cda44bcd902cd,":bookmark: Release v3.7.0-beta.2
+
+Signed-off-by: Daniel <845765@qq.com>",No,-,-,Version release tag only
+portainer/portainer,ca1d9dc6a24d2675e6212fee5a722adafc7ea8ba,fix(edge/stacks): load envs by id [BE-13097] (#2917),No,-,-,Backend environment loading logic fix
+blakeblackshear/frigate,a4f077b128e96de679a777565a7cf0ce630ff72f,"Miscellaneous fixes (#23394)
+
+* serialize OpenVINO inference per process to prevent concurrent-inference segfault
+
+* clean up
+
+* add max scaling meta to login page
+
+* add more detect section field mes",No,-,-,Backend inference serialization and config changes
+blakeblackshear/frigate,b1de5e22909ae393c520a2da04d437f6533828fa,"Add attributes to UI filters list (#23250)
+
+* preserve user-set min_score on attribute filters instead of bumping any 0.5 value
+
+use model_fields_set to distinguish ""user explicitly set min_score"" fro",Yes,B,U,Preserve user filter settings prevent reset
+mattermost/mattermost,1c801690a06a39ad5ad467a621196c19229295bb,"Mattermost Blocks (#36338)
+
+* Mattermost Blocks
+
+* Rethink some block props and styles
+
+* Remove obsolete comment
+
+* Style fixes and add examples
+
+* Add mention, search, and image metadata support
+
+* ",Yes,F,L,Introducing new Mattermost Blocks design system
+portainer/portainer,7e80d88bce0218164694c57457fdb5b77ef7cd9c,"feat(ui): add theme selector to user menu [BE-12961] (#2625)
+
+Co-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",Yes,V,L,Theme selector added to user menu
+ItzCrazyKns/Vane,e1afcbb78797e899f392edb4db66c5c2f340ed99,feat(package): add google genai & bump transformers,No,-,-,Dependency bump unrelated to UI
+grafana/grafana,c0eadea51bda52d3f76fe2b67533364eab2a32d0,"Deps: Unpin production dependencies in `@grafana/data` (#127464)
+
+* Unpin `@braintree/sanitize-url`
+
+* Unpin `@leeoniya/ufuzzy`
+
+* Unpin `@types/*`
+
+* Unpin `d3-interpolate`
+
+* Unpin `d3-scale-chromat",No,-,-,"Dependency version unpinning, no UI changes"
+grafana/grafana,1629a3bdaa4519d97dba7849a15b637cbf998b61,"UnifiedHomepage: Show skeleton until extensions are loaded to avoid flicker (#126376)
+
+* UnifiedHomepage: Show skeleton until extensions are loaded to avoid flicker
+
+* UnifiedHomepage: Use route loade",Yes,B,U,Prevent visual flicker during extension loading
+lobehub/lobehub,a50b6a83e78713d5874b759e5bf9a7d423c758d3,"✨ feat: workspace billing system (squashed) (#16308)
+
+* feat: workspace billing system (squashed)
+
+* fix: lint error",No,-,-,Backend billing system implementation
+umami-software/umami,f3ce0e64cadc7245e8f83e2ee880febcf8252309,"typescript fixes, replayer close error, show page toggle fix.",No,-,-,"Backend/tooling fixes, no UI changes"
+clash-verge-rev/clash-verge-rev,a60ef7506170f859380b9c5ec1a08ab9cc567a53,perf: lazy load monaco editor,No,-,-,"Backend performance optimization, no UI changes"
+apache/superset,b8fd2e9725ceda02b20b53db46c02cf9317474de,"feat(websocket,embedded-sdk): replace Jest with modern Vitest (#38308)
+
+Signed-off-by: hainenber <dotronghai96@gmail.com>
+Co-authored-by: codeant-ai-for-open-source[bot] <244253245+codeant-ai-for-open",No,-,-,"Test framework migration, no UI changes"
+portainer/portainer,eb5ee3bfdb932889c61a55c215a19a1479a7bb6f,fix(kubernetes): improve PVC deletion UX based on workload usage [R8S-1046] (#2766),Yes,B,U,Improve PVC deletion interaction feedback
+outline/outline,e1b2993bcaab363a5b46821ed2f833eeed44cee8,Reduce debounce,No,-,-,"Backend performance optimization, no UI change"
+blakeblackshear/frigate,ca75f064565489e755454ef31e3eba52433c3ca9,"Miscellaneous fixes (#23186)
+
+* improve scroll handling for non-modal DropdownMenu in classification and face selection dialogs
+
+* clean up
+
+* fix incorrect key capitalization
+
+* fix profile array ove",Yes,B,U,Improve scroll handling and fix dropdown interaction
+OpenCut-app/OpenCut,11ee0dbf27c639dcdb0428e9ca42958fbef9a3fe,fix: stable background blur previews in settings,Yes,V,U,Fixing visual glitch in blur preview
+ItzCrazyKns/Vane,fdee29c93ef3bb0ee312326d06cb849c3d05fedf,feat(renderers): add code block,Yes,V,L,Added code block visual component
+lyswhut/lx-music-desktop,691d835d160b68b8e117862d3c696db3c2ea7c3c,更新依赖&版本号（2.10.1-beta.1）,No,-,-,Dependency bump and version release
+ItzCrazyKns/Vane,96001a9e263c81684781efa6c2e1d2addc0a866b,"feat(assistant-steps): handle reading, search_results",Yes,B,U,Handle assistant step reading and search results
+firecrawl/firecrawl,b9eb2faecee615e26d9bf56fbabbb6102f00529c,"feat(nuq): rebuild queue + concurrency limiting on FoundationDB (core engine) (#3758)
+
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",No,-,-,"Backend queue and concurrency logic, no UI changes"
+outline/outline,b2c66c51900e6bf030a8499425b6e50397cda329,"chore(deps-dev): bump the babel group with 7 updates (#12560)
+
+Bumps the babel group with 7 updates:
+
+| Package | From | To |
+| --- | --- | --- |
+| [@babel/cli](https://github.com/babel/babel/tree/HEA",No,-,-,Dependency bump unrelated to UI
+umami-software/umami,1a6f494754ebb9e2a22505561694f0f3200a17bd,add back PLAYWRIGHT_URL implementation,No,-,-,Backend configuration for testing infrastructure
+ItzCrazyKns/Vane,6e2345bd2d56fc136d3397c26e409b03a024ed7c,feat(message-box): update `markdown2jsx` overrides to render codeblock,Yes,V,U,Markdown codeblock rendering improvement
+blakeblackshear/frigate,d7ad3ba6992651bfb427bd1f031c11f2771bbb7a,"Fix chat tool calling and prompt breaking (#23457)
+
+* Implement tool call history keeping
+
+* Refactor to match single message implementation
+
+* Simplify data representation
+
+* Cleanup chat page render",No,-,-,Backend logic and test updates only
+mattermost/mattermost,dbcd904cc23c32dde5e0c92f499f0cbd7ec7ff91,"[MM-69229] Promote CloudIPFiltering: remove the feature flag (#37150)
+
+The CloudIPFiltering flag (default false, shipped v9.4) gated the
+cloud-only IP filtering admin feature. The feature stays cloud-",No,-,-,"Feature flag removal, no UI changes"
+chakra-ui/chakra-ui,e9f04d4a6dad093852b924883b55e4c257ca0c22,fix: backdrop stacking index,Yes,B,U,Fix z-index layering of backdrop component
+appsmithorg/appsmith,99d69180919981ed9bc5484050d809a5bec68acc,"fix: prevent stored XSS via SQL autocomplete (GHSA-vjfq-fvfc-3vjw) (#41760)
+
+## Description
+
+Fixes a stored cross-site scripting vulnerability in the SQL
+autocomplete dropdown (GHSA-vjfq-fvfc-3vjw, CV",No,-,-,"Security patch, no UI changes"
+OpenCut-app/OpenCut,446e68e65ee765d6d54dee8085d569009ff47a77,chore: monorepo setup and web foundation,No,-,-,Monorepo setup and build infrastructure
+portainer/portainer,5395dee4c6da5aeeff5367c470916fc192545936,feat(gpu-stats): add gpu stats to environments [C9S-200] (#2735),No,-,-,"Backend feature, no UI changes"
+chakra-ui/chakra-ui,e7a46f70e8034a90f4ab4dec0a8bcda9191940a3,"fix(deps): update dependency @trivago/prettier-plugin-sort-imports to v6 (#10564)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",No,-,-,Dependency bump unrelated to UI
+remix-run/react-router,d10df2d4ae58c98660414db15c4b506013cb8c3c,"Release v8.0.1 (#15210)
+
+Co-authored-by: Remix Run Bot <hello@remix.run>",No,-,-,"Version release, no UI changes"
+umami-software/umami,15038b09d9fa7ad4c69115c3c0876824426fdbbc,Handle fragmented replay events in recording and playback,No,-,-,Backend logic for replay event handling
+umami-software/umami,cbe4d79b3c842e22b6b8051aa2e25854ce3b0e39,"Merge pull request #4260 from yancat160/fix/chart-canvas-overflow-on-resize
+
+fix: keep charts responsive when the viewport resizes",Yes,V,U,Fix chart overflow on viewport resize
+portainer/portainer,25c69c6e9b4ac2b41b27cb34a4388543f4e80149,fix(ui): update server installation timeout redirect link [BE-13124] (#2991),Yes,B,U,Fix broken redirect link in timeout flow
+apache/superset,f10315f8fcc45d6b9f9105e0df01d7caadaae7d3,"test(databases): migrate database modal Cypress tests to RTL (#41436)
+
+Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",No,-,-,"Test migration, no UI changes"
+lobehub/lobehub,e88776e545807fbf4a6b0b7133da632ab75c63b0,"🐛 fix(builtin-tool): surface real task & agent data in tool cards (#16272)
+
+createTask now structures the created task (name/status/priority/
+description/parent) into `state`, so the Render card and D",Yes,B,U,Fix task data display in tool cards
+lyswhut/lx-music-desktop,aa7ab86b62f34c4e9d6c6e618cb0a6231f249103,Fix some i18n keys (#2148),No,-,-,i18n translation keys fix only
+lobehub/lobehub,ee8ae83c3fc068575017f8a77db5ca33bc2ee744,"🐛 fix(desktop): show ""Topics · <agent>"" as the topics tab title (#16542)
+
+The agent Topics route had no `handle: { meta }`, so the desktop tab
+fell back to ""LobeHub"" instead of reflecting the page. Ad",Yes,B,U,Fix missing tab title display for topics
+mattermost/mattermost,307452bb55f7bd9c752109802f46688220840836,"[MM-67113] Add license preview/diff view when uploading a new license (#34877)
+
+* [MM-67113] Add license preview/diff view when uploading a new license
+
+Add a preview step when uploading a new license",Yes,B,U,License upload preview prevents accidental application
+grafana/grafana,0602319c2cf0fc019f35dc3f0641618f780d306c,"Visual refresh: Fix table styling (#127316)
+
+fix table styling when visualDesignRefresh is enabled",Yes,V,L,Table styling alignment with design refresh
+OpenCut-app/OpenCut,05243616eaf597c8e81b9401ba09b425928ebf95,refactor: use useShiftKey hook in bezier graph,No,-,-,"Backend refactor, no UI changes visible"
+clash-verge-rev/clash-verge-rev,178b33beef4bb9a67910dd3e5e8e5785199319ec,Release 2.5.0-rc,No,-,-,"Version release, no UI changes"
+ChatGPTNextWeb/NextChat,bf265d33759dfada0d91248cbcb5ae22326e745f,"Merge pull request #6164 from ZhangYichi-ZYc/main
+
+Fix: Set consistent fill color for OpenAI/MoonShot/Grok SVG to prevent color inversion in dark mode",Yes,V,U,SVG color consistency dark mode fix
+outline/outline,ebf915c840f08abdccad4fc89a16c9552a1c620b,fix: Prevent Node 24.17.0 deployment (#12760),No,-,-,"Node version constraint, not UI change"
+appsmithorg/appsmith,e498a7bb2ef084a1b07bdd153811a5194dc76824,"fix(security): fail closed when APPSMITH_BASE_URL unset for token-bearing emails (GHSA-j9gf-vw2f-9hrw)  (#41767)
+
+## Summary
+
+Companion to PR #41766 (the GHSA-j9gf-vw2f-9hrw fail-closed fix).
+
+Adds a ",No,-,-,"Security patch, no UI changes"
+blakeblackshear/frigate,e20fc521b144be42f5615449be47a183c6f888a2,fix: fix ReviewTimeline ZoomIn/Out tooltip text (#23184),Yes,V,U,Fix tooltip text clarity in timeline
+siyuan-note/siyuan,99d97ea946077b034dd3eab98d52434df51b9b6d,":art: Improve settings UI (#17942)
+
+* :art: Restore workspace settings on mobile
+
+* :art: The sidebar should not be opened when the mobile synchronization is not paid
+
+* :art: Improve conditional comp",Yes,V,L,Mobile settings UI layout and visibility improvements
+grafana/grafana,9de930f8f6864420982f1709e6407c5a2ae4a5df,"Annotations: Remove `annotationsClustering` client code (#127097)
+
+* chore: remove usage of AnnotationsPlugin2Cluster flag and refactor Annotations2",No,-,-,Backend refactor removing feature flag logic
+remix-run/react-router,13f686b8fbbd44db012d2ba8d59838278e08f349,"Upgrade TypeScript to 6 (#15092)
+
+* Upgrade TypeScript to 6
+
+* Migrate package builds to tsdown
+
+* Use native tsdown config loading
+
+* Enable tsdown unbundle mode
+
+* Add change files for build tooling",No,-,-,"TypeScript upgrade, build tooling, no UI changes"
+ChatGPTNextWeb/NextChat,5225a6e1921d170803ab11aa8ba09957cf0b678b,feat: add more llm icons,No,-,-,"Icon assets addition, no UI behavior change"
+apache/superset,105b8960385e86b05469fd6f5dd78299eb3bf911,"fix(explore): enable free-text entry for temporal D3 format selector in Table chart (#41194)
+
+Co-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",Yes,B,U,Enable user input for temporal format selector
+appsmithorg/appsmith,2a66855df5920eb6695d02806df6c6581dc38937,fix: simplify isChecked update logic by removing unnecessary parameters (#41430),No,-,-,"Backend logic refactor, no UI changes"
+outline/outline,709184ae0b08e72b642e66d6dca88ba5b6f5c7d1,"fix: Before/After creation options appear in menu when no permission on parent doc (#12629)
+
+* fix: Before/After creation options appear in menu when no permission on parent
+
+closes #12624
+
+* fix: Man",Yes,B,U,Hide non-functional menu options without permission
+umami-software/umami,7ac3f1eeccd905305dbd7804113ab79c0651907b,fix export build errors,No,-,-,"Build configuration fix, not UI change"
+outline/outline,ec3200c7d2a615ec9ade4989bb7145aa3e4fb552,"chore: babel -> swc (#12821)
+
+* chore: babel -> swc
+
+* Add ls guard
+
+* PR feedback",No,-,-,"Build tooling migration, no UI changes"
+apache/superset,4a32e0b8d1356830940a0624a0013ca2e224f331,"fix(table): exclude metricSqlExpressions from ownState→extra_form_data spread (#41555)
+
+Co-authored-by: Matt Fitzgerald <matt.fitzgerald@preset.io>
+Co-authored-by: Claude Sonnet 4.6 <noreply@anthropic",No,-,-,Backend logic fix for metric SQL expressions
+lobehub/lobehub,1c04be109c71b55516b19889c5cc4a04375b4d72,"🐛 fix(knowledge): use file ids for chunk actions (#16274)
+
+* 🐛 fix(knowledge): use file id for chunk actions
+
+* ♻️ refactor(knowledge): dedupe chunk-target resolver & fix masonry fileId
+
+Review-driven",No,-,-,Backend logic fix for knowledge chunk actions
+portainer/portainer,6a465637d46ee65c64f331a48feb505efa2325f9,feat(components): add new FilePicker component [R8S-1050] (#2754),Yes,B,L,New component for file selection interaction
+appsmithorg/appsmith,4a3015416165d1698ac4bc697d28406b4c772c86,"fix: generate unique widgetIds when cloning page (#41762)
+
+## Description
+
+### Problem
+The Clone Page feature copied the source page's DSL verbatim, so every
+widget in the cloned page kept the exact s",No,-,-,Backend logic for widget ID generation
+remix-run/react-router,5b2e59fa3f564ede027a8fc3bdda70b15fa8a9af,Fix preview build typo,No,-,-,Typo fix in build configuration
+mattermost/mattermost,8a267c8ababdc7d2acd0aceed7c8451748603fd1,"MM-69104: Elide plugin_statuses_changed payload (#36966)
+
+* MM-69104: signal plugin_statuses_changed without a payload, refetch on demand
+
+The plugin_statuses_changed websocket event broadcast the ent",No,-,-,Backend websocket event payload optimization
+firecrawl/firecrawl,b939b34d49ca5a430b1e4dd38898510aee839a0e,"fix(security): resolve pnpm audit failures from 2026-06-13 audit (#3780)
+
+Co-authored-by: Cursor Agent <cursoragent@cursor.com>
+Co-authored-by: Abimael Martell <abimaelmartell@users.noreply.github.com",No,-,-,"Security patch, dependency audit fixes"
+apache/superset,779fa136793eb97ec38e05e722f30b1445b6699c,"fix(security): prevent duplicate items in permissions dropdown on scroll (#39292)
+
+Co-authored-by: Abhyuday Tomar <abhyuday.tomar@exotel.com>
+Co-authored-by: Evan <evan@preset.io>
+Co-authored-by: Clau",Yes,B,U,Prevent duplicate items rendering on scroll
+ItzCrazyKns/Vane,bd7c563137fe503382da8ca69d8adc9b0edcbd60,feat(package): add json repair,No,-,-,"Backend dependency addition, no UI changes"
+lobehub/lobehub,e751b884f5c6895e415ddc5504692161c47bfb53,"♻️ refactor: migrate Tabs to @lobehub/ui/base-ui (#16229)
+
+* ♻️ refactor: migrate Tabs from antd / @lobehub/ui root to @lobehub/ui/base-ui
+
+Per AGENTS.md component priority (base-ui → @lobehub/ui → an",Yes,F,-,Migrating Tabs to base-ui design system
+portainer/portainer,ba91b41d360c20b469f587f957024a0b58f7f405,fix(table): restore horizontal margins on table views [C9S-227] (#2785),Yes,V,L,Restore horizontal spacing alignment on tables
+firecrawl/firecrawl,9e520616625e48c75ebe42ebd04964a1902920ab,feat(api): separate NuQ FDB worker (#3779),No,-,-,Backend worker infrastructure change
+blakeblackshear/frigate,78fc4720262af0c49d3bdb0ade0ededb515b95e6,"Improve Intel Stats (#23190)
+
+* Implement per intel-gpu stats collection
+
+* Improve device naming
+
+* Improve GPU vendor handling
+
+* Cleanup",No,-,-,Backend stats collection and GPU handling logic
+outline/outline,3b4f2ddac0963ea61da8fbae9b6f0df15af684fb,chore: Vendorize sequelize-encrypted (#12757),No,-,-,"Dependency vendorization, no UI changes"
+chakra-ui/chakra-ui,2d630b16871756980a5ecfba71cf0254b4f2e48b,chore: add pin-input example,No,-,-,Documentation example addition only
+chakra-ui/chakra-ui,a0fc4e0f8d5b7dbae94902cebb24521cf42a80e7,"Version Packages (#10595)
+
+ci(changesets): version packages
+
+Co-authored-by: Segun Adebayo <joseshegs@gmail.com>",No,-,-,"Version release, no UI changes"
+apache/superset,8fed514e794be98835642b834b8049192ad4e210,"fix(dashboard): keep pasted filter values outside the loaded page (#41136)
+
+Co-authored-by: Superset Dev <dev@superset.apache.org>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",Yes,B,U,Fix filter values persistence on pagination
+appsmithorg/appsmith,c268bcecd87ea22d606b35d2297c0603cc7218f0,"feat(client): docs link tooltip on Appsmith Base URL setting + trailing-slash normalization (#41782)
+
+## Summary
+
+Two related changes to the `APPSMITH_BASE_URL` setting under **Settings
+→ Configuratio",Yes,B,U,Tooltip help link improves setting clarity
+clash-verge-rev/clash-verge-rev,c18c23963dbc8ebc0b24833db01de472f5b1d234,"refactor: frontend (#7097)
+
+* refactor: remove unused window show/hide event listeners
+
+* refactor: deduplicate profile-changed event handling
+
+* refactor: remove unused setupCloseListener from use-li",No,-,-,Backend refactoring and event listener cleanup
+OpenCut-app/OpenCut,6b1f38a9a31a0eedaa7abea70f232960469351d5,refactor: split animation helpers by domain,No,-,-,"Backend refactor, no UI changes"
+mattermost/mattermost,9defd980928b4635b40bca66ff4cd97d43e13fd7,"MM-60617 Add unit tests for admin_console secure_connections (#36484)
+
+Co-authored-by: Mattermost Build <build@mattermost.com>",No,-,-,"Tests only, no UI changes"
+outline/outline,c419c3ab63b55bc5c41fb31135ad2b704a82fe36,Add admin interface to change user avatars (#12405),Yes,B,L,Admin interface for avatar management
+umami-software/umami,5ebb49a8f164d4904a84f75b3d493e3adbfcdf70,Group heatmap overlays by screen width,Yes,V,L,Responsive heatmap layout by screen width
+grafana/grafana,26ce10505072275722a4c760010cec6ca14f1727,"Table: Display alt text in image cell when image fails to load (#126904)
+
+* chore(gdev): add panel to Table kitchen sink for image cell
+
+* test(table): add tests for ImageCell sub-component, TDD, bug ",Yes,B,U,Display fallback alt text on image load failure
+OpenCut-app/OpenCut,97f8d1968f186028e41f83b04c0897130e6c69f4,"refactor: type mask handle identifiers
+
+Made-with: Cursor",No,-,-,"Backend type system refactoring, no UI changes"
+blakeblackshear/frigate,4fdc107987f57e1abf24445a15834d3b8f0de063,"Improve go2rtc pane in Settings (#23251)
+
+* improve layout and handling of multiple ffmpeg args in go2rtc pane
+
+* add e2e tests
+
+* fix spacing",Yes,V,L,Improve layout spacing and ffmpeg args display
+grafana/grafana,f2a1749dec748f3e9fb170bae13ff1bbc0e74fda,"Visual refresh: Fix styling of news panel (#127323)
+
+fix styling of news panel in visual refresh",Yes,V,L,News panel styling alignment visual refresh
+outline/outline,487b8df6ae62331b3b532e621af78ea8fb59e1c6,"chore(deps): bump the radix-ui group with 13 updates (#12783)
+
+Bumps the radix-ui group with 13 updates:
+
+| Package | From | To |
+| --- | --- | --- |
+| [@radix-ui/react-collapsible](https://github.com",No,-,-,Dependency bump without UI changes
+portainer/portainer,afae689ea95fa4169ffef9cbd15bca9c48f84b16,fix(kubernetes): PersistentVolumeClaims datatable system resource filter [R8S-1031] (#2701),No,-,-,Backend logic fix for resource filtering

@@ -1,0 +1,809 @@
+repo,sha,message,date,keyword_match,file_match
+firecrawl/firecrawl,53c2473aa18cf22b44de6939fd5b86cf25868f1a,"feat: patch node-fetch, gcs bug (#3825)",2026-06-18T17:28:12Z,False,True
+firecrawl/firecrawl,1f00cc788ee7626610caf2e33224ad39f8216725,"feat(interact): return cdpUrl in the scrape interact response (#3806)
+
+Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",2026-06-16T21:05:46Z,False,True
+firecrawl/firecrawl,722d02f64c1eb205fd7a4fea896a28248a558c81,chore: updates (#3787),2026-06-15T19:38:12Z,False,True
+firecrawl/firecrawl,5efd6ba675e944a2746c6a764e514194fc567a10,"fix(security): resolve pnpm audit failures from 2026-06-15 audit (#3785)
+
+* fix(security): resolve pnpm audit failures
+
+Co-authored-by: Abimael Martell <abimaelmartell@users.noreply.github.com>
+
+* fix(security): resolve new pnpm audit failures
+
+Co-authored-by: Abimael Martell <abimaelmartell@users.n",2026-06-15T19:59:24Z,False,True
+firecrawl/firecrawl,d86b2a91b5715ca8b59f068322449d6b7e20533f,"fix(monitor): judgeEnabled actually gates the LLM judge (off = raw results, no LLM/credits)
+
+The judge_enabled flag was never passed into runSearchTarget; the LLM
+stages were gated only by depth (default ""deep""), so a search monitor with
+judgeEnabled=false still ran the full LLM judge and billed LLM",2026-06-19T01:36:38Z,True,True
+firecrawl/firecrawl,46c5e983963cd6c770ac1caa091da8d10d6d6606,"fix(api/security): upgrade AI SDK family to non-vulnerable provider-utils (GHSA-866g-f22w-33x8) (#3786)
+
+Resolves GHSA-866g-f22w-33x8 (uncontrolled resource consumption in
+@ai-sdk/provider-utils, affected range <= 3.0.97) by upgrading the API's
+direct AI SDK provider packages to their current AI-SDK",2026-06-15T21:34:54Z,False,True
+firecrawl/firecrawl,37c68d3f818bbead35d4366e8bfc8d3d7c78bdff,"chore(sdks): bump versions to release v2 research support
+
+Follow-up to #3794 which added the research methods across all SDKs but
+did not bump versions, so the publish workflows no-op'd at the version gate.
+
+- js:     4.26.0 -> 4.27.0
+- python: 4.28.3 -> 4.29.0
+- rust:   2.8.1  -> 2.9.0
+- go:     1",2026-06-16T16:54:44Z,False,True
+firecrawl/firecrawl,8a4964e09ab09d08f3f89553e16dc901edf47af1,fix(api): build FoundationDB native binding (#3841),2026-06-21T19:55:16Z,False,True
+firecrawl/firecrawl,b9eb2faecee615e26d9bf56fbabbb6102f00529c,"feat(nuq): rebuild queue + concurrency limiting on FoundationDB (core engine) (#3758)
+
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",2026-06-13T05:50:34Z,False,True
+firecrawl/firecrawl,46616acc0257a3b16613f8ea1fc039ca7f6a65da,build(api): upgrade to TypeScript 7 RC (#3861),2026-06-23T09:06:03Z,False,True
+clash-verge-rev/clash-verge-rev,45afb1c15af5482ee296871f5e574f0dde83f6c9," fix(frontend): reduce long-running memory pressure in connections (#7227)
+
+* fix(connections): stabilize table memory usage
+
+Render the connections table and list from stable row view models, and replace the TanStack row/cell instantiation path with a lightweight virtualized table body.
+
+The leak w",2026-06-07T05:08:15Z,True,True
+clash-verge-rev/clash-verge-rev,4ec3a9bf4cefa4615869a0f6bea1373defe173b5,fix: defer provider queries on startup,2026-06-28T22:03:51Z,False,True
+clash-verge-rev/clash-verge-rev,c18c23963dbc8ebc0b24833db01de472f5b1d234,"refactor: frontend (#7097)
+
+* refactor: remove unused window show/hide event listeners
+
+* refactor: deduplicate profile-changed event handling
+
+* refactor: remove unused setupCloseListener from use-listen
+
+* refactor: remove unused removeAllListeners from use-listen
+
+* fix(backend): dedupe profile c",2026-05-23T04:52:52Z,False,True
+clash-verge-rev/clash-verge-rev,ae7915c66fefa0530a8c3902a2ee844048aea22a,chore: update tauri-plugin-mihomo to 0.1.9,2026-05-17T10:13:25Z,False,True
+clash-verge-rev/clash-verge-rev,1026ba88bb0edafdeeebb95290c5f87a093b2dc0,"chore: update biome config and ignore zed settings dir (#7364)
+
+* chore: update biome config and ignore zed settings dir
+
+* chore: remove trailing slash from .vfox directory in .gitignore",2026-06-26T12:46:45Z,False,True
+clash-verge-rev/clash-verge-rev,6e0647f7b2d16947c7d4b295c2711ec7097fa63b,perf: narrow app data subscriptions,2026-04-28T17:00:13Z,False,True
+clash-verge-rev/clash-verge-rev,435d6111147bc570fc30b9f57c8a351af61ea015,chore: update pnpm peers,2026-05-26T04:47:59Z,False,True
+clash-verge-rev/clash-verge-rev,243594c5d13b589b3ba92cdbef082205c694b935,fix: isolate titlebar drag region #6968,2026-05-10T08:10:58Z,False,True
+clash-verge-rev/clash-verge-rev,5a96fdd9a2000a47dee07fe06ecd39a9f822774c,"fix: harden home clash-mode card against /configs read failures
+
+Recover from controller read/switch failures on the mode card instead of
+showing a bare ""communication error"":
+
+- fall back to the tolerant get_clash_mode command (then runtime config)
+  when the live /configs mode is unavailable,
+- op",2026-06-27T07:30:20Z,False,True
+clash-verge-rev/clash-verge-rev,d9ae7578ceae0c4d7433ac48f017ce38ca3af608,perf: reduce traffic update allocations,2026-04-24T16:17:47Z,False,True
+angular/angular,a9e3336aae649ffb251d2c9f6341c6dac2c9d048,"fix(docs-infra): improve code selection contrast in dark mode
+
+The ::selection background mixes only 10% of the accent color into
+--octonary-contrast. In dark mode --octonary-contrast resolves to
+gray-900 (#151417), which is the same color code blocks use as their
+background, so selected code render",2026-06-26T17:16:21Z,True,True
+angular/angular,781cc84db0556985c2ea7f8c57fb3a71d9818d18,"refactor(devtools): convert router details panel to description list
+
+Convert the router details panel in DevTools to use a description list (<dl>) instead of a table. This is semantically more correct for key-value metadata and improves accessibility.",2026-06-03T22:37:35Z,True,True
+angular/angular,ffcc8eee985f6f889e36c45d6211d744c154f093,"fix(docs-infra): correct select dropdown scrolling, sizing, and selection
+
+Several issues in the shared docs `Select` component (used by the API
+reference package filter):
+
+- The options list never scrolled: its element used a class with no styles,
+  so the intended max-height/overflow rule was dead",2026-06-17T15:20:55Z,False,True
+angular/angular,00226e7d8084c5a9a55aef3f814e42315fffbbc7,"fix(docs-infra): align and highlight external-link icon in nav sidebar
+
+The open_in_new icon on external navigation items stayed grey on hover
+and sat inset from the chevron column, so it never matched the chevron
+items visually.
+
+- Add a hover rule so the icon brightens to --primary-contrast along
+",2026-06-24T11:17:24Z,True,True
+angular/angular,4ba8ba4ef2940107d4fec87880413dffd9528312,"fix(docs-infra): align homepage banner and search field
+
+The homepage hero lays out the announcement banner and the search field on
+the same flex row. The `.search-field` wrapper was a plain block, so its
+`docs-text-field` kept its intrinsic height instead of filling the row,
+leaving the two pills a",2026-06-14T20:30:18Z,False,True
+angular/angular,642165f6fc17c03999b0f932d604c74600e1dafc,"fix(docs-infra): remove white flash on example viewer tab labels
+
+The code tabs rendered by the example viewer (e.g. the npm/pnpm/yarn/bun
+install tabs) paint their active label as transparent text clipped to a
+gradient. Material's MDC tab styles add `transition: color 0.15s linear`
+to `.mdc-tab__te",2026-06-21T19:20:24Z,False,True
+angular/angular,f2b642b10ab92213778168c0813630a9a3487deb,"docs(docs-infra): remove test related deps
+They were unused. (it makes maintenance less confusing)",2026-06-09T22:22:09Z,False,True
+angular/angular,985fd7881824cc5c5db56cc7b8dbd2d4cf4c1565,"docs(devtools): document the injector tree visualization
+
+Add an internals doc covering how the injector tree is built from the directive forest's resolution paths, rendered with d3, and how injector data is read from the DI debug APIs.",2026-06-01T15:57:27Z,True,True
+angular/angular,8b1726a1cf92c87e5b744f7a4e82b9fd84fa13b1,"docs(forms): update package docs for Signal Forms graduation
+
+After #68581 graduated the Signal Forms APIs to public API and #68654 removed
+the experimental warnings from the Signal Forms documentation in adev, the
+package READMEs still framed the API as experimental.
+
+Update `packages/forms/signals",2026-06-11T07:28:52Z,True,True
+angular/angular,af14ce16cf749b90018379e27e8571dfef37dde0,"fix(docs-infra): keep footer headings on a single line
+
+The ""Community translations"" column heading wrapped to two lines while
+the other footer headings stayed on one. Add a `white-space: nowrap`
+rule on the footer headings, scoped to the wide (4-column) layout. The
+breakpoint is driven by a shared ",2026-06-23T13:28:29Z,False,True
+ChatGPTNextWeb/NextChat,7d51bfd42e0f60a328abed353ab1ef717b6f3ba8,feat: MCP market,2025-01-09T11:51:01Z,False,True
+ChatGPTNextWeb/NextChat,f22cfd7b33a81c8f245001ccd772c94a6162a54b,Update chat.tsx,2025-01-20T02:10:52Z,False,True
+ChatGPTNextWeb/NextChat,8aa9a500fdee762abe5fd8e0bba00065be1725f4,feat: Optimize MCP configuration logic,2025-01-15T08:52:54Z,False,True
+ChatGPTNextWeb/NextChat,bc71ae247bd1110658aef933eaf301b344181122,feat: add ENABLE_MCP env var to toggle MCP feature globally and in Docker,2025-01-18T13:19:01Z,False,True
+ChatGPTNextWeb/NextChat,51384ddc5feff6ca31028c77cf6b17b751a0ab24,Fix: Set consistent fill color for OpenAI/MoonShot/Grok SVG to prevent color inversion in dark mode,2025-02-07T03:13:22Z,True,True
+ChatGPTNextWeb/NextChat,65810d918bb599716e35c8ea515a265da909cf2f,feat: improve async operations and UI feedback,2025-01-16T13:30:15Z,True,True
+ChatGPTNextWeb/NextChat,77be190d763189915c520d431fc4aa889ca96c7e,feat: carry mcp primitives content as a system prompt,2025-01-09T02:09:46Z,False,True
+ChatGPTNextWeb/NextChat,e95c94d7be72490668d8e022fd126cfe637b5f2a,fix: inaccurate content,2025-01-09T12:10:10Z,False,True
+ChatGPTNextWeb/NextChat,5225a6e1921d170803ab11aa8ba09957cf0b678b,feat: add more llm icons,2025-02-05T04:34:00Z,False,True
+ChatGPTNextWeb/NextChat,d958441d7f7c424b65abb7bac35c4d58dabb3a73,"Merge pull request #6570 from zhang-zhonggui/main
+
+Add gemini-2.5-pro tag, you can use free gemini-2.5-pro",2025-07-17T03:30:34Z,True,True
+lobehub/lobehub,6c99871ca3254f6017069b59997da04d8c37d632,"🐛 fix(floating-panel): disable ChatInput internal expand and control bar in floating panel (#16306)
+
+- Add allowExpand={false} to ChatInput in FloatingChatPanel so its internal
+  expand button is suppressed (redundant with HoverExpandBar)
+- Remove showControlBar in the expanded state - the floating ",2026-06-25T15:58:44Z,False,True
+lobehub/lobehub,1415325cf8861ad788c50cf79582ee4a61c70a7d,"💄 style(community): use base-ui SplitButton from @lobehub/ui (#16348)
+
+:lipstick: style(community): use base-ui SplitButton from @lobehub/ui
+
+Bump @lobehub/ui to ^5.18.0 which now ships SplitButton in
+@lobehub/ui/base-ui, and drop the duplicated in-repo
+src/components/SplitButton. ProviderConfig and",2026-06-27T15:33:32Z,True,True
+lobehub/lobehub,62583f54ef9a863c179e61572ec7479d506bc0f0,"♻️ chore: replace LOBE-123 example ids with LIN-123 (#16374)
+
+♻️ chore: replace LOBE-123 example ids with LIN-123 in shared-tool-ui
+
+Replace LOBE-123 example references in Linear entity renderer with
+the standard Linear issue id format (LIN-123), which is the publicly
+documented issue identifier con",2026-06-29T15:57:33Z,True,True
+lobehub/lobehub,33d836af78713c15797971563be3acbc2a240233,"✨ feat(agent-management): surface heterogeneous agent type in searchAgent results (#16292)
+
+* ✨ feat(agent-management): surface heterogeneous agent type in searchAgent results
+
+The searchAgent tool returned only id/title, so the orchestrator couldn't tell
+that a result (e.g. a Claude Code machine) i",2026-06-25T12:40:04Z,False,True
+lobehub/lobehub,dee95f541985e4e86605dd1c4dd76b02372f8ffe,"💄 style(tool): compact single-row Linear list render (#16359)
+
+Render Linear list_* entities as one tight row each: title on the left,
+relative ""updated"" time on the right. Drop the chunky per-field grid,
+hide meaningless UUID ids (human ids like LOBE-123 stay), and show the
+update time as locale-aw",2026-06-27T15:10:56Z,False,True
+lobehub/lobehub,edd41af83051b451e5183da1ad4c21eee84a9578,🐛 fix(devtools): prevent feature flag rows from collapsing (#16335),2026-06-26T12:16:29Z,False,True
+lobehub/lobehub,05d807c55b7a5ac090e28b79406bc47091081dab,"🐛 fix(connector): persist custom headers alongside any auth type (#16470)
+
+* 🐛 fix(connector): persist custom headers alongside any auth type
+
+Custom MCP headers were silently dropped when the auth type was ""API Key""
+(bearer) or OAuth, because they were stored in the single-kind `credentials`
+column",2026-06-30T11:24:23Z,False,True
+lobehub/lobehub,3cbd464dff1f2b6dda799d7e1a55e0affa1128a9,"🚀 release: 20260629 (#16406)
+
+# 🚀 LobeHub Release (20260629)
+
+**Release Date:** June 29, 2026  
+**Since v2.2.8:** 199 merged PRs · 199 commits · 14 contributors
+
+> This weekly patch strengthens the agent execution loop: tasks can be
+verified with evidence, heterogeneous runs recover more reliably, a",2026-06-29T03:50:50Z,False,True
+lobehub/lobehub,74fb01a378b82e88f36edaf2a50f336662e08901,"🐛 fix(route-meta): render dynamic meta as components (#16253)
+
+* 🐛 fix(route-meta): render dynamic meta as components
+
+* 🐛 fix(route-meta): update DynamicMeta handling in RouteMetaBridge and add test for static route
+
+Signed-off-by: Innei <tukon479@gmail.com>
+
+---------
+
+Signed-off-by: Innei <tukon4",2026-06-25T06:02:52Z,False,True
+lobehub/lobehub,287b8bb2288b921108d601f3d9c4d92da281ae7d,"✨ feat(device-control): add project file search with fuzzy matching and gateway integration (#16526)
+
+* ✨ feat(device-control): add project file search with fuzzy matching and gateway integration
+
+* ⚡️ perf: unify project file search
+
+* ✅ test: fix eval lint blockers",2026-07-01T09:17:07Z,False,True
+grafana/grafana,e9f875e65dd5474c3912ad11eb35c9750c5ae10d,"Visual refresh: Update tag styling (#127236)
+
+* update tag styling for visual refresh
+
+* refactor to tuples
+
+* fix unit tests
+
+* use lighter shades for lightShade
+
+* fix knip and storybook a11y checks
+
+* a11y fixes
+
+* override tag colors as part of theme
+
+* set default text color in a variable
+
+* us",2026-06-30T15:59:13Z,True,True
+grafana/grafana,068c718c456dc40e92ffbbb11da1ebf9ccf48a57,"Playlist: Manage playlists in a provisioning repository (#127128)
+
+* Playlist: Save and create playlists in a provisioning repository
+
+Lets users save an existing playlist to, and create a new playlist in, a
+git repository from the playlist edit/create pages.
+
+A repository selector is shown on both ",2026-06-25T14:06:53Z,False,True
+grafana/grafana,4ec46f7c6df5e9b0e0b0b9a5fcc6e72b260d9c5e,"Deps: Unpin production dependencies in `@grafana/e2e-selectors` (#127498)
+
+Unpin `typescript`",2026-06-30T12:12:09Z,False,True
+grafana/grafana,70e27b5bafc8a7de02c8a0c1f1a1dfb7d2b95c7e,"Visual refresh: allow all components to be overridden in the theme schema (#127606)
+
+allow all components to be overridden in the theme schema",2026-07-01T09:12:27Z,True,True
+grafana/grafana,ddd47ab97a7b1632a961d548a612c314dc13696c,Chore: Remove `panelStyleActions` from code (#127457),2026-06-29T15:09:42Z,False,True
+grafana/grafana,963bc266b8f335316148adee4da2a3126e838319,"Homepage: Add active incidents card alongside firing alerts (#126775)
+
+* Homepage: Add active incidents card alongside firing alerts
+
+* Homepage: Treat 404 from incidents API as empty, not an error
+
+* tweaks
+
+* Home: align alerts/incidents card height and severity colors
+
+Both cards sit side by side",2026-06-25T05:50:42Z,False,True
+grafana/grafana,858b3f171ccc938cd5254e3339a15382d7741bed,"Alerting: Add kind to template preview requests (#126577)
+
+
+---------
+
+Co-authored-by: rodrigopk <rodrigo.barros@grafana.com>",2026-06-30T20:08:32Z,False,True
+grafana/grafana,9480d8bbda6aa058e99c9797e689eeda763a9424,"Parca: Remove from core plugins (#127322)
+
+* remvoe parca frontend
+
+* remove parca backend
+
+* remove parca from schemas
+
+* remove from various places
+
+* update
+
+* decrease the number",2026-06-29T13:04:20Z,False,True
+grafana/grafana,818e7ef255cdb8367e7940a9057a54d6ce6f0806," ConditionalRendering: Show variable name when template variable has no label (#127487)
+
+ConditionalRendering: Show variable name when template variable has no label
+
+The ""Template variable"" rule picker built its options with
+`label: v.state.label ?? v.state.name`. The nullish coalescing operator
+on",2026-06-30T15:32:34Z,False,True
+grafana/grafana,bc0dd77855ab66dfbfe32cc97a7c994074d8d9dc,"Provisioning: add option to disable webhook in repository and connection (#126790)
+
+* feat(provisioning): add webhook disabled checkbox to connection and repository forms
+
+* chore(provisioning): extract i18n translations for webhook disabled fields
+
+* fix(provisioning): address PR review comments fo",2026-06-25T20:48:00Z,False,True
+apache/superset,0370ac8607bfd474aad73e4f6ffdf11a41f420c9,"chore(deps-dev): bump unzipper from 0.12.3 to 0.12.5 in /superset-frontend (#41523)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",2026-06-29T17:06:29Z,False,True
+apache/superset,ba9bd430cb94592ca5159b349df195d710685eed,fix(a11y): add aria-label to ActionButton span role=button (#41503),2026-06-29T22:05:10Z,True,True
+apache/superset,de01fe2ff0e16bc59dd0c8e2670a59c2638b352a,"fix(chart-controls): fix RadioButtonControl crash on empty options and false values (#41170)
+
+Co-authored-by: madhushree agarwal <madhushree_agarwal@apple.com>",2026-06-25T19:02:58Z,False,True
+apache/superset,a8f43890b1dce726270595a92ffb496e21a1b1a2,"chore(superset-ui-core): forward-compat fixes for TypeScript 6.0 (Phase B) (#39535)
+
+Co-authored-by: Claude Opus 4.7 <noreply@anthropic.com>",2026-06-30T20:52:14Z,False,True
+apache/superset,da9fbadaf65645a17526c3aa7e881077de2bf208,"fix(logout): purge the namespaced Cache API store on logout (#41303)
+
+Co-authored-by: Amin Ghadersohi <amin.ghadersohi@gmail.com>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",2026-06-24T23:15:50Z,False,True
+apache/superset,d42076d541bb3c7ab3a50f0d1d0cf745dd195121,"fix(tags): make favorite star toggle in Tags list view (#41460)
+
+Co-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",2026-06-29T17:08:36Z,False,True
+apache/superset,7827d43ea6eab5989f83e747791a9e89b3c8bdc7,"fix(embedded): show already-added allowed domains in embed modal (closes #35328) (#41399)
+
+Co-authored-by: Devin AI <devin-ai-integration[bot]@users.noreply.github.com>",2026-06-30T17:17:53Z,False,True
+apache/superset,068a709c1407d0434d1f42164ead42b94bb96336,"fix(config): expose build details (git SHA/build number) to admins only (#41301)
+
+Co-authored-by: Amin Ghadersohi <amin.ghadersohi@gmail.com>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",2026-06-26T19:08:04Z,False,True
+apache/superset,8fed514e794be98835642b834b8049192ad4e210,"fix(dashboard): keep pasted filter values outside the loaded page (#41136)
+
+Co-authored-by: Superset Dev <dev@superset.apache.org>
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",2026-06-25T22:33:57Z,False,True
+apache/superset,105b8960385e86b05469fd6f5dd78299eb3bf911,"fix(explore): enable free-text entry for temporal D3 format selector in Table chart (#41194)
+
+Co-authored-by: Claude Sonnet 4.6 <noreply@anthropic.com>",2026-06-30T05:38:50Z,False,True
+OpenCut-app/OpenCut,dcf54c1250431f5a4a2848f7c07781ef5eebacaf,feat: migrate time utilities from typescript to rust WASM,2026-03-31T02:03:52Z,False,True
+OpenCut-app/OpenCut,b1d0b103549b7b707c8b90e8a5cb98235dc385c9,fix: default audio waveform color from timeline theme,2026-04-18T13:11:52Z,True,True
+OpenCut-app/OpenCut,011f51051c9750706978d6c89ce84dd15560c335,feat: clip volume line and timeline waveform improvements,2026-04-17T23:40:18Z,False,True
+OpenCut-app/OpenCut,3e89d2998588f8e35c524e523ba2ee853f0f6475,"refactor: restructure files to their domains,  new preview overlay system, and dep graph",2026-04-20T09:31:17Z,False,True
+OpenCut-app/OpenCut,97f8d1968f186028e41f83b04c0897130e6c69f4,"refactor: type mask handle identifiers
+
+Made-with: Cursor",2026-04-29T16:31:24Z,False,True
+OpenCut-app/OpenCut,cb99925d7519a7a0e6b3c9d4918aa18f49192829,refactor: swap out manual tabs withthe shared tabs component in stickers,2026-04-04T09:58:55Z,False,True
+OpenCut-app/OpenCut,23187b0b6a9f179bdb68578fc4bdaa8414b8316d,"refactor: remove dead tangent handle variant
+
+The { kind: ""tangent"" } MaskHandleId variant was never constructed — neither
+getFreeformDisplayHandles nor any other code ever produced a tangent handle
+object. The in/out control-arm branches in computeFreeformParamUpdate, the
+tangent case in maskHandle",2026-05-01T23:33:20Z,False,True
+OpenCut-app/OpenCut,0b7597b31fa956c7f3d4838923b545ba5e341422,refactor: split animation helpers by domain,2026-04-26T02:04:30Z,False,True
+OpenCut-app/OpenCut,b315020416627e06add12e8097e07093095939fc,feat: add hello world to home page,2026-05-27T22:51:29Z,False,True
+OpenCut-app/OpenCut,22725f71faae51e84e02dfd240fc30e10f180238,chore: update opencut-wasm to 0.1.3,2026-04-03T01:37:41Z,False,True
+remix-run/react-router,ec6d3a290c7cc67675c9718596f1ced0607759bf,fix: update to use ReactFormState types instead of unknown. (#15263),2026-06-30T20:51:28Z,False,True
+remix-run/react-router,b4e4329d15058a023353132247b1d6ac1f8120e0,"Add React Router agent skill option to create-react-router (#15213)
+
+* Add agent skill option to create-react-router
+
+* Address PR feedback",2026-06-22T17:52:39Z,False,True
+remix-run/react-router,839d5d052a7d7c4c485a81beae00f6864f2d8c48,replace `cookie` and `set-cookie-parser` with `cookie-es` (#15109),2026-05-28T21:54:07Z,False,True
+remix-run/react-router,8fc707d399c521830e391fc02f421e04f23b9cf3,chore: format,2026-06-17T17:08:29Z,False,True
+remix-run/react-router,1cebd2a823bb232ad74dcb2d970f750070b2bebe,chore: format,2026-06-11T15:20:48Z,False,True
+remix-run/react-router,c1ecb28f96d16f384d2dda92778c6beae7345822,Drop react-router-dom re-export package (#15076),2026-05-19T17:53:39Z,False,True
+remix-run/react-router,2e9f52ae4954cdc78e985f7ceacae0ef3179000a,"Remove `vite-node` dependency in favor of Vite's native module runner APIs (#15104)
+
+Use ESM path metadata in the absolute route typegen fixture, keep config loader resources alive through user `buildEnd` hooks, and avoid legacy SSR stack rewriting when using Vite runnable environments so native run",2026-05-27T22:31:01Z,False,True
+remix-run/react-router,195a0d03c1417127ccee73853058c8521beb4fce,"Release v7.17.0 (#15145)
+
+Co-authored-by: Remix Run Bot <hello@remix.run>",2026-06-04T14:19:00Z,False,True
+remix-run/react-router,521a0ae540e8a57ab185389403a74ae1aea99efc,"Align Node type dependencies (#15090)
+
+Update active packages and templates to use @types/node 22.19.x so the workspace matches the Node 22.12 runtime floor. Refresh the lockfile to collapse older Node 20 and 22.14 type resolutions.
+
+Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.co",2026-05-22T17:35:22Z,False,True
+remix-run/react-router,89b7a8dc98e31119eb74967cf939f54dd178078a,"v8 docs updates (#15199)
+
+* Update docs for v8 release
+
+Assisted-By: devx/988c1e2f-7688-4786-a6e7-89ad2f4a9d6e
+
+* Regen docs",2026-06-17T18:52:23Z,False,True
+lyswhut/lx-music-desktop,ad0c0f37c96dc9e3d73902438ff07e4f48a60a36,新增调换翻译歌词与罗马音歌词位置设置，优化歌词显示逻辑（#2451）,2025-07-09T00:58:34Z,False,True
+lyswhut/lx-music-desktop,eb940d5968bcdaaf36876a9188917aff1ee5c61e,更新依赖&版本号（2.11.0-beta.1）,2025-03-04T03:59:44Z,False,True
+lyswhut/lx-music-desktop,e35895d752c821a082c4a4233e8842c5e8a1c3cf,移除 babel,2026-04-10T01:10:58Z,False,True
+lyswhut/lx-music-desktop,37a18eae9c9a5e0ea159501253c2ce4c034c7adc,更新依赖,2025-05-01T08:55:14Z,False,True
+lyswhut/lx-music-desktop,2ccca633ed3b62b74a4af841cb0164929099708f,优化滚动事件监听，启用 passive 选项以提升性能,2025-05-09T01:04:43Z,False,True
+lyswhut/lx-music-desktop,a587847e41a491532ac08dd6f884c058b964b3fb,更新版本号（2.11.0-beta.0）,2025-03-01T12:04:08Z,False,True
+lyswhut/lx-music-desktop,4710bb16d89f933ddde8b0f7daaefe6e23ed9f00,下载列表菜单新增歌曲添加弹窗（#2537）,2025-10-01T05:29:35Z,False,True
+lyswhut/lx-music-desktop,d5c54b770f561f4a0ec2dd4e5f2d7f0aba1b4aa9,更新依赖&版本号（2.12.1-beta.2）,2026-01-01T03:58:30Z,False,True
+lyswhut/lx-music-desktop,fe712318b8fadfb9b9934fda9a14d9d7d92742e4,更新依赖&版本号（2.12.1-beta.3）,2026-01-31T04:44:16Z,False,True
+lyswhut/lx-music-desktop,6df6eefd3d3ddc2d79c5f4b4b6476d5a6ee83e67,"Revise wording of main window style options (#2372)
+
+- Correct typos
+- Edit i18n key name
+- Avoid displaying long descriptions directly",2025-05-03T03:06:28Z,False,True
+siyuan-note/siyuan,1006e773790f4ead9e25dc4f720db59545c27c8e,":sparkles: AI Agent https://github.com/siyuan-note/siyuan/issues/17797
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-27T12:43:59Z,False,True
+siyuan-note/siyuan,ef65f78db8557ae9b6f635f67f2af272aed87c50,":sparkles: AI Agent https://github.com/siyuan-note/siyuan/issues/17797
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-27T13:26:07Z,False,True
+siyuan-note/siyuan,6aac1682840a9c50f3688d3b7b33f7fab5b098d1,":sparkles: AI Agent https://github.com/siyuan-note/siyuan/issues/17797
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-27T13:28:58Z,False,True
+siyuan-note/siyuan,4e5e568924862c06509156e09fee06cc1db79e89,:art: https://github.com/siyuan-note/siyuan/issues/17797,2026-06-27T01:50:48Z,False,True
+siyuan-note/siyuan,887e5d8ed291f0bd49aae91778e6e86fddefb11a,":art: Improve the creation of new documents (#17959)
+
+* :art: Improve the creation of new documents https://github.com/siyuan-note/siyuan/issues/11915
+
+* :art: Improve the creation of new block reference documents https://github.com/siyuan-note/siyuan/issues/11915",2026-06-29T02:33:43Z,False,True
+siyuan-note/siyuan,c6c444caf36244ff294d95a23bd334ca1eb3e5cc,":sparkles: New default appearance theme https://github.com/siyuan-note/siyuan/issues/17384
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-26T03:17:50Z,True,True
+siyuan-note/siyuan,4dd4aa4c773872c9a9106feb34d5b0cacbe5d6a5,":art: Improve startup prompt after workspace loss https://github.com/siyuan-note/siyuan/issues/14748
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-26T03:41:07Z,False,True
+siyuan-note/siyuan,ea2dc1d5a2388d6a82899ef60f41bffbfb59ebe0,:art: https://github.com/siyuan-note/siyuan/issues/17797,2026-06-27T01:36:27Z,False,True
+siyuan-note/siyuan,56ab4026abb4ee973ca27a14610cda44bcd902cd,":bookmark: Release v3.7.0-beta.2
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-25T16:06:11Z,False,True
+siyuan-note/siyuan,59ee0fccf176f49886b4461b136a0611d04d3a00,:art: https://github.com/siyuan-note/siyuan/issues/17384,2026-06-28T11:55:27Z,False,True
+vercel/hyper,da0c401d7f9e197b1fa6f29854adffa43d3a3287,"chore: switch package management to pnpm (#8184)
+
+* Switch package management to pnpm
+
+Co-authored-by: Steven <styfle@users.noreply.github.com>
+
+* Fix pnpm install and build workflow
+
+* Move pnpm build approvals to workspace config
+
+---------
+
+Co-authored-by: Cursor Agent <cursoragent@cursor.com>",2026-05-21T17:28:40Z,False,True
+chakra-ui/chakra-ui,0a2ad795d988e2206855db4ecf18c32317fc3ceb,docs(client-only): add line examples and wire ExampleTabs (#10642),2026-03-17T15:41:44Z,False,True
+chakra-ui/chakra-ui,730c0b33bd15daa11bd4302ea1fe9ba96edd3e4a,"fix(deps): update eslint (#10776)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",2026-04-16T23:41:54Z,False,True
+chakra-ui/chakra-ui,2c5717eb23bb05e70c598a2ecf5bae8996acb430,"Version Packages (#10509)
+
+ci(changesets): version packages
+
+Co-authored-by: Segun Adebayo <joseshegs@gmail.com>",2026-01-10T07:56:30Z,False,True
+chakra-ui/chakra-ui,6f102700bdf5fd4e61971db77e65f1516ce8ab38,fix: correct css prop usage in Checkmark component (#10859),2026-06-18T18:07:36Z,False,True
+chakra-ui/chakra-ui,e7a46f70e8034a90f4ab4dec0a8bcda9191940a3,"fix(deps): update dependency @trivago/prettier-plugin-sort-imports to v6 (#10564)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",2026-01-09T19:04:07Z,False,True
+chakra-ui/chakra-ui,2b8360bd18f0dba0619ad43e4bef73992f3c8c3f,fix: code block overflow styling,2026-02-09T10:47:38Z,False,True
+chakra-ui/chakra-ui,ba939f23a4b2986e6da0eee9b0e98831e4cd86da,"fix(deps): update eslint (#10706)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",2026-03-17T15:37:05Z,False,True
+chakra-ui/chakra-ui,2d630b16871756980a5ecfba71cf0254b4f2e48b,chore: add pin-input example,2026-04-12T15:20:19Z,False,True
+chakra-ui/chakra-ui,aa08002bcd139fb9e97aab20a3b5bedf8a1967f1,fix(compositions): make date picker presets responsive on mobile (#10695),2026-03-23T12:42:12Z,True,True
+chakra-ui/chakra-ui,ff2067e7ad5f08017f7c17bf047a92f9ff2a215a,"fix(deps): update non-major dependencies
+
+Applies the non-major bumps from Renovate PR #10525 onto current main,
+skipping entries main has already advanced past (@ark-ui/react is
+already 5.37.2 > the PR's 5.37.1; @internationalized/date and the pnpm
+packageManager pin are also ahead).
+
+Notable: stor",2026-06-27T13:02:12Z,True,True
+appsmithorg/appsmith,5fe86c87a7c7eacdddfc6a979401d8b454299638,"fix: make horizontal scroll bar thicker on tables (#41370)
+
+## Description
+> [!TIP]  
+> _Add a TL;DR when the description is longer than 500 words or
+extremely technical (helps the content, marketing, and DevRel team)._
+>
+> _Please also include relevant motivation and context. List any
+dependencies ",2025-11-20T10:55:26Z,False,True
+appsmithorg/appsmith,6f9ee6226bac13fb4b836940b557913fff78b633,"fix(auth): validate Origin header against APPSMITH_BASE_URL (#41426)
+
+## Description
+Prevent account takeover by validating Origin header in password reset
+and email verification endpoints against configured APPSMITH_BASE_URL.
+
+- Add validateBaseUrl() helper to check Origin matches APPSMITH_BASE_URL",2025-11-28T04:39:51Z,False,True
+appsmithorg/appsmith,c21a567cff5665460033ce7de0bad6cd2c6b5e93,"chore(widgets): upgrade tinymce from 6.8.5 to 7.9.3 to fix 8 XSS alerts (#41881)
+
+## Description
+
+Upgrade TinyMCE from 6.8.5 to 7.9.3 and `@tinymce/tinymce-react` from
+^6.0.0 to ^6.3.0 to resolve **8 high-severity XSS vulnerabilities**
+(CVSS 8.7) in the RichTextEditor widget.
+
+### Changes Made
+
+| Pa",2026-06-09T14:34:05Z,True,True
+appsmithorg/appsmith,13313dfc32ca88b821a0eaa234de65045fe33ec1,"fix: upgrade fast-xml-parser to 4.5.4 to resolve critical CVE-2026-25896 (#41595)
+
+## Description
+
+Fixes a **critical** security vulnerability (CVE-2026-25896, CVSS 9.3)
+in `fast-xml-parser` — an entity encoding bypass via regex injection in
+DOCTYPE entity names that allows XSS and injection attacks",2026-03-09T11:18:40Z,False,True
+appsmithorg/appsmith,a0d0c2fa996507f0b543c3d1c0532a5fd2963fb8,"fix(imports): strip identity fields from imported JSON before persistence (#41761)
+
+## Description
+
+Incoming artifact JSON (applications, packages, workflows) could carry
+attacker-controlled identifying fields (`id`, `baseId`, `datasourceId`,
+`environmentId`, `gitApplicationMetadata`, etc.) that wer",2026-04-24T10:12:47Z,True,True
+appsmithorg/appsmith,fbaa0324234af0e4f5d39a5cbf4087ca5b635ca0,"chore: remove setting published entities while importing  (#41485)
+
+## Description
+> [!TIP]  
+> _Add a TL;DR when the description is longer than 500 words or
+extremely technical (helps the content, marketing, and DevRel team)._
+>
+> _Please also include relevant motivation and context. List any
+depen",2025-12-26T10:17:12Z,True,True
+appsmithorg/appsmith,edcef075b3ee5531cacf98470c43e7e857ca0353,"fix(test): wrap PropertyPaneTitle F2 assertion in waitFor (#41888)
+
+## Description
+
+Fixes a pre-existing flaky test in `PropertyPaneTitle.test.tsx`. The
+test dispatches F2 via `userEvent.keyboard` which triggers
+`setIsEditingDefault(true)`. The `querySelector(""input"")` assertion ran
+before React flu",2026-06-10T08:08:08Z,False,True
+appsmithorg/appsmith,3a4ca2194f5713935850ead5b6198fde2a04d9ab,"fix(security): upgrade handlebars to 4.7.9 to fix CVE-2026-33937 (#41672)
+
+<!-- CURSOR_AGENT_PR_BODY_BEGIN -->
+## Description
+
+**TL;DR:** Upgrades the transitive `handlebars` dependency from 4.7.7 to
+4.7.9 via a Yarn resolution to fix a critical (CVSS 9.8) JavaScript
+injection vulnerability (CVE-202",2026-03-30T11:09:57Z,True,True
+appsmithorg/appsmith,dba42ed9d364e75f911a5d17bc8404c684cf75c6,"chore: upgrade Node.js from v20 to v24.14.1 LTS [APP-15048] (#41712)
+
+## Summary
+- Upgrades Node.js from v20 (EOL April 2026) to v24.14.1 LTS across the
+repo
+- Updates `.nvmrc`, `package.json` engines, Dockerfiles
+(`base.dockerfile`, Cypress), CI workflow, and contributor docs
+- ~20+ GH Actions work",2026-05-01T10:20:10Z,False,True
+appsmithorg/appsmith,c4fb5a5b622dbc4479f2c329cb7e766bf8c61903,"feat: add setValue method for radio group (#41402)
+
+## Description
+
+TL;DR: Add widget setter configuration for the legacy `Radio Group`
+widget so it can be controlled via Appsmith’s setter APIs (visibility,
+disabled state, data, and value), consistent with other input widgets.
+
+This change introduce",2025-11-24T05:16:23Z,False,True
+outline/outline,2aff3907c587792b98b620ad3e1d32657f8ee782,"Make collection title and icon inline editable like documents (#12574)
+
+Collection title/icon editing was gated by `isEditRoute && separateEditMode`,
+which meant that in the default inline editing mode (separateEditMode off) the
+title and icon were never editable inline — even though the collection
+",2026-06-04T13:14:04Z,False,True
+outline/outline,79d646b90492a45e05d5f1554775480902b00d6b,"feat(editor): support image corner drag resizing with aspect ratio lock (#12690)
+
+* feat(editor): support image corner drag resizing with aspect ratio lock
+
+- Implement circular corner drag handles (ResizeTopLeft, ResizeTopRight, ResizeBottomLeft, ResizeBottomRight) using theme selection color.
+
+- U",2026-06-25T01:05:50Z,True,True
+outline/outline,def47e6c154bb6925d242f9bb94b48808a54e7a3,Desktop tweaks,2026-06-20T16:52:13Z,False,True
+outline/outline,3d9789e8cf9579b4a9e06bd4a761974dbb06e4bc,chore: Switch prettier -> oxfmt (#12771),2026-06-21T13:29:52Z,False,True
+outline/outline,e7613baccf4b7e0734b43800ba67f84ffc7bab8a,"fix: Retain location state when clicking on hash links in doc and TOC (#12805)
+
+* fix: Retain location state when clicking on hash links in doc and TOC
+
+* fix: Pass explicit location fields when navigating to hash links
+
+Avoid spreading history.location (which carries internal fields like key)
+and p",2026-06-24T01:00:41Z,False,True
+outline/outline,ac6b680cdb67c4d5dc16f047bddac0498d88daee,fix: notice query string consumed on unauthenticated routes,2026-06-07T18:22:11Z,False,True
+outline/outline,98a756154aa30cff3361732b544eb9e32cfe1941,"Add spec-compliant OIDC logout (#12804)
+
+* Add spec-compliant OIDC logout
+
+* Scope OIDC logout token cookie
+
+* Assert OIDC post logout redirect
+
+* Handle invalid OIDC logout URLs",2026-06-24T21:54:14Z,False,True
+outline/outline,a95505c6a73d7805240c93a7ce2406a0a5c3a8bf,"chore(deps-dev): bump babel-plugin-styled-components from 2.1.4 to 2.3.0 (#12785)
+
+Bumps [babel-plugin-styled-components](https://github.com/styled-components/babel-plugin-styled-components) from 2.1.4 to 2.3.0.
+- [Release notes](https://github.com/styled-components/babel-plugin-styled-components/re",2026-06-22T22:32:26Z,False,True
+outline/outline,3e5d21fa1189de864796c664a3e678d366525f7d,fix: `revisions.list` response too large (#12822),2026-06-30T17:35:30Z,False,True
+outline/outline,0d198294ebb98855f5afa5f319be7224d600d1be,"fix: Improve patch merging of links in table cells (#12614)
+
+* fix: Improve merging of links in table cells through patch
+
+* PR feedback",2026-06-07T16:09:44Z,False,True
+mattermost/mattermost,52f30c332014f91549023e3327549a05f40f15f2,"[MM-68783] MBE Phase 8f: add registerPostHeaderComponent (#36586)
+
+* phase 8f
+
+* Fix slot-filtering test to actually exercise the slot gate
+
+The previous test used the correct slot with matcher: () => false, so it
+only validated matcher behavior. Removing the slot-filter code path would
+not have bro",2026-06-16T17:42:50Z,True,True
+mattermost/mattermost,0d08ed27141fecbe57d27aa0939607bbe1cd95dc,"[MM-68972] MBE Phase 12: expose channel modals + favorite actions to plugins; reposition new-channel extraContent (#36860)
+
+* expose more actions to plugins; move new channel modal extraContent
+
+* resolve merge conflict
+
+* add eslint-disable removed by accident",2026-06-16T20:56:42Z,False,True
+mattermost/mattermost,d85da5ce2c7bf9a8718b2bba620ba0992043ef3d,"E2E/Playwright: Upgrade Playwright to 1.61 and its deps (#37277)
+
+* chore: upgrade playwright to 1.61 and its deps
+
+* fix failed tests
+
+* address comments
+
+* use assignTeamsToPolicy helper method",2026-06-30T04:38:05Z,False,True
+mattermost/mattermost,1c801690a06a39ad5ad467a621196c19229295bb,"Mattermost Blocks (#36338)
+
+* Mattermost Blocks
+
+* Rethink some block props and styles
+
+* Remove obsolete comment
+
+* Style fixes and add examples
+
+* Add mention, search, and image metadata support
+
+* Several UI improvements
+
+* Validate blocks by translating them
+
+* Add initial e2e tests
+
+* Fix lint
+",2026-06-29T18:33:46Z,True,True
+mattermost/mattermost,9f7fdadc70033dc568800fc4751d326f28268d86,"[MM-68780] MBE Phase 8b: registerChannelIconOverride (#36575)
+
+* phase 8b
+
+* remove it.todo placeholders for two admin SVG sites
+
+The two admin SVG sites (secure-connection detail, shared-channels add
+modal) had no real test coverage because their `ChannelIcon` sub-component
+isn't exported and the p",2026-06-14T15:44:59Z,False,True
+mattermost/mattermost,46417611228df242d939cfb4c21b44a79087f3f2,"MM - 69063 -  team abac backend and security gate (#36903)
+
+* MM-69063 - Add team ABAC model and constants foundation
+
+* Add team ABAC store EXISTS, channel Type retrofit, policy count split, and index migration
+
+* Add team ABAC app layer: access gate, hydrators, assign/unassign, cleanup, and  GetTe",2026-06-12T21:39:16Z,False,True
+mattermost/mattermost,127552ce84201f4e442f8b41aebf2e8d93c7910b,"Add user setting to disable auto-follow on channel-wide mentions (#36068)
+
+* Add server config to disable auto-follow on channel-wide mentions
+
+Adds `ServiceSettings.ChannelMentionAutoFollowThreads` (default: true)
+which, when disabled, prevents @channel/@here/@all mentions in thread
+replies from au",2026-06-02T13:11:59Z,False,True
+mattermost/mattermost,8a267c8ababdc7d2acd0aceed7c8451748603fd1,"MM-69104: Elide plugin_statuses_changed payload (#36966)
+
+* MM-69104: signal plugin_statuses_changed without a payload, refetch on demand
+
+The plugin_statuses_changed websocket event broadcast the entire cluster-wide
+plugin status slice over the best-effort (UDP) cluster transport. With enough
+insta",2026-06-10T16:07:53Z,False,True
+mattermost/mattermost,263b3c11d3754b631c8aa9012efa1b719fbf40db,"[MM-68779] MBE Phase 8a: registerChannelTypeOption (#36569)
+
+* phase 8a
+
+* i18n string
+
+* review: guard plugin isAvailable throws + include id in logError payload
+
+Address two CodeRabbit comments on the registerChannelTypeOption modal
+integration:
+
+- Wrap `o.isAvailable(state)` in try/catch inside t",2026-06-11T14:56:13Z,False,True
+mattermost/mattermost,a4ecc008fac61faab80b247e8c45311201b3f293,"MM-68232: Remove external Google Fonts from email templates (#36011)
+
+* remove google font dependency from emails
+
+* fix malformed anchor closing tag in cloud_welcome_email.html
+
+---------
+
+Co-authored-by: Jesse Hallam <jesse@mattermost.com>",2026-06-22T14:41:36Z,False,True
+portainer/portainer,e3e2a3b7826fe2e79df9bcc57ccfff28442b2228,fix(environments): Environment Groups detail view environment breakdown regression [BE-13051] (#2828),2026-06-08T04:03:32Z,False,True
+portainer/portainer,e6394102a2ac1deda291c59c6a16e3acd6b2a213,fix(ui): light background in dark mode for workflow paging dropdown [BE-12920] (#3047),2026-06-29T20:58:41Z,True,True
+portainer/portainer,0da42c01b6a39494ac0eafa69d7fa211d77d71d4,feat(gitcredential): remove GitCredential BE-12919 (#2838),2026-06-11T21:53:24Z,False,True
+portainer/portainer,a779c839b75f84ac65bc14253d177a3e6b1932d6,feat(kubernetes): set application list default to expanded [R8S-1040] (#2758),2026-06-05T02:35:00Z,False,True
+portainer/portainer,cd9bb18ba1b9493eb76ef802b98805b3636be66d,"feat(policies): reuse filter status component, give consistent styles [c9s-210] (#2723)",2026-06-16T03:58:33Z,False,True
+portainer/portainer,c9e1467244a7cfdbb488d681f9247cc65194fc4b,fix(stats-items): ensure stats items have consistent widths [C92-215] (#2844),2026-06-09T04:53:17Z,False,True
+portainer/portainer,a5cacd712dc9949149d93d3305ce4c8ce64d495e,"refactor(gitops): remove manual credential entry from git form [BE-13047] (#2951)
+
+Co-authored-by: Claude <noreply@anthropic.com>",2026-06-22T12:42:09Z,False,True
+portainer/portainer,dba86594e19314695e5ecb46fa6822ee86d6b76f,fix(app/kubernetes): kube edit app buttons (#2565),2026-05-09T09:00:17Z,False,True
+portainer/portainer,5c1c18b8f028d75237c8ddd529dfd4c797a66df8,"fix(kubernetes): gate cluster-setup form render on ingress classes query [QE-4214] (#3052)
+
+Co-authored-by: Claude Opus 4.8 <noreply@anthropic.com>",2026-06-29T07:41:41Z,False,True
+portainer/portainer,0dfd27f08c10db3d069b99f0a8a2b2f6d86ee1df,fix(pnpm): pnpm format command failing [R8S-1071] (#2932),2026-06-18T01:27:01Z,False,True
+umami-software/umami,8b479e3b32655948e618154ed984e9d39ad5fa93,remove R2/Playwright packages,2026-06-23T22:19:27Z,False,True
+umami-software/umami,7d84c84d9aad724084ec4f5acd852c6e0cb0a4e0,Clip outlier heatmap clicks without stretching canvas,2026-06-23T04:48:29Z,False,True
+umami-software/umami,07e40db5f4f74a51e1b05a2a30af190d2062e220,add clickhouse+s3 workflow for heatmaps,2026-05-20T05:41:59Z,False,True
+umami-software/umami,afab48587427b3fcc6736681e9e453a290a6ae31,"polish UI/UX color bands, add install-heatmap command",2026-05-19T19:11:48Z,True,True
+umami-software/umami,6f592e334c4b23635b10e67e399f69ed57f3586c,remove install-heatmap script,2026-06-18T17:45:47Z,False,True
+umami-software/umami,790e2ec6442840cd3669a26b5d7c63797287c012,Updated packaegs.,2026-05-18T05:09:28Z,False,True
+umami-software/umami,cd20b3aafd02dd8bc97acb508cd2725603f7bcdf,"Heatmaps bug fixes, update schema to match overlay, use react-zen component to match ui/ux, polish",2026-05-14T21:23:41Z,True,True
+umami-software/umami,4b40be6b5a4d5914f071dedbcdb607c178865a80,fix overlay for 0%,2026-05-19T19:13:31Z,False,True
+umami-software/umami,a0587f72e5c0b36552e4aae73705c6e2a5366ca8,Switch heatmap snapshots to iframe previews,2026-06-21T05:51:45Z,False,True
+umami-software/umami,a63c769ab6130dca079a7b0dde54de1d9c924284,fix error messaging.,2026-05-26T22:57:00Z,False,True
+ItzCrazyKns/Vane,a548fd694aa3b69efbfbe3ddf950cc91651248a2,"feat(utils): compute cosine similarity, remove package",2025-12-05T15:58:15Z,False,True
+ItzCrazyKns/Vane,d0124b9f06a084d1ec4d849c3347b7595969f089,feat(actions): add scrape URL action,2025-12-06T13:24:37Z,False,True
+ItzCrazyKns/Vane,60dd7a81080749ac72733ee26184556f907b241d,feat(ui): fix theming issues,2025-12-24T11:54:07Z,True,True
+ItzCrazyKns/Vane,473a04b6a59bd448bee2541187fc94f5f71b83d9,feat(suggestions): prevent icon from shrinking,2025-12-18T08:26:04Z,False,True
+ItzCrazyKns/Vane,acaa208a41b0cd79a82d4521d3123c86073f1850,"feat(packages): update to latest version, add scraping processing",2026-04-08T17:47:48Z,False,True
+ItzCrazyKns/Vane,85273493a01797291dd088d5d28307bb63203f2c,feat(copy): fix type mismatch,2025-12-19T11:05:13Z,False,True
+ItzCrazyKns/Vane,a691f3bab0a84790f9c63c84059c1d024a6f75cd,"feat(chat-hook): fix history saving delay (async state), add delay before media search to allow component refresh",2025-12-27T14:32:36Z,False,True
+ItzCrazyKns/Vane,bd7c563137fe503382da8ca69d8adc9b0edcbd60,feat(package): add json repair,2025-12-31T07:27:59Z,False,True
+ItzCrazyKns/Vane,6ae885e0ed334ce9610613f2866aa71d3eb0ede1,feat(steps): display after loading animation,2025-12-24T08:25:07Z,False,True
+ItzCrazyKns/Vane,4fc810d9769af82bce1069a48aa840b0f1747b87,feat(calculation-widget): enhance UI,2025-12-05T16:00:41Z,False,True
+lfnovo/open-notebook,98a528158a86219f5f05403609c1fdd9d35c7159,"refactor: migrate i18n from custom Proxy pattern to standard react-i18next t() function
+
+- Replace Proxy-based useTranslation hook with thin react-i18next wrapper
+- Convert all t.section.key property access to t('section.key') function calls across 84 files
+- Migrate TranslationKeys type parameters ",2026-04-12T13:27:49Z,False,True
+lfnovo/open-notebook,42437abf1059cb7766e4ffebabc2a79832c2fd77,"fix: narrow note context mode type (#929)
+
+Adds NoteContextMode = Exclude<ContextMode, 'insights'> and threads it through the note selection utilities and NotesColumn callbacks, so notes only accept off/full (no insights). Pure type-safety, no runtime behavior change.
+
+Fixes #917",2026-06-21T18:00:44Z,False,True
+lfnovo/open-notebook,f8625a58115fb860163b2ead0e30c88f0a913423,"feat: bump esperanto to 2.22.0 + Ollama num_ctx override (#833)
+
+Upgrade esperanto 2.20.0 -> 2.22.0. The constraint (>=2.20.0,<3) already
+allowed it; this relocks and picks up upstream fixes (OpenRouter json body,
+clearer null-embedding errors, streaming ToolCall objects, base_url
+trailing-slash nor",2026-06-02T09:20:24Z,False,True
+lfnovo/open-notebook,2210904e5b431ea648b7b7803dac3c98adc94056,"feat(notebooks): bulk include/exclude all sources from chat context (#915)
+
+* feat(notebooks): bulk include/exclude all sources from chat context
+
+Adds a ""Context"" menu to the Sources column header to set every source's chat
+context selection at once (#223): ""Include all in context"" sets each source",2026-06-17T15:14:44Z,False,True
+lfnovo/open-notebook,9bbd06bf9bf2c3e254cfeee07c1da5f5cbcbcdee,"fix: address dependency audit findings (#962)
+
+Add npm overrides for vulnerable transitive frontend packages (ws, brace-expansion, ajv, @eslint/plugin-kit, postcss) — npm audit now reports 0 vulnerabilities — refresh uv.lock (langsmith, pydantic-settings, pip), and harden external window.open(..., '",2026-06-25T11:25:20Z,False,True
+lfnovo/open-notebook,8a5bf2d98aef25a67c468d7e62a82a724e30852c,"feat: sort sources by all table columns (#930)
+
+Expand /api/sources sorting to type, title, created, updated, insights_count, and embedded (whitelisted, with a computed type alias so SurrealDB can order by it). Frontend adds sortable headers for every column plus an Updated column.
+
+Fixes #895",2026-06-25T10:33:47Z,False,True
+lfnovo/open-notebook,ba01f7df4e8d12acdfd032a5a52c59cba8f54d86,"fix: handle credential decryption errors gracefully (#740)
+
+- Credential.get_all() now uses per-row error handling instead of failing on first bad row
+- Broken credentials include decryption_error field with descriptive message
+- DELETE endpoint falls back to direct DB delete when credential can't b",2026-04-13T00:22:37Z,False,True
+lfnovo/open-notebook,3c2d2af9433b012c0abb8d46412ad2c1d2bff31a,"fix(frontend): keep ""Chat with source"" navigation in-app (#815)
+
+The ""Chat with source"" button in SourceDialog opened an internal app route
+(/sources/...) in a new browser tab via window.open(..., ""_blank""). Switch
+it to Next.js router navigation so it stays within the app (closing the
+dialog first)",2026-05-29T14:01:56Z,False,True
+lfnovo/open-notebook,8e3d6d5dfd8c09e80243877d7adfe62392c1acba,"fix: keep discover-models dialog submit button visible (#956)
+
+Lay the model-discovery dialog out as grid-rows-[auto_1fr_auto] (fixed header/footer, scrollable body) so the Add button stays visible with long model lists. Fixes the OpenRouter-models registration blocker.
+
+Fixes #816",2026-06-21T21:22:27Z,False,True
+lfnovo/open-notebook,a9a14089777c80371d731fee6776ae0816918813,"perf(sources): memoize SourceCard and stop polling completed sources (#901)
+
+* perf(sources): memoize SourceCard and stop polling completed sources
+
+The notebook source list re-rendered every SourceCard whenever an unrelated
+parent state changed (layout toggles, context selection), and every complet",2026-06-16T07:48:07Z,True,True
+blakeblackshear/frigate,407817a3b1d73949a584d81826cafb415f04cd0d,"Motion search fixes (#23359)
+
+* improve error parsing and increase skip default
+
+* improve motion search  layout to match tracking details
+
+* implement draw and move mode on mobile
+
+* update motion search docs
+
+* language tweaks
+
+* improve tips
+
+* note actions menu",2026-05-31T13:51:32Z,False,True
+blakeblackshear/frigate,e2ce0c82ff1c7e3626e705d36c4add85ec89939f,show Frigate+ submission failures in the UI instead of showing a false success (#23579),2026-06-27T22:38:24Z,True,True
+blakeblackshear/frigate,4fdc107987f57e1abf24445a15834d3b8f0de063,"Improve go2rtc pane in Settings (#23251)
+
+* improve layout and handling of multiple ffmpeg args in go2rtc pane
+
+* add e2e tests
+
+* fix spacing",2026-05-19T14:30:04Z,False,True
+blakeblackshear/frigate,ec44398b1c3e1c5fbf2d1177d6f1c78c8c8f108a,"Miscellaneous fixes (#23295)
+
+* filter motion review by allowed cameras
+
+* filter alertCameras by allowed cameras so the recent alerts query for restricted roles doesn't reference cameras they can't access
+
+* skip data streams in chapter exports to avoid ffmpeg segfault
+
+* formatting
+
+* restrict deb",2026-05-24T12:48:52Z,True,True
+blakeblackshear/frigate,78fc4720262af0c49d3bdb0ade0ededb515b95e6,"Improve Intel Stats (#23190)
+
+* Implement per intel-gpu stats collection
+
+* Improve device naming
+
+* Improve GPU vendor handling
+
+* Cleanup",2026-05-13T21:12:48Z,False,True
+blakeblackshear/frigate,7e83d5de906315631de7419cfaa3a9bd4fb490f8,add snapshot download to History player (#23395),2026-06-03T22:17:04Z,False,True
+blakeblackshear/frigate,8203e39b7f3408e348e84d717b98bf6f9b40f6d9,add go2rtc settings section to the save all flow (#23501),2026-06-17T14:10:23Z,False,True
+blakeblackshear/frigate,fa07109a855b7e4b9d6538f8b7d3cd9424fbf761,filter motion review by allowed cameras (#23294),2026-05-23T12:47:32Z,False,True
+blakeblackshear/frigate,68e8afd35c76f05f68de47ee9588d2c91796de4b,"Improve credential redaction handling (#23265)
+
+* redact credentials in config endpoint with sentinel
+
+* backend test
+
+* frontend
+
+* apply widget for credential fields
+
+* i18n",2026-05-20T21:59:01Z,False,True
+blakeblackshear/frigate,e84a89ef3ebe11b848393ab7b627dbef4ce41da5,fix camera audio availability detection on mobile live grid (#23488),2026-06-15T13:26:19Z,False,True

@@ -1,0 +1,740 @@
+repo,sha,message,date,keyword_match,file_match,llm_label,llm_reason
+maotoumao/MusicFree,0ab0ac79546144cbb68273a9c5d73c6571033f60,chore: patch musicItem style,2025-05-15T05:44:51Z,False,True,Yes,matched UI file-type condition
+mantinedev/mantine,1ea2973c138eab56a44ff83e26599d57a3212187,[@mantine/schedule] ResourcesWeekView: Add events resizing support,2026-06-25T08:56:15Z,False,True,Yes,matched UI file-type condition
+chartdb/chartdb,b21202e6c7ecc1807a1ef09853532f1282c6f88e,fix: enforce NOT NULL for primary key fields (#1061),2026-01-13T15:53:00Z,False,True,Yes,matched UI file-type condition
+apache/superset,f49db9e53641d7ce8857944d1af0a4d44c5be421,fix(dashboard): restore page scrolling (#41439),2026-06-26T15:54:19Z,False,True,Yes,UI signal 'scroll' in message
+chakra-ui/chakra-ui,a871bc5d70cd66f4f7df16b581afdd26d6bcfd0f,refactor: docs and examples,2026-01-28T14:57:01Z,False,True,Yes,matched UI file-type condition
+winfunc/opcode,2dfdf31b83db0a897e4b899dad01d55c11a05572,"refactor: remove sandbox system and simplify agent architecture
+
+Remove the entire sandbox security system including:
+- All sandbox-related Rust code and dependencies (gaol crate)
+- Sandbox command handlers and platform-specific implementations
+- Comprehensive test suite for sandbox functionality
+- ",2025-07-02T13:47:38Z,True,True,Yes,matched pipeline keyword condition
+DayuanJiang/next-ai-draw-io,71a1d02e284baac30c986bde4be5b793489331e9,"Update components/chat-panel.tsx
+
+Co-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>",2026-01-29T05:22:41Z,False,True,Yes,UI signal 'component' in message
+activepieces/activepieces,66f43de17588cc3fb579b1f4678f4b81bdad78bd,"chore: harden the check on version difference between worker and app servers (#13760)
+
+Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",2026-06-17T10:28:46Z,False,True,Yes,matched UI file-type condition
+Gitlawb/openclaude,cc385a649092d2e7e0df0a441da7090d90c26638,"fix(ink): reduce high-write-ratio diagnostic noise (#1699)
+
+* fix(ink): reduce high-write-ratio diagnostic noise
+
+* test(ink): cover high-write diagnostic suppression
+
+* fix(ink): preserve churn warnings at suspicious widths",2026-06-18T01:13:53Z,False,True,Yes,matched UI file-type condition
+remix-run/react-router,da102b5928d2cf0b94cd0abc2895d0939698e7e9,Fix globals dependency for lint config (#15208),2026-06-18T18:21:13Z,False,True,No,"backend/infra signal 'dependency', no UI terms"
+hcengineering/platform,2a221cef3ae35c043542b57a03a149e2c4f8f721,"Color control documents (#10717)
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>",2026-04-04T14:38:29Z,False,True,Yes,UI signal 'color' in message
+yikart/AiToEarn,f5bc8919960e56b69d22f4e926612622a76c00a1,fix: Fix some problems (#455),2025-12-23T13:18:08Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,2649ef302002216597e02b982e8c746a93fdc7de,🐛 fix: correct task running UI routing (#16398),2026-06-29T16:33:03Z,True,True,Yes,UI keyword 'ui' in message
+the1812/Bilibili-Evolved,7056affde6ad889dd768249c4def20ee33aa6b6f,保存动态分组过滤选项,2026-06-01T04:57:00Z,False,True,Yes,matched UI file-type condition
+wandb/openui,79c076e14c82f49ba870db778b1f6e9339431467,Polished copilot workspace work,2024-06-26T05:49:58Z,False,True,Yes,matched UI file-type condition
+SigNoz/signoz,13812fac62f559f31368be0c33c8ab966bb2e154,"fix(dashboard): pie panel collapses multi-column ClickHouse query to a single slice (#11919)
+
+* fix(dashboard): pie panel collapses multi-column clickhouse scalar to one slice
+
+A pie panel backed by a ClickHouse query with several aggregations
+(e.g. `count() AS col1, sum() AS col2`) rendered a singl",2026-07-01T05:15:47Z,False,True,Yes,UI signal 'render' in message
+invoke-ai/InvokeAI,acd4157bdf82208c84100adc7a6da570c85b428e,"feat(ui): add canvas project save/load (.invk format) (#8917)
+
+* feat(ui): add canvas project save/load (.invk format)
+
+Add ZIP-based .invk file format to save and restore the entire canvas
+state including all layers, masks, reference images, generation
+parameters, LoRAs, and embedded image files. I",2026-04-14T01:01:57Z,True,True,Yes,UI keyword '(ui)' in message
+portainer/portainer,ca1d9dc6a24d2675e6212fee5a722adafc7ea8ba,fix(edge/stacks): load envs by id [BE-13097] (#2917),2026-06-15T18:23:49Z,False,True,Yes,matched UI file-type condition
+mattermost/mattermost,dbcd904cc23c32dde5e0c92f499f0cbd7ec7ff91,"[MM-69229] Promote CloudIPFiltering: remove the feature flag (#37150)
+
+The CloudIPFiltering flag (default false, shipped v9.4) gated the
+cloud-only IP filtering admin feature. The feature stays cloud-only
+independent of the flag:
+
+- Server: ensureIPFilteringInterface still requires license.IsCloud()",2026-06-23T18:26:28Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,7e02a371feeb35065d4cad35a8c07f36a4286b3d,chore: 更新版本号,2025-06-24T15:23:06Z,False,True,Yes,matched UI file-type condition
+nrwl/nx,e4d35715144db803c8a814c85dd74d4f349fbb28,"docs(nx-dev): document nx migrate agentic flow and modes (#35917)
+
+This PR updates our docs to include new `nx migrate` features from v23.
+
+Recommend running bare `nx migrate` (Nx 23+) and document the new
+behavior:
+
+- **Installation** lead with `nx migrate` and point to `Automate
+updating dependenc",2026-06-10T20:17:45Z,True,True,No,excluded prefix 'docs(' (non-UI maintenance)
+agentsmd/agents.md,4dac4a8f86ec874d25453dc370cb2301ec8f343d,Add GitHub Copilot coding agent to compatibility list (#29),2025-09-02T16:18:03Z,False,True,Yes,matched UI file-type condition
+humanlayer/12-factor-agents,2b486695aed9a55a7240b2d053600c0bde8b06ad,add sections,2025-05-15T23:23:36Z,False,True,Yes,matched UI file-type condition
+umami-software/umami,ced1107261a71494c4200565386f5bfaa842850e,Use sunken styling for heatmap page buttons,2026-06-23T06:26:01Z,False,True,Yes,UI signal 'styling' in message
+activepieces/activepieces,719ed3451abf67d986e10ea9c31a590fe81ea821,feat(json): add Merge JSON Objects action with per-field strategies (#13893),2026-06-26T06:20:39Z,False,True,Yes,matched UI file-type condition
+TibixDev/winboat,77d339a72f4dc790a9fb330ff3fa1c014b2720e4,feat: Warn user when they're about to allocate most of their disk,2025-09-24T11:46:06Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,22bfb99ec6ed6f13ca58d983743c5e3592120b31,fix: keep video thumbnail selection valid,2026-04-30T16:49:53Z,False,True,Yes,matched UI file-type condition
+mantinedev/mantine,8495846e9ee52ae56c23fe3107b5c80e344b412e,[@mantine/schedule] Add `withSubHourGridLines` prop to WeekView and DayView components,2026-06-16T19:07:29Z,False,True,Yes,UI signal 'component' in message
+grafana/grafana,9acf566c44a48d51b45907b8b2c176eff0705014,"Provisioning: Add resource kind icons to job summary table (#127237)
+
+* Provisioning: Add resource kind icons to job summary table
+
+Show the per-kind icon next to the resource name in the Job Summary
+table, resolved from the central resourceKinds registry via the row's
+group/kind. Rows with an unkno",2026-06-25T12:24:58Z,False,True,Yes,UI signal 'icon' in message
+remix-run/react-router,003a14469333499695fcc6dfe53fd43ca7edfba1,"Use parseArgs in create-react-router (#15231)
+
+* Use parseArgs in create-react-router
+
+* Inline create-react-router context flags
+
+* Remove redundant version flag fallback",2026-06-24T15:35:21Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,cb2369e540f9ce4d5f70604e79afb7804782980f,refactor: remove ProBanner and related logic from Layout and Sidebar components to streamline UI and improve code clarity,2025-11-14T16:59:58Z,True,True,Yes,UI keyword 'ui' in message
+invoke-ai/InvokeAI,33ec16deb4ce58b4693a391c528a390035aaca5a,"Feature: Shared/private workflows and image boards in multiuser mode (#9018)
+
+* feat: Per-user workflow libraries in multiuser mode (#114)
+
+* Add per-user workflow isolation: migration 28, service updates, router ownership checks, is_public endpoint, schema regeneration, frontend UI
+
+Co-authored-by:",2026-04-13T21:27:20Z,False,True,No,"backend/infra signal 'endpoint', no UI terms"
+mattermost/mattermost,99ea984ead4e89bbc51de167004a70c5f1193fdc,"Remove unused streaming port 8075 from cluster configuration (#37024)
+
+* Remove legacy streaming port 8075 from Dockerfile EXPOSE
+
+* Remove legacy streaming port 8075 from Dockerfile.fips EXPOSE
+
+* Remove legacy SteamingPort (streaming port) from cluster settings tests
+
+* Remove legacy ports 8064 an",2026-06-17T17:02:58Z,False,True,Yes,matched UI file-type condition
+outline/outline,f4b80d5301d3213dbacd1ba654f5d94f045c1fc4,fix: PDF display does not correctly scale on ombile (#12608),2026-06-06T14:14:35Z,False,True,Yes,matched UI file-type condition
+lyswhut/lx-music-desktop,68b32a20a4ba883c3f686632458a404a1baa66c4,更新版本号（2.10.1-beta.0）,2025-01-28T11:50:56Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,cf4bd9b0ecf2efc9c1e60489db2eb3d6ae54f363,refactor: 重构下载器，优化性能,2025-05-10T10:28:21Z,False,True,Yes,matched UI file-type condition
+iOfficeAI/AionUi,02b2b3831da12418687781858ad110dc168f4690,"feat(conversation): keep project folder header sticky while scrolling
+
+Long project folders now pin their header below the section label while
+scrolling through their conversations, swapping to the next project's header
+as it comes into view — matching the existing sticky section labels. Adds an
+opt",2026-07-01T03:29:42Z,False,True,Yes,UI signal 'header' in message
+iOfficeAI/AionUi,b513c80d835774ec74bd6746f8f8f85ed09742b7,"feat(acp): add observed config option selectors (#3324)
+
+* feat(acp): use observed config options in runtime controls
+
+* feat(acp): show thought level selector on desktop
+
+* fix(acp): enable desktop thought level config
+
+* fix(acp): keep observed mode in selector
+
+* fix(acp): move thought label into",2026-06-14T11:51:50Z,False,True,Yes,matched UI file-type condition
+jitsi/jitsi-meet,7efcdd10239c455bad90723df82d4cd67c5c7940,"ios: fixes (#17467)
+
+* Update rn-webrtc, fix screen broadcast, drop redundant conferenceLeft() dispatch on hangup and source proxy bridge from ExternalAPI.",2026-06-09T12:15:49Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,5bb04374ebb768c0e54c6c0b253033ce94b8559a,"✨ feat(conversation): global human-approval notification island (#16390)
+
+* ✨ feat(conversation): global human-approval notification island
+
+Surface pending human-approval requests from non-active local runs in a
+top-center ""dynamic island"", so users can approve/reject inline without
+switching into ",2026-06-28T13:52:04Z,False,True,Yes,matched UI file-type condition
+umami-software/umami,4b40be6b5a4d5914f071dedbcdb607c178865a80,fix overlay for 0%,2026-05-19T19:13:31Z,False,True,Yes,matched UI file-type condition
+RealKai42/qwerty-learner,e5985e7bc46fd494b5de37084a0b0fa01cb28285,fix: event properties bug,2025-06-11T18:26:43Z,False,True,Yes,matched UI file-type condition
+mantinedev/mantine,e595eed538368c80f7bca010d439dd31371a9bca,[@mantine/dates] DatePicker: Fix `fullWidth` prop being incompatible with presets,2026-06-16T16:40:59Z,False,True,Yes,matched UI file-type condition
+remix-run/react-router,6e21b638e1e692eaf19a8ff98ec05d28d5b23c70,"fix: keep useNavigation() return type a discriminated union (#15095)
+
+* fix: keep useNavigation() return type a discriminated union
+
+* sign CLA
+
+* Minor update to use individual states
+
+---------
+
+Co-authored-by: Matt Brophy <matt@brophy.org>",2026-05-26T14:16:37Z,False,True,Yes,matched UI file-type condition
+nrwl/nx,192f66811d67ebd551504b314c2e9ed9614c16e1,"feat(angular): support angular v22 (#35851)
+
+## Current behavior
+
+Angular v22 is not supported.
+
+## Expected behavior
+
+Angular v22 should be supported.
+
+BREAKING CHANGE: Angular v19 is no longer supported.
+
+## Related issues
+
+Fixes #35910 
+
+<!-- polygraph-session-start -->
+---
+[View session informat",2026-06-18T15:17:51Z,False,True,Yes,matched UI file-type condition
+hcengineering/platform,772c4782c8985c04e5b4c41d3d4b4d5d15fedd0b,"Fix card viewlet setting for associations (#10761)
+
+Signed-off-by: Denis Bykhov <bykhov.denis@gmail.com>",2026-04-13T13:39:50Z,False,True,Yes,UI signal 'card' in message
+SigNoz/signoz,2ad5cb19c3364184f9e84ca28852a6ec2003a794,chore(sentry): bump packages to v10 & v5 for vite-plugin (#11723),2026-06-16T15:34:48Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,50734a08622364020c5d8fc4390fcee671cfa3c4,"♻️ refactor(desktop): replace ToolDetectorManager with BinaryManager + lazy install (#16439)
+
+* 📝 docs(agent-browser): slim builtin skill content to a discovery stub
+
+Drop the 2511-line inlined upstream reference (synced from v0.27.3) and
+replace it with a 22-line stub: core loop, LobeHub-bundled no",2026-06-29T18:37:07Z,False,True,Yes,matched UI file-type condition
+remix-run/react-router,42e70db52eef3015dd60f5a274c461d94291805e,Handle remaining v8 todo's (#15074),2026-05-21T15:39:16Z,False,True,Yes,matched UI file-type condition
+clash-verge-rev/clash-verge-rev,1eb194d0f99cdefff8e84218d88caa1a5807152a,fix(core): streamline core change process and ensure version mutation after upgrade,2026-04-21T16:52:18Z,False,True,Yes,matched UI file-type condition
+firecrawl/firecrawl,b9eb2faecee615e26d9bf56fbabbb6102f00529c,"feat(nuq): rebuild queue + concurrency limiting on FoundationDB (core engine) (#3758)
+
+Co-authored-by: Claude Fable 5 <noreply@anthropic.com>",2026-06-13T05:50:34Z,False,True,No,"backend/infra signal 'queue', no UI terms"
+balena-io/etcher,c2d160f5c7ebec71c9d365933ce1e5f9dc10ae47,v2.1.2,2025-05-08T08:51:47Z,False,True,Yes,matched UI file-type condition
+mattermost/mattermost,7c759e8ae4f24ea2a39614129220a8f41cf08918,[MM-69058] Don't enable native channel banner when creating a classification banner (#36810),2026-06-01T13:29:13Z,False,True,Yes,UI signal 'banner' in message
+winfunc/opcode,443e8e157a131812ace7fbbb3408c584e94d2b82,"feat: enhance timeline UI with slide-in animation and improved layout
+
+- Add slide-in animation for timeline panel using framer-motion
+- Implement responsive layout adjustments when timeline is open
+- Add close button (X icon) to timeline header for better UX
+- Wrap timeline in AnimatePresence for s",2025-07-02T14:05:38Z,True,True,Yes,UI keyword 'ui' in message
+grafana/grafana,72105c48b34997d0b2f3c37a415dde1459457ab6,"Home: Add create and declare actions to alerts and incidents cards (#127546)
+
+* Home: Add create and declare actions to alerts and incidents cards
+
+* fix(home): refetch active incidents when IncidentsCard remounts
+
+A newly declared incident did not appear in the Home page Active
+incidents card until",2026-06-30T13:56:41Z,False,True,Yes,UI signal 'card' in message
+portainer/portainer,5395dee4c6da5aeeff5367c470916fc192545936,feat(gpu-stats): add gpu stats to environments [C9S-200] (#2735),2026-06-21T21:21:43Z,False,True,Yes,matched UI file-type condition
+DayuanJiang/next-ai-draw-io,fd84aa70db7c4457807cd93e5e57688cd577d555,"chore: update volcengine referral URL and sponsor info (#736)
+
+- Replace newyear-referral URL with new Coding Plan referral URL across all files
+- Update model name from K2-thinking to glm-4.7
+- Add volcengine invite poster to Chinese README and about page",2026-03-16T11:48:39Z,False,True,No,"backend/infra signal 'readme', no UI terms"
+mantinedev/mantine,dc1ec801cc28de397081149e2570d8139c0c5978,[@mantine/schedule] Fix incorrect `...others` prop handling in ScheduleEvent,2026-06-17T09:04:36Z,False,True,Yes,matched UI file-type condition
+OpenCut-app/OpenCut,8768f6dd8f6e2df76e7b2af2b6704f3ffaf45a4a,feat(api): add elysia server for cloudflare workers,2026-06-14T22:01:14Z,False,True,Yes,matched UI file-type condition
+mantinedev/mantine,a4094afe8009f12f8895ac7ce89c37cf9ff271b2,[@mantine/core] Menu: Add type-ahead support,2026-05-15T17:58:15Z,False,True,Yes,UI signal 'menu' in message
+portainer/portainer,8d098a2bb9d5b24275d2f06777d3fe5c0b6921df,style(dropdown-menu): fix count badge alignment and uniform width [C9S-116] (#2605),2026-05-11T00:51:18Z,False,True,Yes,UI signal 'align' in message
+yikart/AiToEarn,e3abc458482265f2c2384f95168ceec4500622b8,"feat: sync open-source 2.5 updates (#566)
+
+Co-authored-by: gaoSir <1933669775@qq.com>",2026-06-23T15:10:36Z,False,True,Yes,matched UI file-type condition
+appsmithorg/appsmith,4a3015416165d1698ac4bc697d28406b4c772c86,"fix: generate unique widgetIds when cloning page (#41762)
+
+## Description
+
+### Problem
+The Clone Page feature copied the source page's DSL verbatim, so every
+widget in the cloned page kept the exact same widgetId as its
+counterpart on the source page. This produced duplicate widget ids at
+the applic",2026-06-22T17:58:12Z,False,True,Yes,matched UI file-type condition
+invoke-ai/InvokeAI,cf04eff1f8bc1b342dc914c2fd447993cb50e3c5,"feat(model manager): external providers UI/UX tweaks (#9237)
+
+* feat(model manager): external providers UI tweaks
+
+* feat(model manager): external providers form UX
+
+- use toasts for updates
+- improve state update handling
+- pass linting
+
+---------
+
+Co-authored-by: Alexander Eichhorn <alex@eichhorn.",2026-06-03T13:45:11Z,True,True,Yes,UI keyword 'ui' in message
+blakeblackshear/frigate,0bdf5002a0d5f5380381b9a662f14fcc6f346678,"Miscellaneous fixes (#23279)
+
+* use monotonic clock for detector inference duration to prevent negative values from wall clock steps
+
+* add ability to set camera's webui_url from camera management pane
+
+* Gemini send thought signature
+
+* Update docs
+
+* copy face and lpr configs from source camera to",2026-05-22T13:52:01Z,True,True,Yes,matched pipeline keyword condition
+firecrawl/firecrawl,6840ee516f6033792ecd2f7f3c82459210d34a91,"feat: add `menu` scrape format (engine client + 9 SDKs, menuBeta-gated) (#3831)
+
+Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>",2026-06-19T15:45:21Z,False,True,Yes,UI signal 'menu' in message
+coze-dev/coze-studio,acfce615ec918517e3d2648e6f6366374c26fb31,"feat: support conversation isolation (#2443)
+
+Co-authored-by: yangyu.1 <tomasyu985@gmail.com>",2025-11-05T13:35:17Z,False,True,Yes,matched UI file-type condition
+umami-software/umami,5565182f3b1168252b1b9b80c1bc38b013cecac9,fix heatmap viewport stretching. Polish UI/tooltips,2026-05-28T17:40:07Z,True,True,Yes,UI signal 'tooltip' in message
+lissy93/web-check,d00c0dd1db7822fe113e2e491646f17988712f2c,feat: Cleaner progress bar status,2026-05-09T14:04:01Z,False,True,Yes,matched UI file-type condition
+responsively-org/responsively-app,91530d16a925904092b4b95eff3f7ec8f4bf78ad,"Electron v40 upgrade (#1473)
+
+* Electron v40 upgrade
+
+* Fix CI actions
+
+* Update CI and engines to Node 24 for Electron 40 compatibility
+
+* Lint and prettier fixes
+
+* Test fixes and migrated to vitest",2026-02-28T11:19:02Z,False,True,No,"backend/infra signal 'prettier', no UI terms"
+the1812/Bilibili-Evolved,673fdb6f90eb9794c7a6d71180f08e3f2de4e272,"refactor: async navigation with sectionId support for slide handling
+
+Make jump functions asynchronous to properly handle slide switching in video collections, including support for sectionId in instructions. This improves reliability of navigation by waiting for DOM updates before proceeding, ensur",2026-04-10T13:56:13Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,8be5fdf62cbae3aee01782b0edc087324b84bb40,fix: 修复webdav类型错误,2025-05-10T15:38:39Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,f8cd05f2f03d3a44aa9b3ce485cc5eeed8f8e721,feat: add ENSBadge component to account details and enable autoAssign for username creation,2025-10-24T07:28:00Z,False,True,Yes,UI signal 'component' in message
+invoke-ai/InvokeAI,f9f2a32e966193a8868840ebe412360ad5dcc380,"Feat(UI): Add LLM-powered prompt expansion and image-to-prompt features (#8899)
+
+* Add LLM-powered prompt expansion and image-to-prompt features
+
+Adds two new buttons to the positive prompt area:
+- ""Expand Prompt"" uses a local TextLLM model (AutoModelForCausalLM) to expand brief prompts into detaile",2026-04-27T02:03:16Z,True,True,Yes,UI keyword '(ui)' in message
+mantinedev/mantine,eae5520103cb25acb39212eccf96a3f74d2e512d,"[core] Update minor dependencies version
+
+Co-Authored-By: Claude Opus 4.7 <noreply@anthropic.com>",2026-05-28T09:55:56Z,False,True,Yes,matched UI file-type condition
+hcengineering/platform,ea254970c0d30ebaa5240221d13aea8ced82e7a7,"feat: Add ability to configure guest permissions (#10708)
+
+* Configure guest permissions
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>
+
+* Fix permission domain
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>
+
+* Fix permission declaration
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>
+",2026-04-05T07:36:59Z,False,True,Yes,matched UI file-type condition
+blakeblackshear/frigate,6fdd65ddb56c8c21796f56e4cccd65617dcf4e5e,"UI tweaks (#23346)
+
+* remove redundant per-view toasters in settings
+
+* add variants to standardize dialog footer button layouts
+
+* remove text-md
+
+this class name compiles to nothing in tailwind. we used to add it to prevent iOS from zooming when focusing on an input, but that is now solved via the",2026-05-29T22:00:30Z,False,True,Yes,UI keyword 'ui' in message
+portainer/portainer,2d9fc5d8af2724b18302ce86954fe4b0ede3c92c,feat(home): add environment card storybook stories with Talos permutations [C9S-216] (#2739),2026-05-26T01:25:25Z,False,True,Yes,UI signal 'card' in message
+TibixDev/winboat,8b862af5bdb67c828899471b712f1e7ed75aa2ea,chore: Overhaul PortManager in preparation of using Docker's native port ranges,2025-10-27T23:04:56Z,False,True,Yes,matched UI file-type condition
+winfunc/opcode,14fb1788d98f878c406e0c8e43d41382c9704d2b,improved visual contrast for themes,2025-08-08T04:50:29Z,True,True,Yes,UI keyword 'visual' in message
+appsmithorg/appsmith,c268bcecd87ea22d606b35d2297c0603cc7218f0,"feat(client): docs link tooltip on Appsmith Base URL setting + trailing-slash normalization (#41782)
+
+## Summary
+
+Two related changes to the `APPSMITH_BASE_URL` setting under **Settings
+→ Configuration**:
+
+1. **Docs link tooltip** — adds an optional `helpTextLink` field to the
+admin `Setting` type a",2026-05-07T11:06:51Z,False,True,Yes,UI signal 'tooltip' in message
+angular/angular,4ba8ba4ef2940107d4fec87880413dffd9528312,"fix(docs-infra): align homepage banner and search field
+
+The homepage hero lays out the announcement banner and the search field on
+the same flex row. The `.search-field` wrapper was a plain block, so its
+`docs-text-field` kept its intrinsic height instead of filling the row,
+leaving the two pills a",2026-06-14T20:30:18Z,False,True,Yes,UI signal 'align' in message
+OpenCut-app/OpenCut,79dcec8a2ec2f5cad9be95e5b52fbfa752fb6ac4,"refactor: split builtin and freeform masks
+
+Made-with: Cursor",2026-04-29T16:41:15Z,False,True,Yes,matched UI file-type condition
+gitroomhq/postiz-app,8731fbfea2e731f092b4fa6233906f34e5648e45,feat admin stats,2026-05-29T03:11:53Z,False,True,Yes,matched UI file-type condition
+firecrawl/firecrawl,1663fa5091814199099443367846acab7962b48d,"fix(security): resolve pnpm audit failures (#3822)
+
+Co-authored-by: Cursor Agent <cursoragent@cursor.com>
+Co-authored-by: Abimael Martell <abimaelmartell@users.noreply.github.com>",2026-06-18T15:31:12Z,False,True,Yes,matched UI file-type condition
+chartdb/chartdb,9ac99d928c5d2661006b62e5782cb36b35953fa9,fix: add Oracle database support for SQL import (#1005),2025-12-10T12:23:11Z,False,True,No,"backend/infra signal 'database', no UI terms"
+lyswhut/lx-music-desktop,e0735f89286bb2a49599a59c9424bedb717b9e81,更新依赖&版本号（2.12.1-beta.1）,2025-12-21T05:46:31Z,False,True,Yes,matched UI file-type condition
+DayuanJiang/next-ai-draw-io,a245dcb1504a57f36233560a41b438cb4549455c,"Update components/image-with-basepath.tsx
+
+Co-authored-by: Copilot <175728472+Copilot@users.noreply.github.com>",2026-01-28T15:32:42Z,False,True,Yes,UI signal 'component' in message
+OpenCut-app/OpenCut,a9b9cf6bf50f08723896659634f2e6afc17bcd42,chore: switch from biome to eslint + prettier; fix ton of lint issues,2026-04-28T22:37:56Z,False,True,No,"backend/infra signal 'eslint', no UI terms"
+outline/outline,5ea63aa1a28a0a55cd2c8311caa53705e63d1d4e,"fix: Editor math block parsing and NaN media dimensions (#12668)
+
+* fix: Block math not closed by trailing $$ on a content line
+
+The closing delimiter check compared a 3-character slice against the
+2-character ""$$"" delimiter, so block math closed on the same line as
+content (e.g. ""c = d$$"") was neve",2026-06-12T02:29:29Z,False,True,Yes,matched UI file-type condition
+iOfficeAI/AionUi,aef44a59b85183f656a82ad8ef6ca19b9fc3a493,"feat(settings): voice input settings revamp and home page mic button (#3283)
+
+* feat(settings): add speech settings source-mode utils and model presets
+
+* refactor(stt): share config-changed event constant and error message mapping
+
+* feat(i18n): add voice input settings keys for all locales
+
+* feat",2026-06-11T09:07:22Z,False,True,Yes,UI signal 'button' in message
+chakra-ui/chakra-ui,59bf8f6a63ba70481160556f16113deb143c34f5,fix: field icon sizing,2026-02-13T18:46:35Z,False,True,Yes,UI signal 'icon' in message
+outline/outline,4e3f20831ac51e1d0099ef29502ee4142bb90735,chore: Upgrade mailparser dep (#12725),2026-06-17T03:21:08Z,False,True,Yes,matched UI file-type condition
+yikart/AiToEarn,4b92741f96515dcfb4031d6925aec1e6ee881bbb,feat: Initial integration of browser plugins (#350),2025-12-03T02:34:02Z,False,True,Yes,matched UI file-type condition
+portainer/portainer,6cb6f2e9b454abfffed753674ec4429929bb82ed, fix(change-confirmation): add git dry run and docker resize to the excluded urls [c9s-159] (#2562),2026-05-05T06:00:03Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,98fa2123b8f658aa3b0d45cfc871510f838b9def,chore: 新增eslint规则,2025-06-05T13:52:10Z,False,True,No,"backend/infra signal 'eslint', no UI terms"
+lobehub/lobehub,66e0b3c46a74f9a419304b347920138b514447a9,✨ feat(image): support drag-and-drop reference image upload (#16207),2026-06-23T14:14:41Z,False,True,Yes,matched UI file-type condition
+jitsi/jitsi-meet,4f3cb523b8131346c94a7f98c9b0d7f05a9e14b6,dep(@react-navigation): update version for related,2026-04-23T14:06:13Z,False,True,Yes,matched UI file-type condition
+chakra-ui/chakra-ui,c7e3a59b0e33924f1987afc9aa87a88835b98e58,"fix(deps): update panda to v1.9.0 (#10540)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",2026-03-17T15:45:49Z,False,True,No,"backend/infra signal 'deps', no UI terms"
+nrwl/nx,d5143c0e9eb310cc17b386117a02f8dca90de57c,"chore(repo): migrate to nx 23.0.0-rc.1 (#35971)
+
+## Current Behavior
+
+The workspace pins nx `23.0.0-rc.0`.
+
+## Expected Behavior
+
+The workspace is upgraded to nx `23.0.0-rc.1` via `nx migrate`. This
+single release-candidate step is **dependency-only** — `nx migrate`
+generated no `migrations.json`, s",2026-06-11T23:19:48Z,False,True,No,"backend/infra signal 'dependency', no UI terms"
+mantinedev/mantine,9a1644905bfc7aa4047be2b88a93605568147c14,[mantine.dev] Reduce number of events displayed in the agenda related demos,2026-06-25T10:22:21Z,False,True,Yes,matched UI file-type condition
+chakra-ui/chakra-ui,aa0393b0df5225e3b68ed0b2f976a7ba02617aa1,"fix(deps): update react to v19.2.4 (#10614)
+
+Co-authored-by: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>",2026-02-02T21:48:27Z,False,True,No,"backend/infra signal 'deps', no UI terms"
+jitsi/jitsi-meet,fef0881f6f28b5b781fa71b38929075ae5623c8a,fix(tests): Gives more time to the UI to appear.,2026-05-15T13:30:54Z,True,True,Yes,UI keyword 'ui' in message
+yikart/AiToEarn,608536db7ef99f37f48f583590370af9c8aaa55d,feat: aitoearn-2.1 (#487),2026-03-25T03:10:25Z,False,True,Yes,matched UI file-type condition
+the1812/Bilibili-Evolved,9f57e8c6ac7040970f0cd6f3a9b5e726a73e759d,Fix: duplicate live room in list,2026-03-27T18:27:11Z,False,True,Yes,matched UI file-type condition
+chakra-ui/chakra-ui,2c5717eb23bb05e70c598a2ecf5bae8996acb430,"Version Packages (#10509)
+
+ci(changesets): version packages
+
+Co-authored-by: Segun Adebayo <joseshegs@gmail.com>",2026-01-10T07:56:30Z,False,True,Yes,matched UI file-type condition
+yikart/AiToEarn,b3d2ddd93d486a5b626d54f32a664d4a9ef10567,feat: aitoearn-2.0 (#486),2026-03-17T09:16:39Z,False,True,Yes,matched UI file-type condition
+DayuanJiang/next-ai-draw-io,be4bc916fd054c7f289179acfb2cec1dd0155d58,"feat: Add support for Chinese AI providers (GLM, Qwen, Kimi, MiniMax, Qiniu)
+
+* feat: Add support for Chinese AI providers (GLM, Qwen, Kimi, MiniMax, Qiniu)
+
+- Add minimax, glm, qwen, qiniu, kimi to ProviderName type
+- Add provider configurations to PROVIDER_INFO with default base URLs
+- Add suggest",2026-03-07T09:53:47Z,False,True,Yes,matched UI file-type condition
+OpenCut-app/OpenCut,78a0a27a72e5e6c3d349abe2cb28ce6cd1e64d83,feat: editor feedback,2026-04-14T19:45:11Z,False,True,Yes,matched UI file-type condition
+TibixDev/winboat,bf53d2cf549988645fdd06dcf49e4d95b0007022,"feat: Check if Docker is running in pre-requisites, and improve custom ISO layout",2025-09-06T09:18:35Z,False,True,Yes,UI signal 'layout' in message
+Gitlawb/openclaude,4dee44a54288d8c1f91fb6fa8c138cd6195fe32b,"feat(ux): long-turn visibility + default-on stream hang safety net (#1758)
+
+Long-running turns looked frozen (""are you still working?"") and a dropped
+network stream could hang for the full 5-minute QueryGuard idle timeout.
+Three focused changes:
+
+- Spinner: show the elapsed-time counter at 5s instea",2026-06-23T23:27:16Z,False,True,Yes,UI signal 'focus' in message
+ChatGPTNextWeb/NextChat,18fa2cc30d96fbb452efd9226db7ca6021cacb3e,fix model icon on siliconflow,2025-02-09T10:49:26Z,False,True,Yes,UI signal 'icon' in message
+gitroomhq/postiz-app,be42a59533288d62dba8719d82b317766b3f9f64,feat: trial start fix,2026-06-26T09:55:34Z,False,True,Yes,matched UI file-type condition
+clash-verge-rev/clash-verge-rev,7e233efd10a4bedc3c9d9dd7a38be3012f2c8149,feat: add reset button to Global script,2026-06-18T07:13:38Z,False,True,Yes,UI signal 'button' in message
+lobehub/lobehub,619c71216862ce0b2b638f46a53bae51346729e1,"🐛 fix(git): refresh branch label when switching working directory (#16358)
+
+The branch label stayed stuck on the previous directory's branch when
+switching the working directory — only a manual refresh (mutate()) recovered
+it, while the diff badge updated fine.
+
+Root cause: the branch and the linked",2026-06-27T14:19:44Z,False,True,Yes,UI signal 'badge' in message
+SigNoz/signoz,519853005624e0b1099341c5ba879e05524c12e1,"  chore(traces): remove legacy trace view toggle and redirect /trace-old to /trace (#11732)
+
+* chore: remove legacy trace view redirect
+
+* refactor: review  changes
+
+---------
+
+Co-authored-by: Gaurav Tewari <tewarig@users.noreply.github.com>",2026-06-16T16:46:16Z,False,True,Yes,matched UI file-type condition
+elastic/kibana,4f1dea1d4d6f7e9ada542d0b2a2889512ce10621,"[content list][framework] Decouple custom filter registration from toolbar rendering (#275464)
+
+## Summary
+
+> [!NOTE]
+> This PR supersedes #273979, which GitHub auto-closed as ""merged""
+during a stack reorder (its base branch came to contain its head
+commit). The change is identical; only its positio",2026-06-30T23:49:54Z,True,True,Yes,UI signal 'render' in message
+DayuanJiang/next-ai-draw-io,31819f413cc4b329a1cb81e5fccd0cd98c1fd665,"fix: add 10MB body size limit to MCP HTTP endpoints (#791)
+
+All three POST handlers (/api/state, /api/restore, /api/history-svg)
+now use a shared readBody() helper that enforces a 10MB limit and
+returns 413 if exceeded, preventing memory exhaustion from oversized
+requests.
+
+Bumps @next-ai-drawio/mcp",2026-04-06T00:14:20Z,False,True,No,"backend/infra signal 'endpoint', no UI terms"
+outline/outline,0d50f0d60ac14b73c0a6e6e059fc7f4dd255534e,fix: Do not close icon picker on choice (#12573),2026-06-04T03:24:32Z,False,True,Yes,UI signal 'icon' in message
+OpenCut-app/OpenCut,6b1f38a9a31a0eedaa7abea70f232960469351d5,refactor: split animation helpers by domain,2026-04-26T18:44:07Z,False,True,Yes,UI signal 'animation' in message
+appsmithorg/appsmith,5743047157bc509b87fe8b3e293e702e1770cdf1,"fix: prevent ASI in wrapCode causing refactoring to fail (#41727)
+
+## Description
+
+When a UI module containing a custom widget is instantiated in an app,
+the `inputs` references inside the custom widget's `defaultModel`
+property are not refactored. For example, `inputs.title` should become
+`Commons1",2026-04-09T11:20:07Z,True,True,Yes,UI keyword 'ui' in message
+TibixDev/winboat,41faff876c48ec457499785803093c5638765a89,"feat: Remove PortManager, chore: Prepare for merge with TibixDev/winboat#327",2025-10-28T21:44:04Z,False,True,Yes,matched UI file-type condition
+iOfficeAI/AionUi,ee376d5fd0e74ebb41c12f02a4099902a5a02ac5,"feat(web-host): remove single-chat team upgrade path (#3441)
+
+* Remove single-chat team upgrade path
+
+* chore(web-host): pass prompt dump flag in dev
+
+---------
+
+Co-authored-by: zynx <>",2026-06-26T09:36:32Z,False,True,Yes,matched UI file-type condition
+invoke-ai/InvokeAI,32002bd37e2fd268d546c1fe83e6da456dba5715,"ui: translations update from weblate (#8992)
+
+* translationBot(ui): update translation (Italian)
+
+Currently translated at 98.0% (2205 of 2250 strings)
+
+Co-authored-by: Riccardo Giovanetti <riccardo.giovanetti@gmail.com>
+Translate-URL: https://hosted.weblate.org/projects/invokeai/web-ui/it/
+Translati",2026-04-06T03:54:25Z,True,True,Yes,UI keyword 'ui:' in message
+activepieces/activepieces,f18e8ca9f4d05f07b805f1787b5b33165fcc6f60,"feat(connectuc): scope New SMS recipients by domain/user, add direction filter, require Send SMS recipients (#13715)
+
+Co-authored-by: greptile-apps[bot] <165735046+greptile-apps[bot]@users.noreply.github.com>",2026-06-18T09:01:51Z,False,True,Yes,matched UI file-type condition
+SigNoz/signoz,f4e1465c1386894f10f03d1df6176bf1ebc574e2,feat(auth): add back to login CTA on reset password token error screen (#11634),2026-06-10T18:11:41Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,e0cf68b6c63562608f59e935a7155dd319eda0e4,🐛 fix(chat): fold completed agent turn process (#16431),2026-06-29T13:06:18Z,False,True,Yes,matched UI file-type condition
+iOfficeAI/AionUi,10f51001357d139aa578e24fdf9c1b3c5514ca89,"Merge pull request #3306 from iOfficeAI/waili/polish/conversation-ux
+
+polish(conversation): compact display defaults & tidier chat UI (#21–#24)",2026-06-12T10:45:06Z,True,True,Yes,UI keyword 'ui' in message
+Molunerfinn/PicGo,54d15a6749b07aaea0ba67eef0b2c438f0d77af1,":bug: Fix(custom): the issue that x64 macOS app can't be opened
+
+ISSUES CLOSED: #1363",2025-12-10T15:17:53Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,a50b6a83e78713d5874b759e5bf9a7d423c758d3,"✨ feat: workspace billing system (squashed) (#16308)
+
+* feat: workspace billing system (squashed)
+
+* fix: lint error",2026-06-26T03:42:32Z,False,True,No,"backend/infra signal 'lint', no UI terms"
+siyuan-note/siyuan,eb966c75269a0612c3662e5e99f56d460b090d27,:lipsticks:,2026-06-29T08:45:34Z,False,True,Yes,matched UI file-type condition
+elastic/kibana,cd85d6ce92679c5a997fd0ea953aebe6362f67c3,"[Alerting v2] Filter and sort episodes by severity (#275020)
+
+Closes https://github.com/elastic/kibana/issues/262924
+
+## Summary
+
+Add sort and filter by severity to the episode list view, using the
+top-level severity field on rule events.
+
+- Severity filter allows picking multiple options
+- Severity",2026-06-29T15:49:09Z,False,True,Yes,matched UI file-type condition
+chartdb/chartdb,eaebe3476824af779214a354b3e991923a22f195,fix(menu): clear file menu (#843),2025-08-11T08:46:33Z,False,True,Yes,UI signal 'menu' in message
+felixrieseberg/windows95,27b9e0eb7aacac97f44b02622c151a1a83a5bad1,"Seamless mouse (VMware backdoor + VBADOS) and fs-backed TOOLS share (#355)
+
+* Seamless mouse via VMware backdoor + fs-backed TOOLS share
+
+v86 (rebuilt libv86.js from fork branch vmware-mouse): new VMwareMouse
+device on port 0x5658 implementing GETVERSION/ABSPOINTER_* fed by the
+existing mouse-absolu",2026-04-11T20:54:32Z,False,True,Yes,matched UI file-type condition
+clash-verge-rev/clash-verge-rev,4105dc74794cacb44f8eef9c3e6d7abd629cdf34,"fix: improve type safety and remove redundant type casts (#7252)
+
+* fix: improve type safety and remove redundant type casts
+
+- Fix @@ts-expect-error typo (double @) in traffic-diagnostics.ts
+- Replace (e.target as any) with (e.target as HTMLElement) in setting-clash.tsx
+- Remove redundant (onFormat",2026-06-17T12:47:31Z,False,True,Yes,matched UI file-type condition
+elastic/kibana,ba81be3c33b55950a59337bca295f034f2bafd78,"[Discover] Profile state framework (#272780)
+
+## Summary
+
+This PR adds the first piece of Discover profile state: a typed,
+registered state contract that profile extension points can access
+through `ContextAwarenessToolkit.getStateAdapter()`. This gives profiles
+a host-agnostic way to share state ac",2026-06-29T12:56:51Z,True,True,Yes,matched pipeline keyword condition
+firecrawl/firecrawl,5efd6ba675e944a2746c6a764e514194fc567a10,"fix(security): resolve pnpm audit failures from 2026-06-15 audit (#3785)
+
+* fix(security): resolve pnpm audit failures
+
+Co-authored-by: Abimael Martell <abimaelmartell@users.noreply.github.com>
+
+* fix(security): resolve new pnpm audit failures
+
+Co-authored-by: Abimael Martell <abimaelmartell@users.n",2026-06-15T19:59:24Z,False,True,Yes,matched UI file-type condition
+balena-io/etcher,391164bf15810aeab53a1f0d3c959c9944c944fa,v2.1.3,2025-05-15T18:09:58Z,False,True,Yes,matched UI file-type condition
+grafana/grafana,fc2d55ca9fe25eb74c4867f70aba841fab97d9af,"Dashboards: Show panel query errors and notices in one UI (#127436)
+
+* query errors tooltip and inspector
+
+* i18n and use FF
+
+* fix new panel error tooltip
+
+* lint
+
+* fix circular dep
+
+* support markdown notices in the inspector
+
+* use FF and add tests
+
+* lint
+
+* css fixes
+
+* TestData: add errors_an",2026-06-30T11:14:39Z,True,True,Yes,UI keyword 'ui' in message
+lyswhut/lx-music-desktop,c42b2fb34c017444e4fd1fa4b58f1d1ffea37623,"Fix edit theme dialog layout (#2188)
+
+Co-authored-by: lyswhut <lyswhut@qq.com>",2024-12-18T15:37:59Z,True,True,Yes,UI keyword 'theme' in message
+slymnoyann/hey-1,bb085d1e6fb79311585c2e60f4c60b9e093664a7,feat: group mentions (#6103),2025-12-04T04:55:20Z,False,True,Yes,matched UI file-type condition
+OpenCut-app/OpenCut,8d82ea9c0b7d557ffedf1d59a16ff8fa478ca7a0,feat: draft persistence on Form via persistKey,2026-04-14T17:13:06Z,False,True,Yes,matched UI file-type condition
+portainer/portainer,25c69c6e9b4ac2b41b27cb34a4388543f4e80149,fix(ui): update server installation timeout redirect link [BE-13124] (#2991),2026-06-22T20:49:43Z,True,True,Yes,UI keyword '(ui)' in message
+hcengineering/platform,15aa8fb7b055a166b6f578ecdbf0d4faf5163f01,"add readonly support to MarkupEditor and improve hierarchy-based attr… (#10835)
+
+* add readonly support to MarkupEditor and improve hierarchy-based attribute resolution and locking logic
+
+Signed-off-by: Denis Bykhov <bykhov.denis@gmail.com>
+
+* perf: implement caching for card lookups in process-reso",2026-05-10T13:40:56Z,False,True,Yes,UI signal 'card' in message
+elastic/kibana,9372caf114625464146b3484eae30f8c62a6a9d9,"[ML] [ES|QL] Change Point in Discover: Table results action flyout now shows change point chart (#271793)
+
+## Summary
+
+Adds a ""Change point chart"" tab to the Discover row flyout when a
+CHANGE_POINT ES|QL query is active.
+
+When a user opens a row in the Discover result table under the change
+point pr",2026-06-30T18:12:46Z,True,True,Yes,matched pipeline keyword condition
+TibixDev/winboat,5503eb79866b4a3ff6cde8b2feae78ea67874717,chore: Update most packages (incl. Electron) to the latest version,2026-02-06T03:46:19Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,6613e77203923e5b1742a49281bfa5de03fc1440,feat: 升级到ReactNative0.76,2025-01-01T09:46:29Z,False,True,Yes,matched UI file-type condition
+mattermost/mattermost,307452bb55f7bd9c752109802f46688220840836,"[MM-67113] Add license preview/diff view when uploading a new license (#34877)
+
+* [MM-67113] Add license preview/diff view when uploading a new license
+
+Add a preview step when uploading a new license file in the Admin Console,
+allowing administrators to review differences before applying.
+
+Backend:",2026-06-01T09:34:23Z,False,True,No,"backend/infra signal 'backend', no UI terms"
+iOfficeAI/AionUi,bf0507fa32fc434fedda48e97931b49c1b394d6c,"fix: pass workspace roots to local fs routes (#3451)
+
+* fix: pass workspace roots to local fs routes
+
+* feat: update aioncoreVersion
+
+* fix: refresh workspace after rename
+
+---------
+
+Co-authored-by: zk <zk@users.noreply.local>",2026-06-29T06:12:09Z,False,True,Yes,matched UI file-type condition
+SigNoz/signoz,a487b311bc9c6deb296dbbfadcd47dbbfa626876,fix(metrics-explorer): handle in case .data is undefined (#11527),2026-06-02T13:46:53Z,False,True,Yes,matched UI file-type condition
+appsmithorg/appsmith,f5d7a4a526f01f8d0379194f2473bc305860f20e,"chore: overloaded theme methods and added error handling conditionals (#41514)
+
+## Description
+> [!TIP]  
+> _Add a TL;DR when the description is longer than 500 words or
+extremely technical (helps the content, marketing, and DevRel team)._
+>
+> _Please also include relevant motivation and context. Li",2026-01-15T06:58:33Z,True,True,Yes,UI keyword 'theme' in message
+mantinedev/mantine,94e044a2ab4461182eb3fd4c0d4970ccadb8e7dc,"[@mantine/dates] TimePicker: Fix duration values greater than 9999 hours not working (#9002)
+
+* fix(dates): allow duration values greater than 9999 hours
+
+* [@mantine/dates] TimePicker: Remove hours upper bound for duration type so values >= 10000 hours can be entered by typing
+
+Cleans up leftover c",2026-06-28T10:19:46Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,7fa2ff0c02f487832ebb7b228e39eba7d60f6bd5,"Publish v0.5.0
+
+Publish v0.5.0",2025-02-09T15:24:07Z,False,True,Yes,matched UI file-type condition
+humanlayer/12-factor-agents,818736c1abc6306b9a67bb2d2cc7aceda4f6ab9a,rebake sections,2025-05-10T16:04:41Z,False,True,Yes,matched UI file-type condition
+winfunc/opcode,2009601dd9e0c2757fead43f6c5a40d7765c435e,"feat: Add clipboard image paste support and fix image previews in CC sessions
+
+- Add save_clipboard_image and cleanup_temp_images commands in Rust backend
+- Implement paste event handler in FloatingPromptInput to capture pasted images
+- Save pasted images to .claude_temp/session_id/ directory
+- Add ",2025-07-06T11:05:41Z,False,True,No,"backend/infra signal 'backend', no UI terms"
+chartdb/chartdb,fad5adc048bb0c0fb96bfb2a24beb5b3be33d53a,fix: add dbml autocomplete (#1017),2025-12-17T15:13:44Z,False,True,Yes,matched UI file-type condition
+SigNoz/signoz,2e60ab0f8105ee9aa80a6860bf777e52fa854658,"fix(logs): dedupe body/timestamp columns in explorer picker (#11553)
+
+* fix: duplicate body issue
+
+* fix: update test",2026-06-02T20:15:32Z,False,True,Yes,matched UI file-type condition
+apache/superset,e807e66a3e9498866e6550af6e896c76a3ce1b03,"chore(deps-dev): bump timezone-mock from 1.4.2 to 1.4.3 in /superset-frontend (#41521)
+
+Signed-off-by: dependabot[bot] <support@github.com>
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>",2026-06-29T17:06:44Z,False,True,No,excluded prefix 'chore(deps' (non-UI maintenance)
+hcengineering/platform,fc1f99bea10ace82fbc5b6022339ba74c5c22e25,"Fix docker build (#10831)
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>",2026-05-08T09:00:08Z,False,True,Yes,matched UI file-type condition
+elastic/kibana,43b0114f329809ce66050f03944b5e5b3840017c,"[Agent Context Layer] Context Engine feature flag (#275110)
+
+## Summary
+Introduces a dedicated `contextEngine:enabled` Advanced Setting and
+moves all Context Engine (SML) gating off the shared
+`agentBuilder:experimentalFeatures` flag onto it. Private-preview users
+can now enable the Context Engine w",2026-06-29T16:11:14Z,True,True,Yes,matched pipeline keyword condition
+HumanSignal/label-studio,1f946dc82370a98349d552d135e1281dbbb7f257,"fix: FIT-1499: Resolve endless loading state for TimeSeries in Review Stream (#9538)
+
+Co-authored-by: bmartel <bmartel@users.noreply.github.com>",2026-03-07T02:20:13Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,ae8b4597ebff917f3c2433bbfb40ec6877af558e,"✨ feat(task): add setTaskVerify tool for agent-set verify gate (#16296)
+
+* ✨ feat(task): add setTaskVerify tool so agents can attach a verify gate
+
+Agents creating tasks via the builtin task tool had no entry to set the
+delivery-acceptance (verify) config (`tasks.config.verify`), so dispatched
+tasks",2026-06-25T13:10:03Z,False,True,Yes,matched UI file-type condition
+maotoumao/MusicFree,4548114100fca2518082a3eb7343100ed2971d0c,refactor: 重构pluginManager，解决循环依赖的问题,2025-05-18T09:28:29Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,5f7a6d2adcfa010314ce9d10094aa9285aa665d1,chore: integrate umami analytics tracking for post likes,2026-01-27T13:21:26Z,False,True,Yes,matched UI file-type condition
+jitsi/jitsi-meet,11cb9be644c37d44588fef275e5cdc19e496ae91,fix(ui): guard createRoot/isVisible against missing DOM containers,2026-06-10T20:33:00Z,True,True,Yes,UI keyword '(ui)' in message
+activepieces/activepieces,d4f906359db41b95a4270ae632cade7b59e2ca6a,"feat(pieces): add Workday batch business-object, report, WQL & custom-object actions and triggers (#13473)
+
+Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+Co-authored-by: David Anyatonwu <davidanyatonwu@gmail.com>
+Co-authored-by: sanket@activepieces.com <sanket@activepieces.com",2026-06-18T07:11:35Z,False,True,Yes,matched UI file-type condition
+lissy93/web-check,57d5454cd0f8dfee2389f68605b1b0c77451208f,🔖 Bump version to 2.1.3,2026-05-10T19:31:36Z,False,True,Yes,matched UI file-type condition
+OpenCut-app/OpenCut,1c3b22edecdccfbac1a940463446ca3c02413683,feat: add keyframe graphs button,2026-03-29T19:48:33Z,False,True,Yes,UI signal 'button' in message
+firecrawl/firecrawl,b180e9f1a5e0b4224792d4f37b5931850491bf77,"fix(security): upgrade esbuild to 0.28.1 (GHSA-gv7w-rqvm-qjhr, GHSA-g7r4-m6w7-qqqr) (#3777)",2026-06-12T22:30:15Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,bab9d08d2b521aa9cd02203eeff757c077520125,fix: surface wallet network failures,2026-04-30T16:51:55Z,False,True,Yes,matched UI file-type condition
+Molunerfinn/PicGo,4d04a9b71154ff384991baa39884f797e64bf13a,:tada: Release: v2.4.1,2025-12-23T11:37:55Z,False,True,Yes,matched UI file-type condition
+the1812/Bilibili-Evolved,6ce68b82a892c3fc8a8530f217b660b942556187,feat: 添加小窗播放器大小调整,2026-02-10T06:31:30Z,False,True,Yes,matched UI file-type condition
+winfunc/opcode,f710882cbf8f1a34161f561fc527ec0debea0533,fix padding in settings page,2025-08-06T20:54:57Z,False,True,Yes,UI signal 'padding' in message
+responsively-org/responsively-app,2e5273d66f3922a734ba9cd0785f1d73817c09e7,"Merge pull request #1295 from responsively-org/hot-reload-fix
+
+Fixes #1184",2024-09-09T04:34:08Z,True,True,Yes,UI keyword 'responsive' in message
+maotoumao/MusicFree,13752d8ce7b6ec3fd58af1a5a2fc02fe0f42637a,chore: 移动persistStatus文件位置,2025-05-09T04:39:39Z,False,True,Yes,matched UI file-type condition
+outline/outline,a1481679e41f408532c8df5908449e43b13624d6,fix: Tracking of block toolbars (#12681),2026-06-13T18:40:13Z,False,True,Yes,matched UI file-type condition
+SigNoz/signoz,b2f048770e7a19163b6de0d6f7394b34f8ee5216,"feat(dashboards-v2): list tags, DSL search, per-user pinning & org-shared views (#11868)
+
+* feat(dashboards-v2): remove temporary V2 list banner
+
+The 'You're on the V2 dashboards page' warning banner was a stop-gap while the
+page was in flux. Remove it now that the page is the intended destination.
+",2026-06-30T10:35:45Z,False,True,Yes,UI signal 'banner' in message
+the1812/Bilibili-Evolved,eed382ed6510ca20192a04b27ce436a906a91abe,Fix broken url (fix #5459),2026-02-12T01:50:27Z,False,True,Yes,matched UI file-type condition
+iOfficeAI/AionUi,1650096021842ae6eaad89a184a17033f3fd4147,"fix: repair assistant cron and guid metadata flows (#3336)
+
+* fix(assistant): repair cron and guid metadata flows
+
+* style(renderer): format assistant bugfix files
+
+---------
+
+Co-authored-by: zk <zk@users.noreply.local>",2026-06-15T12:16:31Z,False,True,Yes,UI signal 'render' in message
+DayuanJiang/next-ai-draw-io,67b0d77fa17436db088426cc60e99b1031045036,"fix(mcp-server): restrict CORS to same-origin only (#757)
+
+Replace wildcard `Access-Control-Allow-Origin: *` with same-origin check,
+preventing external websites from accessing MCP server APIs via cross-origin requests.",2026-03-24T02:50:03Z,False,True,Yes,UI signal 'card' in message
+SigNoz/signoz,b3b245ebc531a008aa3b3703e47cf22ed55e2d38,"feat: adding get cloud integration service for account handler (#11497)
+
+* feat: adding get cloud integration service for account handler
+
+* feat: adding integration test for new API endpoint
+
+* ci: fix py fmt lint
+
+* refactor: cloudfront integration service (#11570)
+
+Co-authored-by: Gaurav Tewari <",2026-06-05T12:42:18Z,False,True,No,"backend/infra signal 'endpoint', no UI terms"
+OpenCut-app/OpenCut,f47e85c3bb3c11607bbff69dcd511fd577ced9f9,fix: respect scale lock when editing keyframed scale,2026-04-06T23:19:46Z,False,True,Yes,matched UI file-type condition
+slymnoyann/hey-1,6817ecd274c4c01c66279efd3a4d7e5b9ef68804,fix: validate creator coin trade amounts,2026-04-30T17:01:57Z,False,True,Yes,matched UI file-type condition
+ItzCrazyKns/Vane,bd7c563137fe503382da8ca69d8adc9b0edcbd60,feat(package): add json repair,2025-12-31T07:27:59Z,False,True,Yes,matched UI file-type condition
+invoke-ai/InvokeAI,17da6bb9c3d219f708fc828b263824b74d08416b,"Fix(UI): Replace boolean submenu icon with PiIntersectSquareBold (#8962)
+
+* change submenu icon to phosphor
+
+* Use PiIntersectSquareBold",2026-03-15T15:14:35Z,True,True,Yes,UI keyword '(ui)' in message
+gitroomhq/postiz-app,23696d2973510ae1f3f48bfa41a6bfbbf9827b05,feat: security fixes,2026-05-22T12:16:26Z,False,True,Yes,matched UI file-type condition
+ItzCrazyKns/Vane,b706434bac23ba0db8f67baaaf2be918e58a4cd1,feat(chat-window): display only when ready,2025-12-23T12:26:15Z,False,True,Yes,matched UI file-type condition
+the1812/Bilibili-Evolved,8078a021b25c3742058820be04cc643d6958513c,fix(dark-mode): 抽离 festival 样式至独立文件并扩展 collection-wrapper,2026-02-15T07:27:28Z,False,True,Yes,matched UI file-type condition
+responsively-org/responsively-app,37d21acf77fc2ada16116a977c0ecfbfef0237ac,accept language header handling improvements,2025-01-17T13:21:47Z,False,True,Yes,UI signal 'header' in message
+ItzCrazyKns/Vane,e1afcbb78797e899f392edb4db66c5c2f340ed99,feat(package): add google genai & bump transformers,2025-12-24T08:26:43Z,False,True,Yes,matched UI file-type condition
+clash-verge-rev/clash-verge-rev,c18c23963dbc8ebc0b24833db01de472f5b1d234,"refactor: frontend (#7097)
+
+* refactor: remove unused window show/hide event listeners
+
+* refactor: deduplicate profile-changed event handling
+
+* refactor: remove unused setupCloseListener from use-listen
+
+* refactor: remove unused removeAllListeners from use-listen
+
+* fix(backend): dedupe profile c",2026-05-23T04:52:52Z,False,True,No,"backend/infra signal 'backend', no UI terms"
+felixrieseberg/windows95,5da7f94c5ac9bbde25f923ec294a55b767f7cf50,"Make ""Start without state"" always enabled (#360)
+
+The menu item now works whether the machine is running or not. bootFromScratch() awaits stopEmulator() first (a no-op when already stopped), so invoking it mid-session saves the current state, tears down the running VM, and boots a fresh one.",2026-04-12T01:39:45Z,False,True,Yes,UI signal 'menu' in message
+chartdb/chartdb,8a2267281b444a720d310eaf4e333f3b55b084f8,alignment of node converters (#839),2025-08-10T10:36:55Z,False,True,Yes,UI signal 'align' in message
+invoke-ai/InvokeAI,5c464f88f11307237488166b8b1bb242b2523c25,"feat(mm): add Qwen Image single-file checkpoint loader with fp8 support (#9253)
+
+* feat(model-manager): add Qwen Image single-file checkpoint loader with fp8 support
+
+Adds Main_Checkpoint_QwenImage_Config and QwenImageCheckpointModel so that
+single-file safetensors checkpoints (e.g. Qwen-Image-Edit ",2026-06-24T19:23:54Z,True,True,Yes,UI signal 'loader' in message
+siyuan-note/siyuan,9e6429234b655d16f433b884a5c18517c37e231a,":bookmark: Release v3.7.0-beta.3
+
+Signed-off-by: Daniel <845765@qq.com>",2026-06-27T00:56:28Z,False,True,Yes,matched UI file-type condition
+hcengineering/platform,efe3d7200a88d76002cb1262e1d87c031ac375ae,"Update employee role on account role change (#10709)
+
+Signed-off-by: Artem Savchenko <armisav@gmail.com>",2026-03-31T13:21:27Z,False,True,Yes,matched UI file-type condition
+lobehub/lobehub,1a7997c574ba3faa2e2ed754510d056c6dc90e48,🐛 fix(task): align topic drawer layout (#16275),2026-06-25T08:12:47Z,False,True,Yes,UI signal 'layout' in message
+the1812/Bilibili-Evolved,b2baa3c9d708d009fca38d840aa328d3f78b2c09,"Merge pull request #5567 from cscnk52/fix-dark
+
+Fix dark mode",2026-04-24T11:46:16Z,True,True,Yes,UI keyword 'dark mode' in message
+TibixDev/winboat,9d656ebd0b685c98d6af743480bb20365d154d59,feat: Add version tracking in config (#508),2025-11-23T19:48:10Z,False,True,Yes,matched UI file-type condition
+RealKai42/qwerty-learner,5de7e7cbfd8e67c7a462f3cc68de929fc1dd0f94,fix:dark mode text color issue in friendlink page,2024-11-19T11:34:35Z,True,True,Yes,UI keyword 'dark mode' in message
