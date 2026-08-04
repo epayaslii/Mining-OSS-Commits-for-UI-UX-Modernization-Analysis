@@ -1,9 +1,5 @@
 # Data-Driven UI/UX Modernization: Mining Human-Centric Look and Feel Evolution in Open-Source Software
 
-**Authors:** Eliz Payaslı, Jacob Krüger, Alexander Nolte  
-**Date:** July 2026  
-**Affiliation:** Eindhoven University of Technology, Software Engineering & Technology (SET) Group
-
 ## Overview
 
 This repository contains research data, analysis scripts, and findings from a comprehensive Mining Software Repositories (MSR) study examining UI/UX modernization in open-source software. The study analyzes commit logs from 346 actively maintained JavaScript/TypeScript repositories to understand the causes and patterns of visual modernization.
@@ -134,19 +130,6 @@ Interactive interface for manual validation of commit classifications.
 | **Visual & Responsive Design** | Intermediate-Level | CSS | Colors, spacing, typography, responsive breakpoints |
 | **Framework/Design System Migration** | Down-Level | HTML/Infrastructure | Dependency updates, centralized design systems |
 
-## Citation
-
-If you use this dataset or findings in your research, please cite:
-
-```bibtex
-@article{payasli2026uiux,
-  title={Data-Driven {UI}/{UX} Modernization: Mining Human-Centric Look and Feel Evolution in Open-Source Software},
-  author={Payaslı, Eliz and Krüger, Jacob and Nolte, Alexander},
-  journal={Empirical Software Engineering},
-  year={2026},
-  publisher={Springer}
-}
-```
 
 ## Initial Validation Repositories
 
@@ -215,13 +198,5 @@ See individual scripts for specific dependencies.
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Contact
 
-For questions, feedback, or collaboration inquiries:
-- **Eliz Payaslı** - elizpayasli.ep@gmail.com
-- **Jacob Krüger** - Eindhoven University of Technology
-- **Alexander Nolte** - Eindhoven University of Technology
 
----
-
-**Last Updated:** August 4, 2026
