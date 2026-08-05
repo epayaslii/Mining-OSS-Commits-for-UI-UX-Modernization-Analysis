@@ -37,22 +37,36 @@ This repository contains research data, analysis scripts, and findings from a co
 │   └── validation/                                 # Validation sample data
 │       ├── validation_sample_random200*.csv        # Random 200-sample validation
 │       └── validation_sample_stratified*.csv       # Stratified per-repo validation
+├── notebooks/
+│   ├── 01_repository_collection.py                 # Phase 1: Repository search & filtering
+│   ├── 02_commit_mining.py                         # Phase 2: Commit mining pipeline
+│   ├── 03_validation_sampling.py                   # Phase 3: Random + stratified sampling
+│   └── 04_ml_clustering.py                         # Phase 4: TF-IDF + K-Means clustering
 ├── scripts/
-│   ├── mine_commits_improved.py                    # Phase 2: Commit mining pipeline
-│   ├── llm_classify_aspects_causes.py              # Cause/Aspect classification
-│   ├── llm_label_api.py                            # LLM integration utilities
-│   ├── hand_label_200.py                           # Manual validation interface
-│   ├── label_commits.py                            # Commit classification
-│   ├── fetch_filenames.py                          # GitHub API utilities
-│   └── apply_all.py                                # Batch processing
+│   ├── mine_commits_improved.py                    # Standalone mining run used for the paper's final pool
+│   ├── fetch_filenames.py                          # Backfill changed filenames per commit (GitHub API)
+│   ├── label_commits.py                            # Rule-based Yes/No UI labeling (no API key needed)
+│   ├── llm_label_api.py                            # LLM-assisted Yes/No labeling (Anthropic API)
+│   ├── llm_classify_aspects_causes.py              # LLM Cause/Aspect/UI-relatedness classification
+│   ├── hand_label_200.py                           # Hand-coded labels for the random-200 sample
+│   ├── compare_samples.py                          # Compares label agreement across sample types
+│   ├── dump200.py                                  # Dumps the random-200 sample for manual review
+│   └── apply_all.py                                # Applies rule-based labeling to the full pool + margin-of-error / precision stats
 ├── paper/
-│   ├── paper.tex                                   # Full LaTeX paper manuscript
-│   ├── aspects_causes_chart.tex                    # Cause/Aspect visualizations
-│   └── full_pool_charts.tex                        # Full dataset visualizations
+│   └── paper.tex                                   # Full LaTeX paper manuscript
 ├── README.md                                       # This file
 ├── LICENSE                                         # MIT License
 └── .gitignore                                      # Git ignore rules
 ```
+
+### `notebooks/` vs `scripts/`
+
+These two directories serve different purposes and are not duplicates of each other:
+
+- **`notebooks/`** is the canonical, end-to-end pipeline — four numbered phases (`01` → `04`) that take you from "search GitHub" to "clustered, tiered commit pool" in order. Each script reads the previous phase's output and can be re-run standalone if its input file already exists. Run these top-to-bottom for a fresh replication.
+- **`scripts/`** are the labeling, validation, and one-off analysis tools built on top of `notebooks/`' output (`ui_commits_checkpoint_final.csv`). They cover the parts of the methodology that aren't a single linear pipeline step: rule-based and LLM-assisted commit labeling (`label_commits.py`, `llm_label_api.py`, `llm_classify_aspects_causes.py`), the hand-coded random-200 sample (`hand_label_200.py`), precision/margin-of-error and cross-sample comparison stats (`apply_all.py`, `compare_samples.py`), and small utilities (`dump200.py`, `fetch_filenames.py`). `mine_commits_improved.py` is the exact mining run that produced the paper's final commit pool — `notebooks/02_commit_mining.py` now mirrors its refined filtering logic (bot exclusion, word-boundary keywords, tiered UI-file detection), so the two stay in sync rather than describing different filters.
+
+Note: none of the tracked scripts currently compute Cohen's κ automatically — inter-rater agreement is a two-line `sklearn.metrics.cohen_kappa_score` call documented under the manual-coding notes in [`notebooks/README.md`](notebooks/README.md), run once both raters' labels exist.
 
 ## Methodology
 

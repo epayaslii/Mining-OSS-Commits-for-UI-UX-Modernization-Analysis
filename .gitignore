@@ -166,3 +166,6 @@ dmypy.json
 outputs/
 *.html
 temp/
+
+# Raw Colab draft with hardcoded credentials — never commit
+data/set.py

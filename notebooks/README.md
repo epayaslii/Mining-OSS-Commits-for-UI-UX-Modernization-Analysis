@@ -63,24 +63,28 @@ Phase 4: ML Clustering & Validation
 **What it does:**
 - Fetches up to 200 most recent commits per repository
 - Applies 4-condition filtering pipeline:
-  1. **Pre-exclusion filter:** Excludes automated commits (chore, deps, CI, release)
-  2. **Keyword condition:** Matches UI-related keywords in commit message
-  3. **File-type condition:** Checks if commit modifies UI files (.css, .tsx, .vue, package.json)
+  1. **Pre-exclusion filter:** Excludes automated commits (chore, deps, CI, release, version-only) and bot authors (dependabot, renovate, github-actions, weblate)
+  2. **Keyword condition:** Matches UI-related keywords with word-boundary regex, so substrings like "ui" inside "build" don't false-positive
+  3. **File-type condition:** Checks if commit modifies UI files, tier-aware (see below)
   4. **Date condition:** Only keeps commits after June 26, 2024
 
 - File categorization:
-  - **Tier 1 (Stylesheets):** .css, .scss, .sass, .less, .styl, .module.css
-  - **Tier 2 (Components):** .tsx, .jsx, .vue, .svelte in UI directories
+  - **Tier 1 (Stylesheets):** .css, .scss, .sass, .less, .styl — always counted as a UI hit
+  - **Tier 2 (Components):** .tsx, .jsx, .vue, .svelte — only counted if the path is inside a UI directory (`/components/`, `/ui/`, `/views/`, `/theme/`, etc.), excluding test/spec/story files
+  - **package.json:** only counted if the diff adds/removes a known UI library (React, Vue, Tailwind, MUI, Radix, etc.), not on every dependency bump
 
 **Key Thresholds:**
 - `CUTOFF_DATE = "2024-06-26"`
-- `EXCLUDE_PREFIXES` - Automated commit patterns
-- `UI_KEYWORDS` - Terms like "ui", "accessibility", "theme", "responsive"
-- `UI_EXTENSIONS` - File types to check
+- `EXCLUDE_PREFIXES` / `BOT_RE` - Automated commit and bot-author patterns
+- `UI_SURFACE` / `UI_WORD_RE` - Keyword forms, matched with word boundaries
+- `UI_DIRS` / `UI_LIBS` - Directories and libraries used for tiered file classification
 
 **Resume Capability:**
+- Maintains a durable per-commit file cache (`commit_files_cache.csv`) so an interrupted run never re-fetches a commit's file list from the GitHub API
+- Tracks fully-processed repos in `done_repos.txt` and only marks a repo done on success, so a crash mid-repo retries cleanly on the next run
 - Saves checkpoints every 10 repositories
-- Can resume from where it left off if interrupted
+
+This is a refined version of the mining logic — it supersedes the plain keyword/extension matching used in earlier drafts by adding bot filtering, word-boundary regex, and UI-directory/library awareness to cut false positives.
 
 **Output:** `ui_commits_checkpoint_final.csv`
 - 25,061 UI-related commits
