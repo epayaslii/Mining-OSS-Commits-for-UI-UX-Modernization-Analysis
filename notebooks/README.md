@@ -166,10 +166,10 @@ kappa = cohen_kappa_score(df['rater1_label'], df['rater2_label'])
    - Generates prompts for each commit
    - Ready for Claude API validation
 
-**Top Terms per Cluster:**
-- **Up-Level:** animation, state, behavior, interaction, event, handler, useState, useEffect
-- **Intermediate-Level:** style, color, theme, css, spacing, layout, responsive, design
-- **Down-Level:** package, dependency, migrate, framework, library, install, npm, react
+**Top Terms per Cluster** (matches paper Sec 5.5.2):
+- **Up-Level:** component, state, interaction, focus, handler, keyboard
+- **Intermediate-Level:** color, theme, contrast, spacing, dark mode, responsive
+- **Down-Level:** package, dependency, migrate, design system, library, tailwind
 
 **Outputs:**
 - `ui_commits_clustered.csv` (full dataset with cluster + tier assignments)
@@ -248,17 +248,18 @@ python 04_ml_clustering.py
 ### After Phase 1
 ```
 repositories_filtered.csv:
-- 346 repositories
-- Median stars: ~300
-- Median age: ~2.5 years
+- 346 repositories (204 TypeScript, 142 JavaScript)
+- Median stars: ~12,970 (min/max 6,608 / 142,462)
+- Median age: ~5.2 years (min/max 0.2 / 16.8)
 ```
 
 ### After Phase 2
 ```
 ui_commits_checkpoint_final.csv:
-- 25,061 UI-related commits
-- Keyword matches: ~5,000 (20%)
-- File matches: ~20,000 (80%)
+- 25,061 UI-related commits (from a 44,371-commit 2-year baseline; ~56.5% retention)
+- Keyword condition: 2,795 commits (~11%)
+- File-type condition: 22,266 commits (~89%)  [some commits match both]
+- Median UI-related commits per repository: 77
 - Date range: June 26, 2024 - June 26, 2026
 ```
 
@@ -269,20 +270,20 @@ validation_sample_random200.csv:
 - Precision: ~96% (±3.5% CI)
 
 validation_sample_stratified.csv:
-- ~1,038 commits (3 per repo × 346 repos)
+- ~1,000 commits (3 per repo × 346 repos)
 - Represents all repositories
 ```
 
 ### After Phase 4
 ```
 ui_commits_clustered.csv:
-- 25,061 commits with tier assignments
-- Up-Level: ~8,000 commits (32%)
-- Intermediate-Level: ~12,000 commits (48%)
-- Down-Level: ~5,000 commits (20%)
+- 23,692 clustering-eligible commits (1,369 near-empty messages excluded)
+- Up-Level (Cluster 0):        8,524 commits (36.0%)
+- Intermediate-Level (Cluster 1): 7,806 commits (32.9%)
+- Down-Level (Cluster 2):      7,362 commits (31.1%)
 
-Cluster separation: ANOVA p < 0.001 ✓ (statistically distinct)
-Purity score: 0.72-0.78 ✓ (acceptable)
+Cluster separation: ANOVA F = 7,022.63, p < 0.000001 ✓ (statistically distinct)
+Purity score: ≥ 0.70 ✓ (acceptable threshold for unsupervised taxonomy mapping)
 ```
 
 ## Advanced: Resuming from Checkpoints
@@ -322,18 +323,4 @@ Ensure prerequisite phases have completed:
 See the main [README.md](../README.md) for:
 - Research questions and findings
 - Methodology and taxonomy details
-- Citation information
 - Contact details
-
-## Citation
-
-If you use this pipeline in your research:
-
-```bibtex
-@article{payasli2026uiux,
-  title={Data-Driven UI/UX Modernization: Mining Human-Centric Look and Feel Evolution in Open-Source Software},
-  author={Payaslı, Eliz and Krüger, Jacob and Nolte, Alexander},
-  journal={Empirical Software Engineering},
-  year={2026}
-}
-```
